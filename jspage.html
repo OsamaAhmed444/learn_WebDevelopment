@@ -1,0 +1,6467 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> JavaScript</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<button id="menuBtn">☰</button>
+<button id="homeBtn" title="العودة للرئيسية" onclick="window.location.href='index.html'">🏠</button>
+
+
+
+<nav id="navbar">
+
+<header>JavaScript</header>
+
+<a href="index.html" style="display: block; text-align: center; color: #38bdf8; padding: 10px; margin-bottom: 15px; border-bottom: 1px solid #334155; text-decoration: none; font-size: 14px; transition: color 0.3s;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#38bdf8'">← العودة للرئيسية</a>
+
+<a class="nav-link" href="#intro">المقدمة</a>
+
+<a class="nav-link" href="#data-types">
+أنواع البيانات
+</a>
+
+<a class="nav-link" href="#variables">
+المتغيرات
+</a>
+
+<a class="nav-link" href="#strings">
+السلاسل النصية
+</a>
+
+<a class="nav-link" href="#numbers">
+الأرقام والعمليات الحسابية
+</a>
+
+<a class="nav-link" href="#operators">
+العوامل والمنطق البولياني
+</a>
+
+<a class="nav-link" href="#conditions">
+الجمل الشرطية
+</a>
+
+<a class="nav-link" href="#functions">
+الدوال ونطاق المتغيرات
+</a>
+
+<a class="nav-link" href="#arrays">
+المصفوفات
+</a>
+
+<a class="nav-link" href="#objects">
+الكائنات و JSON
+</a>
+
+<a class="nav-link" href="#loops">
+الحلقات التكرارية
+</a>
+
+<a class="nav-link" href="#best-practices">
+أفضل الممارسات
+</a>
+
+<a class="nav-link" href="#advanced-javascript">
+مفاهيم JavaScript المتقدمة
+</a>
+
+<a class="nav-link" href="#array-advanced-methods">
+طرق المصفوفات المتقدمة
+</a>
+
+<a class="nav-link" href="#dom-and-web-apis">
+DOM و Web APIs
+</a>
+<a class="nav-link" href="#bom">
+BOM (المتصفّح)
+</a>
+<a class="nav-link" href="#accessibility">
+إمكانية الوصول Accessibility
+</a>
+
+<a class="nav-link" href="#errors-debugging">
+معالجة الأخطاء وتصحيحها
+</a>
+
+<a class="nav-link" href="#regex">
+التعبيرات النمطية Regex
+</a>
+
+<a class="nav-link" href="#regex-advanced">
+Regex المتقدم
+</a>
+
+<a class="nav-link" href="#form-validation">
+النماذج والتحقق من البيانات
+</a>
+
+<a class="nav-link" href="#forms-date-media">
+Forms و Date و Media
+</a>
+</nav>
+
+
+<main id="main-doc">
+    <div id="search-bar">
+      <input type="search" id="searchInput" placeholder="ابحث في الشرح..." aria-label="بحث">
+      <div class="search-controls">
+        <span id="search-count" aria-live="polite">ادخل بحثًا للبدء</span>
+      </div>
+    </div>
+<section class="main-section" id="intro">
+
+<header>المقدمة</header>
+
+<p>
+JavaScript هي لغة برمجة تُستخدم لإضافة التفاعل إلى صفحات الويب.
+تُعد واحدة من أهم التقنيات المستخدمة في تطوير الويب إلى جانب HTML و CSS.
+</p>
+
+<h3>تسجيل الرسائل باستخدام console.log()</h3>
+
+<p>
+تُستخدم الدالة console.log() لعرض الرسائل والقيم داخل وحدة التحكم Console.
+</p>
+
+<code>
+console.log("Hello, World!");
+</code>
+
+<h3>الفواصل المنقوطة</h3>
+
+<p>
+تُستخدم الفاصلة المنقوطة لإنهاء التعليمات البرمجية وفصل العبارات عن بعضها.
+</p>
+
+<code>
+let message = "Hello";
+let number = 42;
+</code>
+
+<h3>التعليقات</h3>
+
+<p>
+تُستخدم التعليقات لشرح الكود أو كتابة الملاحظات.
+</p>
+
+<code>
+// تعليق من سطر واحد
+</code>
+
+<code>
+/*
+تعليق
+متعدد الأسطر
+*/
+</code>
+
+</section>
+<section class="main-section" id="data-types">
+
+<header>أنواع البيانات</header>
+
+<p>
+تساعد أنواع البيانات لغة JavaScript على فهم نوع البيانات التي يتعامل معها البرنامج، سواء كانت رقمًا أو نصًا أو أي شيء آخر.
+</p>
+
+<h3>الأرقام (Number)</h3>
+
+<p>
+يُستخدم نوع البيانات Number لتمثيل الأعداد الصحيحة والأعداد العشرية.
+</p>
+
+<ul>
+<li>الأعداد الصحيحة مثل: 7 و 19 و 90.</li>
+<li>الأعداد العشرية مثل: 3.14 و 0.5 و 0.0001.</li>
+</ul>
+
+<code>
+let age = 25;
+let pi = 3.14;
+</code>
+
+<h3>السلاسل النصية (String)</h3>
+
+<p>
+السلسلة النصية هي مجموعة من الأحرف محاطة بعلامات اقتباس مفردة أو مزدوجة.
+</p>
+
+<code>
+let message = "I like coding";
+
+let language = 'JavaScript is fun';
+</code>
+
+<h3>القيم المنطقية (Boolean)</h3>
+
+<p>
+تمثل القيم المنطقية إحدى قيمتين فقط: true أو false.
+</p>
+
+<code>
+let isLoggedIn = true;
+
+let isAdmin = false;
+</code>
+
+<h3>Undefined</h3>
+
+<p>
+القيمة undefined تعني أن المتغير تم تعريفه ولكن لم يتم إسناد قيمة له.
+</p>
+
+<code>
+let userName;
+
+console.log(userName);
+</code>
+
+<h3>Null</h3>
+
+<p>
+القيمة null تعني أن المتغير يحتوي على قيمة فارغة تم تعيينها بشكل مقصود.
+</p>
+
+<code>
+let selectedUser = null;
+</code>
+
+<h3>الكائنات (Object)</h3>
+
+<p>
+الكائن عبارة عن مجموعة من أزواج المفاتيح والقيم.
+المفتاح يمثل اسم الخاصية والقيمة تمثل البيانات المخزنة داخلها.
+</p>
+
+<code>
+let pet = {
+  name: "Fluffy",
+  age: 3,
+  type: "dog"
+};
+</code>
+
+<p>
+في المثال السابق يحتوي الكائن على ثلاث خصائص:
+name و age و type.
+</p>
+
+<h3>الرموز (Symbol)</h3>
+
+<p>
+يُستخدم Symbol لإنشاء معرفات فريدة لا يمكن تكرارها.
+</p>
+
+<code>
+const crypticKey1 =
+Symbol("saltNpepper");
+
+const crypticKey2 =
+Symbol("saltNpepper");
+
+console.log(
+crypticKey1 === crypticKey2
+);
+
+// false
+</code>
+
+<p>
+على الرغم من أن الوصف متشابه إلا أن كل Symbol يُعتبر قيمة فريدة ومستقلة.
+</p>
+
+<h3>BigInt</h3>
+
+<p>
+عندما يكون الرقم أكبر من قدرة Number على تخزينه يمكن استخدام BigInt.
+</p>
+
+<code>
+const veryBigNumber =
+1234567890123456789012345678901234567890n;
+</code>
+
+<p>
+يتم إنشاء BigInt بإضافة الحرف n في نهاية الرقم.
+</p>
+
+<h3>JavaScript كلغة ذات كتابة ديناميكية</h3>
+
+<p>
+JavaScript لغة ذات كتابة ديناميكية، مما يعني أنك لا تحتاج إلى تحديد نوع البيانات عند إنشاء المتغير.
+</p>
+
+<code>
+let error = 404;
+
+// JavaScript treats error
+// as a number
+
+error = "Not Found";
+
+// JavaScript now treats
+// error as a string
+</code>
+
+<p>
+في بعض اللغات الأخرى مثل C# لا يمكن تغيير نوع المتغير بعد تعريفه.
+</p>
+
+<code>
+int error = 404;
+
+error = "Not Found";
+
+// Error
+</code>
+
+<h3>المعامل typeof</h3>
+
+<p>
+يُستخدم typeof لمعرفة نوع البيانات المخزنة داخل المتغير.
+</p>
+
+<code>
+let age = 25;
+
+console.log(typeof age);
+
+// number
+</code>
+
+<code>
+let isLoggedIn = true;
+
+console.log(typeof isLoggedIn);
+
+// boolean
+</code>
+
+<p>
+يوجد سلوك خاص مع القيمة null حيث يعيد typeof القيمة object.
+</p>
+
+<code>
+let user = null;
+
+console.log(typeof user);
+
+// object
+</code>
+
+</section>
+
+<section class="main-section" id="variables">
+
+<header>المتغيرات</header>
+
+<p>
+المتغيرات هي حاويات تُستخدم لتخزين البيانات وإعادة استخدامها داخل البرنامج.
+</p>
+
+<p>
+يمكن تعريف المتغيرات باستخدام الكلمة المفتاحية let.
+</p>
+
+<code>
+let cityName;
+</code>
+
+<p>
+لتعيين قيمة لمتغير يمكنك استخدام عامل التعيين =.
+</p>
+
+<code>
+cityName = "New York";
+</code>
+
+<h3>إعادة تعيين القيم</h3>
+
+<p>
+المتغيرات المعرفة باستخدام let يمكن تغيير قيمتها لاحقًا.
+</p>
+
+<code>
+let cityName = "New York";
+
+cityName = "Los Angeles";
+
+console.log(cityName);
+
+// Los Angeles
+</code>
+
+<h3>استخدام const</h3>
+
+<p>
+يمكن أيضًا تعريف المتغيرات باستخدام const.
+</p>
+
+<code>
+const cityName = "New York";
+</code>
+
+<p>
+المتغيرات المعرفة باستخدام const لا يمكن إعادة تعيين قيمتها.
+</p>
+
+<code>
+const cityName = "New York";
+
+cityName = "Los Angeles";
+
+// TypeError
+</code>
+
+<p>
+تُستخدم const عادةً لتعريف الثوابت التي لا تتغير أثناء تشغيل البرنامج.
+</p>
+
+<code>
+const PI = 3.14159;
+
+const MAX_SIZE = 100;
+</code>
+
+<h3>قواعد تسمية المتغيرات</h3>
+
+<p>
+ينبغي اختيار أسماء واضحة ومعبرة عن الغرض من المتغير.
+</p>
+
+<ul>
+
+<li>
+استخدم أسماء وصفية وذات معنى.
+</li>
+
+<li>
+استخدم أسلوب Camel Case.
+</li>
+
+<li>
+يجب ألا يبدأ اسم المتغير برقم.
+</li>
+
+<li>
+يمكن أن يبدأ بحرف أو _ أو $.
+</li>
+
+<li>
+لا يجب أن يحتوي على مسافات.
+</li>
+
+<li>
+لا يجب استخدام الكلمات المحجوزة.
+</li>
+
+<li>
+JavaScript حساسة لحالة الأحرف.
+</li>
+
+</ul>
+
+<h3>Camel Case</h3>
+
+<p>
+في أسلوب Camel Case تبدأ أول كلمة بحرف صغير ثم تبدأ الكلمات التالية بحرف كبير.
+</p>
+
+<code>
+let cityName;
+
+let isLoggedIn;
+
+let veryBigNumber;
+</code>
+
+<h3>أسماء غير صحيحة</h3>
+
+<code>
+let 1name;
+
+let user name;
+
+let let;
+</code>
+
+<h3>الحساسية لحالة الأحرف</h3>
+
+<p>
+JavaScript تعتبر الأحرف الكبيرة والصغيرة مختلفة.
+</p>
+
+<code>
+let age = 20;
+
+let Age = 30;
+</code>
+
+<p>
+المتغيران السابقان مختلفان تمامًا بالنسبة للغة.
+</p>
+
+</section>
+
+<section class="main-section" id="strings">
+
+<header>السلاسل النصية</header>
+
+<p>
+السلسلة النصية هي تسلسل من الأحرف محاط بعلامات اقتباس مفردة أو مزدوجة.
+وتُعد من أنواع البيانات الأساسية في JavaScript.
+</p>
+
+<code>
+let correctWay = 'This is a string';
+
+let alsoCorrect = "This is also a string";
+</code>
+
+<h3>عدم قابلية التغيير (Immutability)</h3>
+
+<p>
+السلاسل النصية غير قابلة للتغيير، وهذا يعني أنه لا يمكن تعديل الأحرف الموجودة داخل النص مباشرة بعد إنشائه.
+ولكن يمكن إعادة تعيين قيمة جديدة للمتغير.
+</p>
+
+<code>
+let firstName = "John";
+
+firstName = "Jane";
+</code>
+
+<h3>الوصول إلى الأحرف</h3>
+
+<p>
+يمكن الوصول إلى أي حرف باستخدام الفهرس Index والذي يبدأ من الصفر.
+</p>
+
+<code>
+const developer = "Jessica";
+
+console.log(developer[0]);
+
+// J
+</code>
+
+<h3>حرف السطر الجديد \\n</h3>
+
+<p>
+يمكن استخدام \\n لإنشاء سطر جديد داخل النص.
+</p>
+
+<code>
+const poem =
+"Roses are red,\nViolets are blue,\nJavaScript is fun";
+
+console.log(poem);
+</code>
+
+<h3>الهروب من الأحرف Escape Characters</h3>
+
+<p>
+يمكن استخدام الشرطة العكسية \ لإدراج علامات الاقتباس داخل النص.
+</p>
+
+<code>
+const statement =
+"She said, \"Hello!\"";
+
+console.log(statement);
+</code>
+
+<h3>دمج السلاسل النصية باستخدام +</h3>
+
+<p>
+يُستخدم العامل + لدمج النصوص معًا.
+</p>
+
+<code>
+let studentName = "Asad";
+
+let studentAge = 25;
+
+let studentInfo =
+studentName +
+" is " +
+studentAge +
+" years old.";
+
+console.log(studentInfo);
+</code>
+
+<h3>استخدام +=</h3>
+
+<p>
+يمكن استخدام += لإضافة نص جديد إلى نص موجود.
+</p>
+
+<code>
+let message =
+"Welcome to programming, ";
+
+message += "Asad!";
+
+console.log(message);
+</code>
+
+<h3>الدالة concat()</h3>
+
+<p>
+تُستخدم concat() لدمج سلسلتين نصيتين أو أكثر.
+</p>
+
+<code>
+let firstName = "John";
+
+let lastName = "Doe";
+
+let fullName =
+firstName.concat(" ", lastName);
+
+console.log(fullName);
+</code>
+
+<h3>Template Literals</h3>
+
+<p>
+تُستخدم Template Literals مع علامات Backticks وتسمح بإدراج المتغيرات داخل النص مباشرة.
+</p>
+
+<code>
+const name = "Jessica";
+
+const greeting =
+`Hello, ${name}!`;
+
+console.log(greeting);
+</code>
+
+<h3>ASCII</h3>
+
+<p>
+ASCII هو معيار لترميز الأحرف بحيث يكون لكل حرف رقم خاص به.
+</p>
+
+<h3>charCodeAt()</h3>
+
+<p>
+تعيد هذه الدالة قيمة ASCII الخاصة بالحرف الموجود في فهرس معين.
+</p>
+
+<code>
+const letter = "A";
+
+console.log(
+letter.charCodeAt(0)
+);
+
+// 65
+</code>
+
+<h3>String.fromCharCode()</h3>
+
+<p>
+تقوم بتحويل رقم ASCII إلى الحرف المقابل له.
+</p>
+
+<code>
+const char =
+String.fromCharCode(65);
+
+console.log(char);
+
+// A
+</code>
+
+<h3>indexOf()</h3>
+
+<p>
+تُستخدم للبحث عن أول ظهور لنص داخل نص آخر.
+</p>
+
+<code>
+const text =
+"The quick brown fox";
+
+console.log(
+text.indexOf("fox")
+);
+
+// 16
+</code>
+
+<h3>includes()</h3>
+
+<p>
+تتحقق مما إذا كان النص يحتوي على قيمة معينة.
+</p>
+
+<code>
+const text =
+"The quick brown fox";
+
+console.log(
+text.includes("fox")
+);
+
+// true
+</code>
+
+<h3>slice()</h3>
+
+<p>
+تُستخدم لاستخراج جزء من النص.
+</p>
+
+<code>
+const text =
+"freeCodeCamp";
+
+console.log(text.slice(0,4));
+
+// free
+</code>
+
+<code>
+console.log(text.slice(4,8));
+
+// Code
+</code>
+
+<h3>toUpperCase()</h3>
+
+<p>
+تحول جميع الأحرف إلى أحرف كبيرة.
+</p>
+
+<code>
+const text = "Hello";
+
+console.log(
+text.toUpperCase()
+);
+
+// HELLO
+</code>
+
+<h3>toLowerCase()</h3>
+
+<p>
+تحول جميع الأحرف إلى أحرف صغيرة.
+</p>
+
+<code>
+const text = "HELLO";
+
+console.log(
+text.toLowerCase()
+);
+
+// hello
+</code>
+
+<h3>replace()</h3>
+
+<p>
+تستبدل قيمة معينة داخل النص بقيمة أخرى.
+</p>
+
+<code>
+const text =
+"I like cats";
+
+console.log(
+text.replace(
+"cats",
+"dogs"
+)
+);
+
+// I like dogs
+</code>
+
+<h3>repeat()</h3>
+
+<p>
+تكرر النص عددًا محددًا من المرات.
+</p>
+
+<code>
+const text = "Hello";
+
+console.log(
+text.repeat(3)
+);
+
+// HelloHelloHello
+</code>
+
+<h3>trim()</h3>
+
+<p>
+تزيل المسافات من بداية ونهاية النص.
+</p>
+
+<code>
+const text =
+"  Hello World  ";
+
+console.log(
+text.trim()
+);
+</code>
+
+<h3>trimStart()</h3>
+
+<p>
+تزيل المسافات من بداية النص فقط.
+</p>
+
+<code>
+const text =
+"  Hello World";
+
+console.log(
+text.trimStart()
+);
+</code>
+
+<h3>trimEnd()</h3>
+
+<p>
+تزيل المسافات من نهاية النص فقط.
+</p>
+
+<code>
+const text =
+"Hello World  ";
+
+console.log(
+text.trimEnd()
+);
+</code>
+
+<h3>prompt()</h3>
+
+<p>
+تُستخدم للحصول على مدخلات من المستخدم من خلال نافذة منبثقة.
+</p>
+
+<code>
+const answer =
+window.prompt(
+"What's your favorite animal?"
+);
+</code>
+
+</section>
+
+<section class="main-section" id="numbers">
+
+<header>الأرقام والعمليات الحسابية</header>
+
+<p>
+يشمل نوع البيانات Number في JavaScript الأعداد الصحيحة والأعداد العشرية والقيم الخاصة مثل Infinity و NaN.
+</p>
+
+<code>
+let age = 25;
+
+let price = 99.99;
+</code>
+
+<h3>الجمع (+)</h3>
+
+<p>
+يُستخدم عامل الجمع لحساب مجموع عددين أو أكثر.
+</p>
+
+<code>
+let result = 10 + 5;
+
+console.log(result);
+
+// 15
+</code>
+
+<h3>الطرح (-)</h3>
+
+<p>
+يُستخدم عامل الطرح لحساب الفرق بين عددين.
+</p>
+
+<code>
+let result = 10 - 5;
+
+console.log(result);
+
+// 5
+</code>
+
+<h3>الضرب (*)</h3>
+
+<p>
+يُستخدم عامل الضرب لحساب ناتج ضرب عددين أو أكثر.
+</p>
+
+<code>
+let result = 10 * 5;
+
+console.log(result);
+
+// 50
+</code>
+
+<h3>القسمة (/)</h3>
+
+<p>
+يُستخدم عامل القسمة لحساب ناتج قسمة عدد على آخر.
+</p>
+
+<code>
+let result = 10 / 5;
+
+console.log(result);
+
+// 2
+</code>
+
+<h3>عامل الباقي (%)</h3>
+
+<p>
+يعيد باقي القسمة بين عددين.
+</p>
+
+<code>
+let result = 10 % 3;
+
+console.log(result);
+
+// 1
+</code>
+
+<h3>عامل الأس (**)</h3>
+
+<p>
+يُستخدم لرفع عدد إلى قوة عدد آخر.
+</p>
+
+<code>
+let result = 2 ** 3;
+
+console.log(result);
+
+// 8
+</code>
+
+<h3>القسمة على صفر</h3>
+
+<p>
+عند القسمة على الصفر لا يظهر خطأ، بل تعيد JavaScript القيمة Infinity.
+</p>
+
+<code>
+console.log(10 / 0);
+
+// Infinity
+</code>
+
+<h3>Infinity</h3>
+
+<p>
+تمثل Infinity قيمة أكبر من أي رقم يمكن تمثيله في JavaScript.
+</p>
+
+<code>
+console.log(Infinity);
+</code>
+
+<h3>NaN</h3>
+
+<p>
+NaN اختصار لـ Not a Number وتظهر عند محاولة إجراء عملية حسابية غير صالحة.
+</p>
+
+<code>
+console.log("Jessica" * 2);
+
+// NaN
+</code>
+
+<h3>العمليات بين الأرقام والسلاسل النصية</h3>
+
+<p>
+عند استخدام العامل + مع رقم وسلسلة نصية يتم تحويل الرقم إلى نص ثم دمجه مع السلسلة النصية.
+</p>
+
+<code>
+const result = 5 + "10";
+
+console.log(result);
+
+// "510"
+
+console.log(typeof result);
+
+// string
+</code>
+
+<p>
+أما عند استخدام الطرح أو الضرب أو القسمة، تحاول JavaScript تحويل النص إلى رقم.
+</p>
+
+<code>
+const subtractionResult =
+"10" - 5;
+
+console.log(
+subtractionResult
+);
+
+// 5
+</code>
+
+<code>
+const multiplicationResult =
+"10" * 2;
+
+console.log(
+multiplicationResult
+);
+
+// 20
+</code>
+
+<code>
+const divisionResult =
+"20" / 2;
+
+console.log(
+divisionResult
+);
+
+// 10
+</code>
+
+<h3>التعامل مع null</h3>
+
+<p>
+في العمليات الحسابية تتعامل JavaScript مع null على أنها صفر.
+</p>
+
+<code>
+const result =
+null + 5;
+
+console.log(result);
+
+// 5
+</code>
+
+<h3>التعامل مع undefined</h3>
+
+<p>
+عند استخدام undefined في العمليات الحسابية تكون النتيجة NaN.
+</p>
+
+<code>
+const result =
+undefined + 5;
+
+console.log(result);
+
+// NaN
+</code>
+
+</section>
+
+<section class="main-section" id="operators">
+
+<header>أولوية المشغلات والعوامل</header>
+
+<h3>أولوية المشغل</h3>
+
+<p>
+تحدد أسبقية المعاملات ترتيب تقييم العمليات في التعبير. تُقيّم المعاملات ذات الأسبقية الأعلى قبل تلك ذات الأسبقية الأقل.
+</p>
+
+<p>
+تُقيّم القيم داخل الأقواس أولًا، وتكون أسبقية الضرب والقسمة أعلى من أسبقية الجمع والطرح.
+</p>
+
+<code>
+const result = (2 + 3) * 4;
+
+console.log(result);
+
+// 20
+</code>
+
+<code>
+const result2 = 10 - 2 + 3;
+
+console.log(result2);
+
+// 11
+</code>
+
+<code>
+const result3 = 2 ** 3 ** 2;
+
+console.log(result3);
+
+// 512
+</code>
+
+<h3>عامل الزيادة ++</h3>
+
+<p>
+يُستخدم هذا العامل لزيادة القيمة بمقدار واحد.
+</p>
+
+<code>
+let x = 5;
+
+console.log(++x);
+
+console.log(x);
+</code>
+
+<code>
+let y = 5;
+
+console.log(y++);
+
+console.log(y);
+</code>
+
+<h3>عامل الإنقاص --</h3>
+
+<code>
+let num = 5;
+
+console.log(--num);
+
+console.log(num--);
+
+console.log(num);
+</code>
+
+<h3>عوامل التعيين المركبة</h3>
+
+<ul>
+<li>+=</li>
+<li>-=</li>
+<li>*=</li>
+<li>/=</li>
+<li>%=</li>
+<li>**=</li>
+</ul>
+
+<p>
+تُستخدم هذه العوامل لإجراء العملية الحسابية ثم إعادة تعيين النتيجة للمتغير.
+</p>
+
+</section>
+
+<section class="main-section" id="boolean-operators">
+
+<header>المنطق البولياني وعوامل المقارنة</header>
+
+<h3>القيم المنطقية Boolean</h3>
+
+<p>
+القيمة المنطقية لا يمكن أن تكون إلا true أو false.
+</p>
+
+<h3>عامل المساواة ==</h3>
+
+<code>
+console.log(5 == '5');
+
+// true
+</code>
+
+<h3>عامل المساواة الصارمة ===</h3>
+
+<code>
+console.log(5 === '5');
+
+// false
+</code>
+
+<h3>عامل عدم المساواة !=</h3>
+
+<p>
+يستخدم تحويل النوع قبل المقارنة.
+</p>
+
+<h3>عامل عدم المساواة الصارمة !==</h3>
+
+<p>
+لا يستخدم تحويل النوع ويتحقق من القيمة والنوع معًا.
+</p>
+
+<h3>عوامل المقارنة</h3>
+
+<ul>
+<li>></li>
+<li>>=</li>
+<li><</li>
+<li><=</li>
+</ul>
+
+<p>
+تُستخدم للمقارنة بين القيم العددية.
+</p>
+
+</section>
+
+<section class="main-section" id="unary-operators">
+
+<header>المشغلات الأحادية</header>
+
+<h3>عامل الجمع الأحادي +</h3>
+
+<code>
+const str = '42';
+
+const num = +str;
+
+console.log(num);
+
+console.log(typeof num);
+</code>
+
+<h3>عامل النفي الأحادي -</h3>
+
+<code>
+const num = 4;
+
+console.log(-num);
+</code>
+
+<h3>عامل NOT المنطقي !</h3>
+
+<p>
+يقوم بعكس القيمة المنطقية.
+</p>
+
+<code>
+console.log(!true);
+
+// false
+
+console.log(!false);
+
+// true
+</code>
+
+</section>
+
+<section class="main-section" id="logical-operators">
+
+<header>عوامل التشغيل المنطقية</header>
+
+<h3>عامل AND المنطقي &&</h3>
+
+<p>
+يتحقق هذا العامل مما إذا كان كلا المعاملين صحيحين.
+إذا كانت القيمة الأولى صحيحة فسيعيد القيمة الثانية.
+أما إذا كانت الأولى خاطئة فسيعيدها مباشرة.
+</p>
+
+<code>
+const result = true && "hello";
+
+console.log(result);
+
+// hello
+</code>
+
+<h3>عامل OR المنطقي ||</h3>
+
+<p>
+يتحقق مما إذا كان أحد المعاملات على الأقل صحيحًا.
+إذا كانت القيمة الأولى صحيحة فسيتم إرجاعها.
+أما إذا كانت خاطئة فسيتم إرجاع القيمة الثانية.
+</p>
+
+<code>
+console.log(true || false);
+
+// true
+</code>
+
+<code>
+console.log(false || "Hello");
+
+// Hello
+</code>
+
+<h3>عامل دمج القيم الفارغة ??</h3>
+
+<p>
+يعيد القيمة الثانية فقط إذا كانت القيمة الأولى null أو undefined.
+</p>
+
+<code>
+const userSettings = {
+ theme: null,
+ volume: 0,
+ notifications: false,
+};
+
+let theme =
+userSettings.theme ?? "light";
+
+console.log(theme);
+
+// light
+</code>
+
+</section>
+
+<section class="main-section" id="bitwise-operators">
+
+<header>عوامل التشغيل الثنائية Bitwise</header>
+
+<h3>عامل AND الثنائي &</h3>
+
+<p>
+يعيد 1 في كل موضع بت تكون فيه البتات المقابلة لكلا المعاملين تساوي 1.
+</p>
+
+<h3>عامل التعيين AND &=</h3>
+
+<p>
+ينفذ عملية AND الثنائية ثم يعيد تعيين النتيجة للمتغير.
+</p>
+
+<h3>عامل OR الثنائي |</h3>
+
+<p>
+يعيد 1 إذا كانت إحدى البتات أو كلتاهما تساوي 1.
+</p>
+
+<h3>عامل التعيين OR |=</h3>
+
+<p>
+ينفذ OR الثنائية ثم يعيد تعيين النتيجة.
+</p>
+
+<h3>عامل XOR الثنائي ^</h3>
+
+<p>
+يعيد 1 إذا كانت إحدى القيمتين فقط تساوي 1.
+</p>
+
+<h3>عامل النفي الثنائي ~</h3>
+
+<p>
+يقوم بعكس التمثيل الثنائي للرقم.
+</p>
+
+<h3>عامل الإزاحة لليسار <<</h3>
+
+<p>
+يقوم بإزاحة جميع البتات لليسار بعدد محدد من المواضع.
+</p>
+
+<h3>عامل الإزاحة لليمين >></h3>
+
+<p>
+يقوم بإزاحة جميع البتات لليمين.
+</p>
+
+</section>
+
+<section class="main-section" id="conditions">
+
+<header>الجمل الشرطية</header>
+
+<h3>Truthy و Falsy</h3>
+
+<p>
+Truthy هي أي قيمة يتم تقييمها على أنها true داخل الجمل الشرطية.
+</p>
+
+<p>
+Falsy هي أي قيمة يتم تقييمها على أنها false داخل الجمل الشرطية.
+</p>
+
+<h3>if / else if / else</h3>
+
+<code>
+const score = 87;
+
+if (score >= 90) {
+
+ console.log("You got an A");
+
+} else if (score >= 80) {
+
+ console.log("You got a B");
+
+} else if (score >= 70) {
+
+ console.log("You got a C");
+
+} else {
+
+ console.log(
+ "You failed! You need to study more!"
+ );
+
+}
+</code>
+
+<h3>المعامل الثلاثي Ternary Operator</h3>
+
+<p>
+يُستخدم كطريقة مختصرة لكتابة if و else.
+</p>
+
+<code>
+const temperature = 30;
+
+const weather =
+temperature > 25
+? "sunny"
+: "cool";
+
+console.log(
+`It's a ${weather} day!`
+);
+</code>
+
+</section>
+
+<section class="main-section" id="null-undefined">
+
+<header>المقارنات مع null و undefined</header>
+
+<h3>المقارنات مع undefined</h3>
+
+<code>
+console.log(undefined < 0);
+
+// false
+
+console.log(undefined >= 0);
+
+// false
+</code>
+
+<h3>المقارنات مع null</h3>
+
+<code>
+console.log(null < 0);
+
+// false
+
+console.log(null >= 0);
+
+// true
+</code>
+
+<h3>المساواة باستخدام ==</h3>
+
+<code>
+console.log(
+null == undefined
+);
+
+// true
+
+console.log(
+null == 0
+);
+
+// false
+
+console.log(
+undefined == NaN
+);
+
+// false
+</code>
+
+<h3>المساواة الصارمة ===</h3>
+
+<code>
+console.log(
+null === undefined
+);
+
+// false
+</code>
+
+</section>
+
+<section class="main-section" id="switch-statement">
+
+<header>جملة Switch</header>
+
+<p>
+تقوم switch بتقييم تعبير ومطابقة قيمته مع مجموعة من الحالات.
+عند العثور على تطابق يتم تنفيذ الكود المرتبط بهذه الحالة.
+</p>
+
+<code>
+const dayOfWeek = 3;
+
+switch (dayOfWeek) {
+
+ case 1:
+  console.log(
+  "It's Monday! Time to start the week strong."
+  );
+  break;
+
+ case 2:
+  console.log(
+  "It's Tuesday! Keep the momentum going."
+  );
+  break;
+
+ case 3:
+  console.log(
+  "It's Wednesday! We're halfway there."
+  );
+  break;
+
+ case 4:
+  console.log(
+  "It's Thursday! Almost the weekend."
+  );
+  break;
+
+ case 5:
+  console.log(
+  "It's Friday! The weekend is near."
+  );
+  break;
+
+ case 6:
+  console.log(
+  "It's Saturday! Enjoy your weekend."
+  );
+  break;
+
+ case 7:
+  console.log(
+  "It's Sunday! Rest and recharge."
+  );
+  break;
+
+ default:
+  console.log(
+  "Invalid day!"
+  );
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="functions">
+
+<header>وظائف JavaScript</header>
+
+<p>
+الدوال عبارة عن كتل برمجية قابلة لإعادة الاستخدام تؤدي مهمة محددة.
+</p>
+
+<p>
+يمكن تعريف الدوال باستخدام الكلمة المفتاحية function متبوعة باسم الدالة والمعلمات.
+</p>
+
+<code>
+function greet(name) {
+
+ return "Hello " + name;
+
+}
+
+console.log(
+greet("Osama")
+);
+</code>
+
+<h3>المعلمات Parameters</h3>
+
+<p>
+المعلمات هي المتغيرات المعرفة داخل الدالة.
+</p>
+
+<h3>الوسائط Arguments</h3>
+
+<p>
+الوسائط هي القيم التي يتم تمريرها للدالة عند استدعائها.
+</p>
+
+<h3>القيمة المرجعة Return</h3>
+
+<p>
+تُستخدم الكلمة المفتاحية return لإرجاع قيمة وإنهاء تنفيذ الدالة.
+</p>
+
+<code>
+function add(a, b) {
+
+ return a + b;
+
+}
+</code>
+
+<p>
+إذا لم يتم استخدام return فستعيد الدالة القيمة undefined بشكل افتراضي.
+</p>
+
+</section>
+
+<section class="main-section" id="arrow-functions">
+
+<header>دوال الأسهم Arrow Functions</header>
+
+<p>
+تُعد دوال الأسهم طريقة مختصرة لكتابة الدوال في JavaScript.
+</p>
+
+<code>
+const greet = (name) => {
+
+ return "Hello " + name;
+
+};
+</code>
+
+<p>
+عند وجود معامل واحد فقط يمكن حذف الأقواس.
+</p>
+
+<code>
+const greet = name => {
+
+ return "Hello " + name;
+
+};
+</code>
+
+<p>
+إذا كان جسم الدالة يحتوي على تعبير واحد فقط يمكن حذف return والأقواس المعقوفة.
+</p>
+
+<code>
+const square = num => num * num;
+</code>
+
+</section>
+
+<section class="main-section" id="scope">
+
+<header>نطاق المتغيرات Scope</header>
+
+<h3>النطاق العام Global Scope</h3>
+
+<p>
+المتغيرات المعرفة في النطاق العام يمكن الوصول إليها من أي مكان في البرنامج.
+</p>
+
+<code>
+let userName = "Osama";
+</code>
+
+<h3>النطاق المحلي Local Scope</h3>
+
+<p>
+المتغيرات المعرفة داخل الدالة لا يمكن الوصول إليها إلا من داخلها.
+</p>
+
+<code>
+function test() {
+
+ let message = "Hello";
+
+}
+</code>
+
+<h3>نطاق الكتلة Block Scope</h3>
+
+<p>
+الكتلة هي مجموعة من الأوامر بين الأقواس المعقوفة {}.
+</p>
+
+<p>
+يوفر let و const نطاقًا خاصًا بالكتلة.
+</p>
+
+<code>
+if (true) {
+
+ let age = 20;
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="arrays">
+
+<header>أساسيات المصفوفات</header>
+
+<p>
+المصفوفة هي مجموعة مرتبة من القيم يتم الوصول إليها بواسطة الفهرس.
+</p>
+
+<code>
+const developers =
+
+["Jessica", "Naomi", "Tom"];
+</code>
+
+<h3>الوصول إلى العناصر</h3>
+
+<code>
+const developers =
+
+["Jessica", "Naomi", "Tom"];
+
+console.log(
+developers[0]
+);
+
+console.log(
+developers[1]
+);
+
+console.log(
+developers[10]
+);
+</code>
+
+<h3>خاصية length</h3>
+
+<code>
+const developers =
+
+["Jessica", "Naomi", "Tom"];
+
+console.log(
+developers.length
+);
+</code>
+
+<h3>تحديث عناصر المصفوفة</h3>
+
+<code>
+const fruits =
+
+["apple", "banana", "cherry"];
+
+fruits[1] = "blueberry";
+
+console.log(fruits);
+</code>
+
+</section>
+
+<section class="main-section" id="two-dimensional-arrays">
+
+<header>المصفوفات ثنائية الأبعاد</header>
+
+<p>
+المصفوفة ثنائية الأبعاد هي مصفوفة تحتوي على مصفوفات أخرى.
+</p>
+
+<code>
+const chessboard = [
+
+['R','N','B','Q','K','B','N','R'],
+
+['P','P','P','P','P','P','P','P']
+
+];
+
+console.log(
+chessboard[0][3]
+);
+
+// Q
+</code>
+
+</section>
+
+<section class="main-section" id="destructuring">
+
+<header>تفكيك المصفوفات Destructuring</header>
+
+<code>
+const fruits =
+
+["apple","banana","orange"];
+
+const
+[first, second, third]
+= fruits;
+
+console.log(first);
+
+console.log(second);
+
+console.log(third);
+</code>
+
+<h3>Rest Syntax</h3>
+
+<code>
+const fruits =
+
+["apple",
+"banana",
+"orange",
+"mango",
+"kiwi"];
+
+const
+[first, second, ...rest]
+= fruits;
+
+console.log(rest);
+</code>
+
+</section>
+
+<section class="main-section" id="array-methods">
+
+<header>طرق المصفوفات الشائعة</header>
+
+<h3>push()</h3>
+
+<p>
+تُستخدم لإضافة عناصر إلى نهاية المصفوفة وتُرجع الطول الجديد.
+</p>
+
+<code>
+const desserts =
+
+["cake", "cookies", "pie"];
+
+desserts.push("ice cream");
+
+console.log(desserts);
+</code>
+
+<h3>pop()</h3>
+
+<p>
+تُستخدم لحذف آخر عنصر من المصفوفة وإرجاعه.
+</p>
+
+<code>
+const desserts =
+
+["cake", "cookies", "pie"];
+
+desserts.pop();
+
+console.log(desserts);
+</code>
+
+<h3>shift()</h3>
+
+<p>
+تُستخدم لحذف أول عنصر من المصفوفة وإرجاعه.
+</p>
+
+<code>
+const desserts =
+
+["cake", "cookies", "pie"];
+
+desserts.shift();
+
+console.log(desserts);
+</code>
+
+<h3>unshift()</h3>
+
+<p>
+تُستخدم لإضافة عناصر إلى بداية المصفوفة.
+</p>
+
+<code>
+const desserts =
+
+["cake", "cookies", "pie"];
+
+desserts.unshift("ice cream");
+
+console.log(desserts);
+</code>
+
+<h3>indexOf()</h3>
+
+<p>
+تُستخدم للبحث عن أول فهرس لعنصر داخل المصفوفة.
+</p>
+
+<code>
+const fruits =
+
+["apple",
+"banana",
+"orange",
+"banana"];
+
+const index =
+fruits.indexOf("banana");
+
+console.log(index);
+
+console.log(
+fruits.indexOf("not found")
+);
+</code>
+
+<h3>splice()</h3>
+
+<p>
+تُستخدم لإضافة أو حذف عناصر من أي مكان داخل المصفوفة.
+</p>
+
+<code>
+const colors =
+
+["red", "green", "blue"];
+
+colors.splice(
+1,
+0,
+"yellow",
+"purple"
+);
+
+console.log(colors);
+</code>
+
+<h3>includes()</h3>
+
+<p>
+تتحقق مما إذا كانت المصفوفة تحتوي على عنصر محدد.
+</p>
+
+<code>
+const programmingLanguages =
+
+["JavaScript",
+"Python",
+"C++"];
+
+console.log(
+programmingLanguages.includes(
+"Python"
+)
+);
+
+console.log(
+programmingLanguages.includes(
+"Perl"
+)
+);
+</code>
+
+<h3>concat()</h3>
+
+<p>
+تقوم بإنشاء مصفوفة جديدة عن طريق دمج مصفوفتين أو أكثر.
+</p>
+
+<code>
+const programmingLanguages =
+
+["JavaScript",
+"Python",
+"C++"];
+
+const newList =
+programmingLanguages.concat(
+"Perl"
+);
+
+console.log(newList);
+</code>
+
+<h3>slice()</h3>
+
+<p>
+تعيد نسخة سطحية من جزء من المصفوفة.
+</p>
+
+<code>
+const programmingLanguages =
+
+["JavaScript",
+"Python",
+"C++"];
+
+const newList =
+programmingLanguages.slice(1);
+
+console.log(newList);
+</code>
+
+<h3>Spread Syntax</h3>
+
+<p>
+تُستخدم لإنشاء نسخة سطحية من المصفوفة.
+</p>
+
+<code>
+const originalArray =
+[1, 2, 3];
+
+const shallowCopiedArray =
+[...originalArray];
+
+shallowCopiedArray.push(4);
+
+console.log(originalArray);
+
+console.log(shallowCopiedArray);
+</code>
+
+<h3>split()</h3>
+
+<p>
+تقسم السلسلة النصية إلى مصفوفة.
+</p>
+
+<code>
+const str = "hello";
+
+const charArray =
+str.split("");
+
+console.log(charArray);
+</code>
+
+<h3>reverse()</h3>
+
+<p>
+تعكس ترتيب عناصر المصفوفة.
+</p>
+
+<code>
+const desserts =
+
+["cake",
+"cookies",
+"pie"];
+
+console.log(
+desserts.reverse()
+);
+</code>
+
+<h3>join()</h3>
+
+<p>
+تدمج عناصر المصفوفة في سلسلة نصية واحدة.
+</p>
+
+<code>
+const reversedArray =
+
+["o",
+"l",
+"l",
+"e",
+"h"];
+
+const reversedString =
+reversedArray.join("");
+
+console.log(reversedString);
+
+// olleh
+</code>
+
+</section>
+
+<section class="main-section" id="objects">
+
+<header>الكائنات و JSON</header>
+
+<h3>أساسيات الكائنات</h3>
+
+<p>
+الكائن هو بنية بيانات تتكون من خصائص. تتكون الخاصية من مفتاح وقيمة.
+</p>
+
+<p>
+للوصول إلى البيانات من كائن، يمكنك استخدام إما صيغة النقطة أو صيغة الأقواس.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "New York"
+};
+
+console.log(person.name);
+
+console.log(person["name"]);
+</code>
+
+<h3>إضافة خصائص إلى كائن</h3>
+
+<p>
+لتعيين خاصية لكائن موجود، يمكنك استخدام إما تدوين النقطة أو تدوين الأقواس مع عامل التعيين.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30
+};
+
+person.job = "Engineer";
+
+person["hobby"] = "Knitting";
+
+console.log(person);
+</code>
+
+<h3>إزالة الخصائص من كائن</h3>
+
+<p>
+يُستخدم المعامل delete لإزالة خاصية من كائن.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30,
+  job: "Engineer"
+};
+
+delete person.job;
+
+console.log(person.job);
+</code>
+
+<h3>التحقق مما إذا كان للكائن خاصية</h3>
+
+<p>
+تُرجع الطريقة hasOwnProperty() قيمة منطقية تشير إلى ما إذا كان الكائن يحتوي على الخاصية المحددة كخاصية خاصة به.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30
+};
+
+console.log(
+person.hasOwnProperty("name")
+);
+
+console.log(
+person.hasOwnProperty("job")
+);
+</code>
+
+<h3>Object.hasOwn()</h3>
+
+<p>
+هذه هي الطريقة الحديثة والموصى بها للتحقق مما إذا كان للكائن خاصية خاصة به وليست موروثة.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30
+};
+
+console.log(
+Object.hasOwn(person, "name")
+);
+
+console.log(
+Object.hasOwn(person, "job")
+);
+</code>
+
+<p>
+استخدام Object.hasOwn() داخل if يمنع حدوث الأخطاء.
+</p>
+
+<code>
+const cart = {
+  item: "Headphones",
+  quantity: 1,
+  discount: 0
+};
+
+if (
+Object.hasOwn(cart, "discount")
+) {
+
+ console.log(
+ "Discount value:",
+ cart.discount
+ );
+
+}
+</code>
+
+<h3>عامل in</h3>
+
+<p>
+سيعيد هذا المعامل القيمة true إذا كانت الخاصية موجودة في الكائن.
+</p>
+
+<code>
+const person = {
+  name: "Bob",
+  age: 25
+};
+
+console.log(
+"name" in person
+);
+</code>
+
+<h3>الوصول إلى الخصائص من الكائنات المتداخلة</h3>
+
+<p>
+يتضمن الوصول إلى خصائص الكائنات المتداخلة استخدام رمز النقطة أو رمز الأقواس.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30,
+
+  contact: {
+    email: "alice@example.com",
+
+    phone: {
+      home: "123-456-7890",
+      work: "098-765-4321"
+    }
+  }
+};
+
+console.log(
+person.contact.phone.work
+);
+</code>
+
+<h3>أنواع البيانات الأولية وغير الأولية</h3>
+
+<p>
+تشمل الأنواع الأولية:
+Number, String, Boolean, Null, Undefined, Symbol.
+</p>
+
+<p>
+تشمل الأنواع غير الأولية:
+Objects, Arrays, Functions.
+</p>
+
+<h3>أساليب الكائنات</h3>
+
+<p>
+دوال الكائنات هي وظائف مرتبطة بكائن ما. تُعرَّف هذه الدوال بأنها خصائص للكائن.
+</p>
+
+<p>
+تشير الكلمة المفتاحية this داخل الدالة إلى الكائن نفسه.
+</p>
+
+<code>
+const person = {
+  name: "Bob",
+  age: 30,
+
+  sayHello: function() {
+
+    return
+    "Hello, my name is "
+    + this.name;
+
+  }
+};
+
+console.log(
+person.sayHello()
+);
+</code>
+
+<h3>مُنشئ الكائن</h3>
+
+<p>
+في JavaScript، الدالة البانية Constructor هي نوع خاص من الدوال يُستخدم لإنشاء الكائنات وتهيئتها.
+</p>
+
+<p>
+يتم استدعاؤها باستخدام الكلمة المفتاحية new.
+</p>
+
+<code>
+new Object();
+</code>
+
+<p>
+تُنشئ الدالة Object() كائنًا جديدًا فارغًا.
+</p>
+
+<h3>Optional Chaining</h3>
+
+<p>
+يتيح لك هذا المعامل الوصول بأمان إلى خصائص الكائن أو استدعاء الأساليب دون القلق بشأن ما إذا كانت موجودة أم لا.
+</p>
+
+<code>
+const user = {
+
+  name: "John",
+
+  profile: {
+
+    email:
+    "john@example.com",
+
+    address: {
+
+      street:
+      "123 Main St",
+
+      city:
+      "Somewhere"
+
+    }
+
+  }
+
+};
+
+console.log(
+user.profile?.address?.street
+);
+
+console.log(
+user.profile?.phone?.number
+);
+</code>
+
+<h3>تفكيك الكائنات</h3>
+
+<p>
+يسمح لك تفكيك الكائنات باستخراج القيم من الكائنات وتعيينها للمتغيرات بطريقة أكثر إيجازًا.
+</p>
+
+<code>
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "New York"
+};
+
+const {
+  name,
+  age
+} = person;
+
+console.log(name);
+
+console.log(age);
+</code>
+
+<h3>العمل مع JSON</h3>
+
+<p>
+JSON هو اختصار لـ JavaScript Object Notation.
+</p>
+
+<p>
+وهو تنسيق بيانات نصي خفيف الوزن يُستخدم عادةً لتبادل البيانات بين الخادم وتطبيق الويب.
+</p>
+
+<code>
+{
+  "name": "Alice",
+  "age": 30,
+  "isStudent": false,
+  "list of courses": [
+    "Mathematics",
+    "Physics",
+    "Computer Science"
+  ]
+}
+</code>
+
+<h3>JSON.stringify()</h3>
+
+<p>
+تُستخدم هذه الطريقة لتحويل كائن JavaScript إلى سلسلة JSON.
+</p>
+
+<code>
+const user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+const jsonString =
+JSON.stringify(user);
+
+console.log(jsonString);
+</code>
+
+<h3>JSON.parse()</h3>
+
+<p>
+تقوم هذه الطريقة بتحويل سلسلة JSON إلى كائن JavaScript.
+</p>
+
+<code>
+const jsonString =
+'{"name":"John","age":30,"isAdmin":true}';
+
+const userObject =
+JSON.parse(jsonString);
+
+console.log(userObject);
+</code>
+
+</section>
+
+<section class="main-section" id="loops">
+
+<header>الحلقات التكرارية</header>
+
+<h3>حلقة for</h3>
+
+<p>
+يُستخدم هذا النوع من الحلقات لتكرار جزء من التعليمات البرمجية عددًا محددًا من المرات.
+</p>
+
+<p>
+تنقسم الحلقة إلى ثلاثة أجزاء:
+التهيئة، والشرط، والزيادة أو النقصان.
+</p>
+
+<code>
+for (let i = 0; i < 5; i++) {
+
+  console.log(i);
+
+}
+</code>
+
+<h3>حلقة for...of</h3>
+
+<p>
+تُستخدم عند الحاجة إلى التكرار على القيم داخل كائن قابل للتكرار مثل المصفوفات والسلاسل النصية.
+</p>
+
+<code>
+const numbers = [
+  1,
+  2,
+  3,
+  4,
+  5
+];
+
+for (const num of numbers) {
+
+  console.log(num);
+
+}
+</code>
+
+<h3>حلقة for...in</h3>
+
+<p>
+تُستخدم للتكرار على خصائص الكائن.
+</p>
+
+<code>
+const fruit = {
+
+  name: "apple",
+
+  color: "red",
+
+  price: 0.99
+
+};
+
+for (const prop in fruit) {
+
+  console.log(
+    fruit[prop]
+  );
+
+}
+</code>
+
+<h3>حلقة while</h3>
+
+<p>
+تستمر هذه الحلقة في التنفيذ طالما أن الشرط يساوي true.
+</p>
+
+<code>
+let i = 5;
+
+while (i > 0) {
+
+  console.log(i);
+
+  i--;
+
+}
+</code>
+
+<h3>حلقة do...while</h3>
+
+<p>
+تنفذ الكود مرة واحدة على الأقل قبل التحقق من الشرط.
+</p>
+
+<code>
+let userInput;
+
+do {
+
+  userInput =
+  prompt(
+    "Please enter a number between 1 and 10"
+  );
+
+} while (
+
+  Number(userInput) < 1 ||
+
+  Number(userInput) > 10
+
+);
+
+alert(
+  "You entered a valid number!"
+);
+</code>
+
+<h3>عبارة break</h3>
+
+<p>
+تُستخدم للخروج من الحلقة قبل انتهائها.
+</p>
+
+<code>
+for (let i = 0; i < 10; i++) {
+
+  if (i === 5) {
+
+    break;
+
+  }
+
+  console.log(i);
+
+}
+</code>
+
+<h3>عبارة continue</h3>
+
+<p>
+تُستخدم لتجاوز التكرار الحالي والانتقال للتكرار التالي.
+</p>
+
+<code>
+for (let i = 0; i < 10; i++) {
+
+  if (i === 5) {
+
+    continue;
+
+  }
+
+  console.log(i);
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="best-practices">
+
+<header>أفضل الممارسات</header>
+
+<h3>نمط Camel Case</h3>
+
+<p>
+جرت العادة في JavaScript على استخدام نمط Camel Case لتسمية المتغيرات والدوال.
+</p>
+
+<p>
+في هذا النمط تكون الكلمة الأولى بأحرف صغيرة بينما تبدأ الكلمات التالية بحرف كبير.
+</p>
+
+<code>
+let isLoading = true;
+</code>
+
+<h3>تسمية المتغيرات المنطقية</h3>
+
+<p>
+بالنسبة للمتغيرات المنطقية من الشائع استخدام البادئات:
+is و has و can.
+</p>
+
+<code>
+let isLoading = true;
+
+let hasPermission = false;
+
+let canEdit = true;
+</code>
+
+<h3>تسمية الدوال</h3>
+
+<p>
+يجب أن يوضح اسم الدالة وظيفتها بشكل واضح.
+</p>
+
+<p>
+عند جلب البيانات يفضل استخدام get.
+</p>
+
+<p>
+عند تعيين البيانات يفضل استخدام set.
+</p>
+
+<p>
+لدوال التحقق يمكن استخدام is أو has أو can.
+</p>
+
+<p>
+لمعالجة الأحداث يمكن استخدام handle.
+</p>
+
+<code>
+function getUserData() {
+
+}
+
+function isValidEmail(email) {
+
+}
+
+function getProductDetails(productId) {
+
+}
+
+function setUserPreferences(preferences) {
+
+}
+
+function handleClick() {
+
+}
+</code>
+
+<h3>تسمية المتغيرات داخل الحلقات</h3>
+
+<p>
+من الشائع استخدام الأحرف i أو j أو k كمتغيرات للتكرار داخل الحلقات.
+</p>
+
+<code>
+for (
+ let i = 0;
+ i < array.length;
+ i++
+) {
+
+}
+</code>
+
+<h3>المصفوفات المتفرقة</h3>
+
+<p>
+يمكن أن تحتوي المصفوفة على خانات فارغة لا تحتوي على عناصر.
+</p>
+
+<code>
+const sparseArray =
+
+[1, , , 4];
+
+console.log(
+sparseArray.length
+);
+
+// 4
+</code>
+
+<h3>أدوات تحليل الشفرة</h3>
+
+<p>
+أدوات التحليل الثابت مثل ESLint تساعد على اكتشاف الأخطاء البرمجية وتحسين جودة الكود.
+</p>
+
+<h3>أدوات التنسيق</h3>
+
+<p>
+تقوم أدوات التنسيق مثل Prettier بتنسيق الكود تلقائيًا وفق قواعد موحدة.
+</p>
+
+</section>
+
+<section class="main-section" id="advanced-javascript">
+
+<header>مفاهيم JavaScript المتقدمة</header>
+
+<h3>إدارة الذاكرة</h3>
+
+<p>
+إدارة الذاكرة هي عملية التحكم في الذاكرة وتخصيصها عند الحاجة وتحريرها عند انتهاء الحاجة إليها.
+</p>
+
+<p>
+يستخدم JavaScript إدارة الذاكرة التلقائية.
+</p>
+
+<p>
+يقوم محرك JavaScript بتخصيص الذاكرة وتحريرها نيابة عن المبرمج.
+</p>
+
+<p>
+تُعرف هذه العملية باسم Garbage Collection.
+</p>
+
+<h3>Closures</h3>
+
+<p>
+الإغلاق Closure هو دالة يمكنها الوصول إلى المتغيرات الموجودة في نطاقها الخارجي حتى بعد انتهاء تنفيذ الدالة الخارجية.
+</p>
+
+<code>
+function outerFunction(x) {
+
+ let y = 10;
+
+ function innerFunction() {
+
+  console.log(x + y);
+
+ }
+
+ return innerFunction;
+
+}
+
+let closure =
+
+outerFunction(5);
+
+closure();
+
+// 15
+</code>
+
+<h3>الكلمة المفتاحية var</h3>
+
+<p>
+كانت var الطريقة الأصلية لتعريف المتغيرات قبل ES6.
+</p>
+
+<p>
+اليوم يُفضل استخدام let و const بدلاً منها.
+</p>
+
+<h3>إعادة تعريف المتغيرات باستخدام var</h3>
+
+<p>
+يسمح var بإعادة تعريف المتغيرات بينما let لا يسمح بذلك.
+</p>
+
+<code>
+var myNum = 5;
+
+var myNum = 10;
+
+console.log(myNum);
+
+// 10
+</code>
+
+<code>
+let num = 19;
+
+let num = 18;
+
+// SyntaxError
+</code>
+
+<h3>var والنطاق</h3>
+
+<p>
+المتغيرات المعرفة باستخدام var داخل الكتل تبقى متاحة خارج الكتلة.
+</p>
+
+<code>
+if (true) {
+
+ var num = 5;
+
+}
+
+console.log(num);
+
+// 5
+</code>
+
+<h3>Hoisting</h3>
+
+<p>
+الرفع هو سلوك JavaScript الذي يقوم بنقل التصريحات إلى أعلى النطاق قبل تنفيذ الكود.
+</p>
+
+<code>
+console.log(num);
+
+// undefined
+
+var num = 5;
+
+console.log(num);
+
+// 5
+</code>
+
+<h3>Hoisting للدوال</h3>
+
+<p>
+يمكن استدعاء الدوال قبل تعريفها عند استخدام Function Declaration.
+</p>
+
+<code>
+sayHello();
+
+function sayHello() {
+
+ console.log(
+ "Hello, World!"
+ );
+
+}
+</code>
+
+<h3>Temporal Dead Zone</h3>
+
+<p>
+المتغيرات المعرفة باستخدام let و const يتم رفعها ولكن لا يمكن الوصول إليها قبل تعريفها.
+</p>
+
+<code>
+console.log(num);
+
+// ReferenceError
+
+let num = 10;
+</code>
+
+<h3>الوحدات البرمجية Modules</h3>
+
+<p>
+الوحدة البرمجية هي وحدة مستقلة تحتوي على دوال أو متغيرات أو فئات ذات صلة.
+</p>
+
+<p>
+لإنشاء وحدة برمجية، اكتب كود JavaScript في ملف منفصل.
+</p>
+
+<h3>التصدير Export</h3>
+
+<p>
+أي متغيرات أو دوال أو فئات ترغب في إتاحتها لأجزاء أخرى من التطبيق يجب تصديرها باستخدام الكلمة المفتاحية export.
+</p>
+
+<p>
+يوجد نوعان من التصدير:
+Named Export و Default Export.
+</p>
+
+<code>
+// math.js
+
+export function add(
+ num1,
+ num2
+) {
+
+ return num1 + num2;
+
+}
+
+export default function subtract(
+ num1,
+ num2
+) {
+
+ return num1 - num2;
+
+}
+</code>
+
+<h3>الاستيراد Import</h3>
+
+<p>
+لاستخدام العناصر المصدرة في ملف آخر يجب استيرادها باستخدام الكلمة المفتاحية import.
+</p>
+
+<p>
+يمكن أن يكون الاستيراد:
+Named Import أو Default Import أو Namespace Import.
+</p>
+
+<code>
+// Named Import
+
+import { add }
+from "./math.js";
+</code>
+
+<code>
+// Default Import
+
+import subtractFunc
+from "./math.js";
+</code>
+
+<code>
+// Namespace Import
+
+import * as Math
+from "./math.js";
+</code>
+
+<h3>أمثلة على الاستيراد</h3>
+
+<code>
+console.log(
+add(5, 3)
+);
+
+// 8
+
+console.log(
+subtractFunc(5, 3)
+);
+
+// 2
+
+console.log(
+Math.add(5, 3)
+);
+
+// 8
+
+console.log(
+Math.subtract(5, 3)
+);
+
+// 2
+</code>
+
+</section>
+
+<section class="main-section" id="array-advanced-methods">
+
+<header>طرق المصفوفات المتقدمة</header>
+
+<h3>دوال Callback</h3>
+
+<p>
+دالة Callback هي دالة يتم تمريرها كوسيط إلى دالة أخرى ويتم تنفيذها بعد انتهاء الدالة الرئيسية.
+</p>
+
+<code>
+function greet(name) {
+
+ console.log(
+ "Hello " + name
+ );
+
+}
+
+function processUser(
+ callback
+) {
+
+ callback("Osama");
+
+}
+
+processUser(greet);
+</code>
+
+<h3>forEach()</h3>
+
+<p>
+تُستخدم هذه الطريقة للتكرار على كل عنصر في المصفوفة وتنفيذ عملية عليه.
+</p>
+
+<code>
+const numbers =
+[1, 2, 3, 4, 5];
+
+numbers.forEach(
+(number) => {
+
+ console.log(
+ number * 2
+ );
+
+}
+);
+</code>
+
+<h3>الدوال ذات الرتبة العليا</h3>
+
+<p>
+الدالة ذات الرتبة العليا هي دالة تستقبل دوال أخرى كوسائط أو تعيد دالة كنتيجة.
+</p>
+
+<code>
+function operateOnArray(
+ arr,
+ operation
+) {
+
+ const result = [];
+
+ for (
+  let i = 0;
+  i < arr.length;
+  i++
+ ) {
+
+  result.push(
+   operation(arr[i])
+  );
+
+ }
+
+ return result;
+
+}
+
+function double(x) {
+
+ return x * 2;
+
+}
+
+const numbers =
+[1,2,3,4,5];
+
+const doubledNumbers =
+operateOnArray(
+ numbers,
+ double
+);
+
+console.log(
+doubledNumbers
+);
+</code>
+
+<h3>map()</h3>
+
+<p>
+تُستخدم لإنشاء مصفوفة جديدة من خلال تطبيق دالة على كل عنصر.
+</p>
+
+<code>
+const numbers =
+[1,2,3,4,5];
+
+const doubled =
+numbers.map(
+(num) => num * 2
+);
+
+console.log(numbers);
+
+console.log(doubled);
+</code>
+
+<h3>filter()</h3>
+
+<p>
+تُستخدم لإنشاء مصفوفة جديدة تحتوي فقط على العناصر التي تحقق شرطًا معينًا.
+</p>
+
+<code>
+const numbers =
+[1,2,3,4,5,6,7,8,9,10];
+
+const evenNumbers =
+numbers.filter(
+(num) =>
+ num % 2 === 0
+);
+
+console.log(
+evenNumbers
+);
+</code>
+
+<h3>reduce()</h3>
+
+<p>
+تُستخدم لمعالجة المصفوفة وتحويلها إلى قيمة واحدة.
+</p>
+
+<code>
+const numbers =
+[1,2,3,4,5];
+
+const sum =
+numbers.reduce(
+
+(accumulator,
+ currentValue)
+
+=>
+
+accumulator +
+currentValue,
+
+0
+
+);
+
+console.log(sum);
+
+// 15
+</code>
+
+<h3>Method Chaining</h3>
+
+<p>
+تسلسل الدوال هو أسلوب برمجي يسمح باستدعاء عدة دوال على نفس الكائن في سطر واحد.
+</p>
+
+<p>
+يساعد ذلك على جعل الكود أكثر وضوحًا وإيجازًا.
+</p>
+
+<code>
+const result =
+
+"  Hello, World!  "
+
+.trim()
+
+.toLowerCase()
+
+.replace(
+ "world",
+ "JavaScript"
+);
+
+console.log(result);
+
+// hello, JavaScript!
+</code>
+
+<h3>sort()</h3>
+
+<p>
+تُستخدم هذه الطريقة لترتيب عناصر المصفوفة وإرجاع مرجع إلى المصفوفة المرتبة.
+</p>
+
+<code>
+const fruits =
+
+[
+ "Banana",
+ "Orange",
+ "Apple",
+ "Mango"
+];
+
+fruits.sort();
+
+console.log(fruits);
+</code>
+
+<p>
+عند ترتيب الأرقام يجب تمرير دالة مقارنة.
+</p>
+
+<code>
+const numbers =
+
+[
+ 414,
+ 200,
+ 5,
+ 10,
+ 3
+];
+
+numbers.sort(
+
+(a, b) =>
+
+a - b
+
+);
+
+console.log(numbers);
+
+// [3, 5, 10, 200, 414]
+</code>
+
+<p>
+المعاملان a و b هما العنصران المراد مقارنتهما.
+</p>
+
+<p>
+تعيد دالة المقارنة:
+قيمة سالبة إذا كان a قبل b،
+وقيمة موجبة إذا كان a بعد b،
+وصفرًا إذا كانا متساويين.
+</p>
+
+<h3>every()</h3>
+
+<p>
+تختبر هذه الطريقة ما إذا كانت جميع عناصر المصفوفة تجتاز اختبارًا معينًا.
+</p>
+
+<code>
+const numbers =
+
+[
+ 2,
+ 4,
+ 6,
+ 8,
+ 10
+];
+
+const hasAllEvenNumbers =
+
+numbers.every(
+
+(num) =>
+
+num % 2 === 0
+
+);
+
+console.log(
+hasAllEvenNumbers
+);
+
+// true
+</code>
+
+<h3>some()</h3>
+
+<p>
+تتحقق هذه الطريقة مما إذا كان عنصر واحد على الأقل يجتاز الاختبار.
+</p>
+
+<code>
+const numbers =
+
+[
+ 1,
+ 3,
+ 5,
+ 7,
+ 8,
+ 9
+];
+
+const hasSomeEvenNumbers =
+
+numbers.some(
+
+(num) =>
+
+num % 2 === 0
+
+);
+
+console.log(
+hasSomeEvenNumbers
+);
+
+// true
+</code>
+
+</section>
+
+<section class="main-section" id="dom-and-web-apis">
+
+<header>DOM و Web APIs</header>
+
+<h3>واجهة برمجة التطبيقات API</h3>
+
+<p>
+واجهة برمجة التطبيقات API هي مجموعة من القواعد والبروتوكولات التي تسمح لتطبيقات البرامج بالتواصل مع بعضها البعض وتبادل البيانات.
+</p>
+
+<h3>Web APIs</h3>
+
+<p>
+صُممت Web APIs خصيصًا لتطبيقات الويب.
+</p>
+
+<p>
+غالبًا ما تنقسم إلى نوعين:
+Browser APIs و Third Party APIs.
+</p>
+
+<h3>Browser APIs</h3>
+
+<p>
+توفر هذه الواجهات إمكانية الوصول إلى بيانات وإمكانيات المتصفح.
+</p>
+
+<p>
+يمكن لمطور الويب استخدام JavaScript للتعامل مع هذه البيانات.
+</p>
+
+<h3>Third Party APIs</h3>
+
+<p>
+هذه الواجهات ليست مدمجة داخل المتصفح بشكل افتراضي.
+</p>
+
+<p>
+يجب الحصول عليها من مزود الخدمة واستخدامها وفقًا للتوثيق الخاص بها.
+</p>
+
+<p>
+من الأمثلة الشهيرة:
+Google Maps API.
+</p>
+
+<h3>DOM</h3>
+
+<p>
+DOM اختصار لـ Document Object Model.
+</p>
+
+<p>
+وهو واجهة برمجة تطبيقات تسمح بالتفاعل مع مستندات HTML.
+</p>
+
+<p>
+يمكنك إضافة العناصر أو تعديلها أو حذفها باستخدام JavaScript.
+</p>
+
+<p>
+يمثل العنصر html جذر شجرة DOM.
+</p>
+
+<p>
+العقدة الأب هي العنصر الذي يحتوي على عناصر أخرى.
+</p>
+
+<p>
+العقدة الابن هي العنصر الموجود داخل عنصر آخر.
+</p>
+
+
+<h3>getElementById()</h3>
+
+<p>
+تُستخدم هذه الطريقة للحصول على عنصر HTML يملك معرف id محدد.
+</p>
+
+<p>
+يجب أن يكون id فريدًا داخل الصفحة.
+</p>
+
+<code>
+&lt;div id="container"&gt;&lt;/div&gt;
+</code>
+
+<code>
+const container =
+
+document.getElementById(
+"container"
+);
+
+console.log(container);
+</code>
+
+<h3>querySelector()</h3>
+
+<p>
+تُستخدم للحصول على أول عنصر يطابق محدد CSS معين.
+</p>
+
+<code>
+&lt;section class="section"&gt;
+&lt;/section&gt;
+</code>
+
+<code>
+const section =
+
+document.querySelector(
+".section"
+);
+
+console.log(section);
+</code>
+
+<h3>querySelectorAll()</h3>
+
+<p>
+تُستخدم للحصول على جميع العناصر التي تطابق محدد CSS معين.
+</p>
+
+<code>
+&lt;ul class="ingredients"&gt;
+
+ &lt;li&gt;Sugar&lt;/li&gt;
+
+ &lt;li&gt;Milk&lt;/li&gt;
+
+ &lt;li&gt;Eggs&lt;/li&gt;
+
+&lt;/ul&gt;
+</code>
+
+<code>
+const ingredients =
+
+document.querySelectorAll(
+"ul.ingredients li"
+);
+
+console.log(
+ingredients
+);
+</code>
+
+<h3>innerHTML</h3>
+
+<p>
+خاصية تُستخدم لقراءة أو تعديل محتوى HTML داخل العنصر.
+</p>
+
+<code>
+&lt;div id="container"&gt;
+
+&lt;/div&gt;
+</code>
+
+<code>
+const container =
+
+document.getElementById(
+"container"
+);
+
+container.innerHTML =
+
+"&lt;ul&gt;
+&lt;li&gt;Cheese&lt;/li&gt;
+&lt;li&gt;Tomato&lt;/li&gt;
+&lt;/ul&gt;";
+</code>
+
+<h3>createElement()</h3>
+
+<p>
+تُستخدم لإنشاء عنصر HTML جديد.
+</p>
+
+<code>
+const img =
+
+document.createElement(
+"img"
+);
+</code>
+
+<h3>innerText</h3>
+
+<p>
+يمثل النص الظاهر للمستخدم داخل العنصر.
+</p>
+
+<code>
+&lt;div id="container"&gt;
+
+ &lt;p&gt;
+ Hello, World!
+ &lt;/p&gt;
+
+ &lt;p&gt;
+ I'm learning JavaScript
+ &lt;/p&gt;
+
+&lt;/div&gt;
+</code>
+
+<code>
+const container =
+
+document.getElementById(
+"container"
+);
+
+console.log(
+container.innerText
+);
+</code>
+
+<h3>textContent</h3>
+
+<p>
+يعيد جميع المحتويات النصية الموجودة داخل العنصر والعناصر التابعة له.
+</p>
+
+<code>
+&lt;div id="container"&gt;
+
+ &lt;p&gt;
+ Hello, World!
+ &lt;/p&gt;
+
+ &lt;p&gt;
+ I'm learning JavaScript
+ &lt;/p&gt;
+
+&lt;/div&gt;
+</code>
+
+<code>
+const container =
+
+document.getElementById(
+"container"
+);
+
+console.log(
+container.textContent
+);
+</code>
+
+<h3>appendChild()</h3>
+
+<p>
+تُستخدم هذه الطريقة لإضافة عنصر إلى نهاية قائمة الأبناء الخاصة بعنصر أب.
+</p>
+
+<code>
+const dessertsList =
+
+document.getElementById(
+"desserts"
+);
+
+const listItem =
+
+document.createElement(
+"li"
+);
+
+listItem.textContent =
+"Cookies";
+
+dessertsList.appendChild(
+listItem
+);
+</code>
+
+<h3>removeChild()</h3>
+
+<p>
+تُستخدم هذه الطريقة لإزالة عنصر من DOM.
+</p>
+
+<code>
+const sectionEl =
+
+document.getElementById(
+"example-section"
+);
+
+const lastParagraph =
+
+document.querySelector(
+"#example-section p:last-of-type"
+);
+
+sectionEl.removeChild(
+lastParagraph
+);
+</code>
+
+<h3>setAttribute()</h3>
+
+<p>
+تُستخدم لتعيين أو تحديث خاصية لعنصر HTML.
+</p>
+
+<code>
+const para =
+
+document.getElementById(
+"para"
+);
+
+para.setAttribute(
+"class",
+"my-class"
+);
+</code>
+
+<h3>كائن الحدث Event Object</h3>
+
+<p>
+كائن الحدث هو حمولة بيانات يتم إنشاؤها عند تفاعل المستخدم مع الصفحة.
+</p>
+
+<p>
+جميع كائنات الأحداث تحتوي على الخاصية type التي توضح نوع الحدث.
+</p>
+
+<h3>addEventListener()</h3>
+
+<p>
+تُستخدم هذه الطريقة للاستماع إلى الأحداث المختلفة.
+</p>
+
+<code>
+const btn =
+
+document.getElementById(
+"btn"
+);
+
+btn.addEventListener(
+"click",
+
+() => alert(
+"You clicked the button"
+)
+
+);
+</code>
+
+<h3>removeEventListener()</h3>
+
+<p>
+تُستخدم لإزالة مستمع حدث تمت إضافته مسبقًا.
+</p>
+
+<code>
+btn.removeEventListener(
+"click",
+toggleBgColor
+);
+</code>
+
+<h3>Inline Event Handlers</h3>
+
+<p>
+هي سمات HTML تحتوي على كود JavaScript يتم تنفيذه عند وقوع حدث.
+</p>
+
+<p>
+لا تعتبر من أفضل الممارسات في JavaScript الحديثة.
+</p>
+
+<code>
+&lt;button
+onclick="alert('Hello World!')"&gt;
+
+Show alert
+
+&lt;/button&gt;
+</code>
+
+<h3>DOMContentLoaded</h3>
+
+<p>
+يتم إطلاق هذا الحدث عند تحميل وتحليل جميع عناصر HTML.
+</p>
+
+<p>
+لا ينتظر تحميل الصور أو ملفات CSS الخارجية.
+</p>
+
+<code>
+document.addEventListener(
+
+"DOMContentLoaded",
+
+() => {
+
+ console.log(
+ "DOM Ready"
+ );
+
+}
+
+);
+</code>
+
+<h3>Element.style</h3>
+
+<p>
+تمثل هذه الخاصية النمط المضمن للعنصر.
+</p>
+
+<p>
+يمكن استخدامها لقراءة أو تعديل الأنماط مباشرة.
+</p>
+
+<code>
+const paraEl =
+
+document.getElementById(
+"para"
+);
+
+paraEl.style.color =
+"red";
+</code>
+
+<h3>Element.classList</h3>
+
+<p>
+تُستخدم لإضافة أو إزالة أو تبديل الفئات Classes على العناصر.
+</p>
+
+<h4>إضافة Class</h4>
+
+<code>
+const paraEl =
+
+document.getElementById(
+"para"
+);
+
+paraEl.classList.add(
+"highlight"
+);
+</code>
+
+<h4>إزالة Class</h4>
+
+<code>
+paraEl.classList.remove(
+"blue-background"
+);
+</code>
+
+<h4>تبديل Class</h4>
+
+<code>
+const menu =
+
+document.getElementById(
+"menu"
+);
+
+menu.classList.toggle(
+"show"
+);
+</code>
+
+
+
+<h3>clearInterval()</h3>
+
+<p>
+تُستخدم لإيقاف setInterval.
+</p>
+
+<code>
+const intervalID =
+
+setInterval(() => {
+
+ console.log(
+ "Running..."
+ );
+
+}, 1000);
+
+setTimeout(() => {
+
+ clearInterval(
+  intervalID
+ );
+
+}, 5000);
+</code>
+
+<h3>requestAnimationFrame()</h3>
+
+<p>
+تسمح بجدولة الإطار التالي من الرسوم المتحركة قبل إعادة رسم الشاشة.
+</p>
+
+<code>
+function animate() {
+
+ update();
+
+ requestAnimationFrame(
+  animate
+ );
+
+}
+</code>
+
+<h3>Web Animations API</h3>
+
+<p>
+توفر واجهة Web Animations API إمكانية إنشاء الرسوم المتحركة والتحكم بها باستخدام JavaScript.
+</p>
+
+<code>
+const square =
+
+document.querySelector(
+"#square"
+);
+
+const animation =
+
+square.animate(
+
+[
+ {
+  transform:
+  "translateX(0px)"
+ },
+
+ {
+  transform:
+  "translateX(100px)"
+ }
+],
+
+{
+ duration: 2000,
+
+ iterations: Infinity,
+
+ direction:
+ "alternate",
+
+ easing:
+ "ease-in-out"
+}
+
+);
+</code>
+
+<h3>Canvas API</h3>
+
+<p>
+توفر Canvas API إمكانيات رسم ومعالجة الرسومات باستخدام JavaScript.
+</p>
+
+<code>
+const canvas =
+
+document.getElementById(
+"my-canvas"
+);
+
+const ctx =
+
+canvas.getContext(
+"2d"
+);
+
+ctx.fillStyle =
+"crimson";
+
+ctx.fillRect(
+1,
+1,
+150,
+100
+);
+</code>
+
+<h3>Dialogs</h3>
+
+<p>
+تسمح الحوارات Dialogs بعرض رسائل أو إجراءات مهمة للمستخدم.
+</p>
+
+<h4>showModal()</h4>
+
+<p>
+تُستخدم لفتح نافذة حوار منبثقة.
+</p>
+
+<code>
+dialog.showModal();
+</code>
+
+<h4>close()</h4>
+
+<p>
+تُستخدم لإغلاق نافذة الحوار.
+</p>
+
+<code>
+dialog.close();
+</code>
+
+<h3>Change Event</h3>
+
+<p>
+يتم تشغيل حدث change عند تغيير قيمة عناصر الإدخال.
+</p>
+
+<code>
+selectEl.addEventListener(
+
+"change",
+
+(e) => {
+
+ result.textContent =
+
+ `You enjoy programming in
+ ${e.target.value}`;
+
+}
+
+);
+</code>
+
+<h3>Event Bubbling</h3>
+
+<p>
+يشير انتشار الأحداث إلى انتقال الحدث من العنصر الهدف إلى العناصر الأب الأعلى منه.
+</p>
+
+<h3>Event Delegation</h3>
+
+<p>
+تعني الاستماع للأحداث على العنصر الأب بدلاً من إضافة مستمع لكل عنصر ابن.
+</p>
+
+<p>
+تعتمد هذه التقنية على Event Bubbling.
+</p>
+
+</section>
+
+<section class="main-section" id="accessibility">
+
+<header>إمكانية الوصول (Accessibility)</header>
+
+<p>
+إمكانية الوصول تساعد جميع المستخدمين، بما في ذلك مستخدمي قارئات الشاشة والتقنيات المساعدة، على استخدام المواقع بسهولة.
+</p>
+
+<h3>سمات ARIA الشائعة</h3>
+
+<p>
+السمة aria-expanded تُستخدم لنقل حالة ميزة التبديل أو الكشف إلى مستخدمي قارئ الشاشة.
+</p>
+
+<p>
+السمة aria-haspopup تُستخدم للإشارة إلى أن العنصر سيُظهر نافذة منبثقة عند التفاعل معه.
+</p>
+
+<p>
+السمة aria-checked تُستخدم لتوضيح ما إذا كان العنصر محددًا أم لا.
+</p>
+
+<p>
+السمة aria-disabled تُستخدم للإشارة إلى أن العنصر معطل لمستخدمي التقنيات المساعدة.
+</p>
+
+<p>
+السمة aria-selected تُستخدم للإشارة إلى أن عنصرًا معينًا محدد.
+</p>
+
+<p>
+السمة aria-controls تُستخدم لربط عنصر بعنصر آخر يتحكم فيه.
+</p>
+
+<p>
+الخاصية hidden تُستخدم لإخفاء العناصر عن جميع المستخدمين والتقنيات المساعدة.
+</p>
+
+<h3>المناطق الحية aria-live</h3>
+
+<p>
+السمة aria-live تجعل جزءًا من الصفحة منطقة حية بحيث يتم إعلام مستخدمي قارئات الشاشة بالتحديثات.
+</p>
+
+<p>
+القيمة polite تعني أن التحديث غير عاجل ويمكن لقارئ الشاشة الانتظار قبل قراءته.
+</p>
+
+<code>
+&lt;div aria-live="polite" id="status"&gt;&lt;/div&gt;
+
+&lt;button id="updateStatus"&gt;Update Status&lt;/button&gt;
+</code>
+
+<code>
+const statusEl = document.getElementById("status");
+const btn = document.getElementById("updateStatus");
+
+btn.addEventListener("click", () =&gt; {
+  statusEl.textContent =
+  "Your file has been successfully uploaded.";
+});
+</code>
+
+<h3>الخاصية contenteditable</h3>
+
+<p>
+تحول العنصر إلى محرر مباشر يمكن للمستخدم الكتابة بداخله.
+</p>
+
+<code>
+&lt;div
+contenteditable="true"
+aria-label="Note editor"
+id="editor"&gt;
+Editable content goes here
+&lt;/div&gt;
+</code>
+
+<code>
+const editor = document.getElementById("editor");
+const status = document.getElementById("status");
+
+editor.addEventListener("input", () =&gt; {
+  status.textContent = "Content updated";
+});
+</code>
+
+<h3>حدث focus</h3>
+
+<p>
+يتم تشغيله عندما يحصل العنصر على التركيز.
+</p>
+
+<code>
+const input = document.getElementById("emailInput");
+
+input.addEventListener("focus", () =&gt; {
+  status.textContent = "Input received focus";
+});
+</code>
+
+<h3>حدث blur</h3>
+
+<p>
+يتم تشغيله عندما يفقد العنصر التركيز.
+</p>
+
+<code>
+const input = document.getElementById("nameInput");
+
+input.addEventListener("blur", () =&gt; {
+  status.textContent = "Input lost focus";
+});
+</code>
+
+</section>
+
+<section class="main-section" id="errors-debugging">
+
+<header>الأخطاء ومعالجة الاستثناءات</header>
+
+<p>
+أثناء كتابة برامج JavaScript قد تواجه أنواعًا مختلفة من الأخطاء. فهم هذه الأخطاء يساعدك على اكتشاف المشكلات وإصلاحها بسرعة.
+</p>
+
+<h3>Syntax Error</h3>
+
+<p>
+خطأ بناء الجملة يحدث عند كتابة الكود بشكل غير صحيح مثل نسيان فاصلة أو قوس.
+</p>
+
+<code>
+const arr = ["Beau", "Quincy" "Tom"];
+</code>
+
+<h3>Reference Error</h3>
+
+<p>
+يحدث عند محاولة استخدام متغير غير معرف أو الوصول إلى متغير قبل تعريفه.
+</p>
+
+<code>
+console.log(num);
+
+const num = 50;
+</code>
+
+<h3>Type Error</h3>
+
+<p>
+يحدث عند محاولة تنفيذ عملية غير مناسبة على نوع البيانات المستخدم.
+</p>
+
+<code>
+const developerObj = {
+  name: "Jessica",
+  country: "USA",
+  isEmployed: true
+};
+
+developerObj.map();
+</code>
+
+<h3>Range Error</h3>
+
+<p>
+يحدث عندما تكون القيمة خارج النطاق المسموح به في JavaScript.
+</p>
+
+<code>
+const arr = [];
+
+arr.length = -1;
+</code>
+
+<h3>العبارة throw</h3>
+
+<p>
+تستخدم throw لإنشاء استثناءات مخصصة وإيقاف التنفيذ عند وجود مشكلة.
+</p>
+
+<code>
+function validateNumber(input) {
+
+  if (typeof input !== "number") {
+
+    throw new TypeError(
+      "Expected a number, but received " +
+      typeof input
+    );
+
+  }
+
+  return input * 2;
+}
+</code>
+
+<h3>try / catch / finally</h3>
+
+<p>
+تستخدم try لتجربة تنفيذ كود قد ينتج عنه خطأ.
+</p>
+
+<p>
+تستخدم catch لالتقاط الخطأ والتعامل معه.
+</p>
+
+<p>
+تستخدم finally لتنفيذ كود دائمًا سواء حدث خطأ أم لا.
+</p>
+
+<code>
+function processInput(input) {
+
+  if (typeof input !== "string") {
+
+    throw new TypeError(
+      "Input must be a string."
+    );
+
+  }
+
+  return input.toUpperCase();
+}
+
+try {
+
+  console.log(
+    "Starting to process input..."
+  );
+
+  const result1 =
+    processInput("hello");
+
+  console.log(
+    "Processed result:",
+    result1
+  );
+
+  const result2 =
+    processInput(9);
+
+  console.log(
+    "Processed result:",
+    result2
+  );
+
+} catch (error) {
+
+  console.error(
+    "Error occurred:",
+    error.message
+  );
+
+}
+</code>
+
+<h3>تقنيات تصحيح الأخطاء</h3>
+
+<p>
+يمكنك استخدام أدوات التصحيح لفهم ما يحدث داخل البرنامج أثناء التشغيل.
+</p>
+
+<h3>debugger</h3>
+
+<p>
+توقف تنفيذ البرنامج مؤقتًا عند نقطة محددة.
+</p>
+
+<code>
+let firstNumber = 5;
+
+let secondNumber = 10;
+
+debugger;
+
+let sum =
+firstNumber + secondNumber;
+
+console.log(sum);
+</code>
+
+<h3>Breakpoints</h3>
+
+<p>
+تسمح لك بإيقاف تنفيذ البرنامج عند سطر معين لفحص القيم والمتغيرات.
+</p>
+
+<h3>Watch Expressions</h3>
+
+<p>
+تسمح بمراقبة قيم المتغيرات أثناء التنفيذ.
+</p>
+
+<h3>Profiling</h3>
+
+<p>
+يساعد في اكتشاف مشاكل الأداء واستهلاك الموارد.
+</p>
+
+</section>
+
+<section class="main-section" id="bom">
+
+<header>BOM (نموذج كائن المتصفح)</header>
+
+<p>BOM يوفّر واجهات للوصول إلى خصائص المتصفح والنوافذ والوظائف المرتبطة بالبيئة الخارجية للصفحة.</p>
+
+<h3 >navigator</h3>
+
+<p>
+توفر هذه الواجهة معلومات عن بيئة المتصفح مثل: User Agent، المنصة، وإصدار المتصفح.
+</p>
+
+<code>
+console.log(navigator.userAgent);
+</code>
+
+<h3 >window</h3>
+
+<p>
+تمثل هذه الواجهة نافذة المتصفح التي تحتوي على مستند DOM. توفر خصائص وطرق للتفاعل مع نافذة المتصفح.
+</p>
+
+<code>
+console.log(window);
+</code>
+
+<h3 >location</h3>
+
+<p>
+كائن `location` يحتوي على معلومات عنوان URL الحالي ويمكن استخدامه للتنقّل بين الصفحات أو قراءة أجزاء الـ URL.
+</p>
+
+<code>
+console.log(location.href);
+// location.assign('https://example.com');
+</code>
+
+<h3 >history</h3>
+
+<p>
+يوفر كائن `history` إمكانيات التنقل في سجل المتصفح مثل الذهاب إلى الخلف أو الأمام.
+</p>
+
+<code>
+// العودة صفحة واحدة في التاريخ
+history.back();
+</code>
+
+<h3>screen</h3>
+
+<p>
+كائن `screen` يوفر معلومات عن شاشة المستخدم مثل الأبعاد ودقة الشاشة.
+</p>
+
+<code>
+console.log(screen.width, screen.height);
+</code>
+
+<h3>frames</h3>
+
+<p>
+يُمثل `frames` مجموعات النوافذ الفرعية (iframes) في الصفحة ويمكن الوصول لكل إطار بالاندكس.
+</p>
+
+<code>
+console.log(frames.length);
+</code>
+
+<h3>setTimeout()</h3>
+
+<p>
+تسمح هذه الطريقة بتأخير تنفيذ كود لفترة زمنية محددة.
+</p>
+
+<code>
+setTimeout(() => {
+  console.log("This runs after 3 seconds");
+}, 3000);
+</code>
+
+<h3>setInterval()</h3>
+
+<p>
+تقوم هذه الطريقة بتنفيذ الكود بشكل متكرر على فترات زمنية ثابتة.
+</p>
+
+<code>
+setInterval(() => {
+  console.log("This runs every 2 seconds");
+}, 2000);
+</code>
+
+<h3 >console.dir()</h3>
+
+<p>
+تعرض خصائص الكائن بشكل هرمي يمكن استكشافه.
+</p>
+
+<code>
+console.dir(document);
+</code>
+
+<h3>console.table()</h3>
+
+<p>
+تعرض البيانات في شكل جدول داخل وحدة التحكم.
+</p>
+
+<code>
+const users = [
+  {name: "Ahmed", age: 20},
+  {name: "Ali", age: 25}
+];
+
+console.table(users);
+</code>
+
+<h3 id="bom-localstorage">localStorage</h3>
+
+<p>
+تُستخدم لتخزين البيانات بشكل دائم داخل المتصفح حتى بعد إغلاقه.
+</p>
+
+<h4>setItem()</h4>
+
+<code>
+localStorage.setItem('username', 'Jessica');
+</code>
+
+<h4>getItem()</h4>
+
+<code>
+let username = localStorage.getItem('username');
+console.log(username);
+</code>
+
+<h4>removeItem()</h4>
+
+<code>
+localStorage.removeItem('username');
+</code>
+
+<h4>clear()</h4>
+
+<code>
+localStorage.clear();
+</code>
+
+<h4>تحذير أمني</h4>
+
+<p>
+لا تخزن كلمات المرور أو البيانات الحساسة في `localStorage` لأن المحتوى غير مشفر ويمكن الوصول إليه من جافاسكربت والامتدادات؛ استخدم آليات أكثر أمانًا مثل جلسات الخادم أو تخزين مؤمن.
+</p>
+
+<h3 id="bom-sessionstorage">sessionStorage</h3>
+
+<p>
+تخزن البيانات للجلسة الحالية فقط ويتم حذفها عند إغلاق التبويب أو المتصفح.
+</p>
+
+<h4>setItem()</h4>
+
+<code>
+sessionStorage.setItem('cart', '3 items');
+</code>
+
+<h4>getItem()</h4>
+
+<code>
+let cart = sessionStorage.getItem('cart');
+console.log(cart);
+</code>
+
+<h4>removeItem()</h4>
+
+<code>
+sessionStorage.removeItem('cart');
+</code>
+
+<h4>clear()</h4>
+
+<code>
+sessionStorage.clear();
+</code>
+
+</section>
+
+<section class="main-section" id="regex">
+
+<header>التعبيرات النمطية (Regular Expressions)</header>
+
+<p>
+تُستخدم التعبيرات النمطية Regex لإنشاء أنماط يمكن استخدامها للبحث داخل النصوص والتحقق من صحة البيانات واستخراج المعلومات.
+</p>
+
+<h3>إنشاء تعبير نمطي</h3>
+
+<code>
+const regex = /freeCodeCamp/;
+</code>
+
+<h3>الطريقة test()</h3>
+
+<p>
+تتحقق مما إذا كانت السلسلة النصية تطابق التعبير النمطي وتعيد قيمة منطقية.
+</p>
+
+<code>
+const regex = /freeCodeCamp/;
+
+const test = regex.test("e");
+
+console.log(test);
+
+// false
+</code>
+
+<h3>الطريقة match()</h3>
+
+<p>
+تُرجع مصفوفة تحتوي على نتائج المطابقة.
+</p>
+
+<code>
+const regex = /freeCodeCamp/;
+
+const match =
+"freeCodeCamp".match(regex);
+
+console.log(match);
+</code>
+
+<h3>الطريقة replace()</h3>
+
+<p>
+تستبدل النص المطابق بنص آخر.
+</p>
+
+<code>
+const regex = /Jessica/;
+
+const str =
+"Jessica is rly kewl";
+
+const replaced =
+str.replace(
+regex,
+"freeCodeCamp"
+);
+
+console.log(replaced);
+
+// freeCodeCamp is rly kewl
+</code>
+
+<h3>الطريقة replaceAll()</h3>
+
+<p>
+تستبدل جميع مرات ظهور النص.
+</p>
+
+<code>
+const text =
+"I hate JavaScript! I hate programming!";
+
+const newText =
+text.replaceAll(
+"hate",
+"love"
+);
+
+console.log(newText);
+
+// I love JavaScript!
+// I love programming!
+</code>
+
+<h3>الطريقة matchAll()</h3>
+
+<p>
+تُرجع جميع التطابقات مع إمكانية التكرار عليها.
+</p>
+
+<code>
+const str =
+"JavaScript, Python, JavaScript, Swift, JavaScript";
+
+const regex =
+/JavaScript/g;
+
+const iterator =
+str.matchAll(regex);
+
+for (let match of iterator) {
+
+ console.log(match[0]);
+
+}
+</code>
+
+<h3>علامات Regex</h3>
+
+<h4>العلم i</h4>
+
+<p>
+يجعل المطابقة غير حساسة لحالة الأحرف.
+</p>
+
+<code>
+const regex =
+/freeCodeCamp/i;
+
+console.log(
+regex.test("FREECODECAMP")
+);
+
+// true
+</code>
+
+<h4>العلم g</h4>
+
+<p>
+يسمح بالبحث عن جميع التطابقات.
+</p>
+
+<code>
+const regex =
+/freeCodeCamp/gi;
+</code>
+
+<h4>المثبتات ^ و $</h4>
+
+<p>
+^ لمطابقة بداية السلسلة و $ لمطابقة نهايتها.
+</p>
+
+<code>
+const start =
+/^freeCodeCamp/i;
+
+const end =
+/freeCodeCamp$/i;
+</code>
+
+<h4>العلم m</h4>
+
+<p>
+يُستخدم للتعامل مع النصوص متعددة الأسطر.
+</p>
+
+<code>
+const start =
+/^freecodecamp/im;
+
+const end =
+/freecodecamp$/im;
+</code>
+
+<h4>العلم d</h4>
+
+<p>
+يعرض معلومات إضافية عن أماكن التطابق.
+</p>
+
+<code>
+const regex =
+/freecodecamp/di;
+</code>
+
+<h4>العلم u</h4>
+
+<p>
+يضيف دعماً متقدماً لأحرف Unicode.
+</p>
+
+<code>
+const regex =
+/\p{Extended_Pictographic}/u;
+</code>
+
+<h4>العلم y</h4>
+
+<p>
+المعدل اللاصق Sticky Modifier.
+</p>
+
+<code>
+const regex =
+/hello/y;
+</code>
+
+<h4>العلم s</h4>
+
+<p>
+يجعل النقطة . تطابق أسطرًا جديدة.
+</p>
+
+<code>
+const regex =
+/a.b/s;
+</code>
+
+</section>
+
+<section class="main-section" id="regex-advanced">
+
+<header>فئات الأحرف والتعبيرات المتقدمة</header>
+
+<h3>فئات الأحرف Character Classes</h3>
+
+<p>
+فئات الأحرف هي صيغة خاصة تستخدم لمطابقة مجموعات من الأحرف.
+</p>
+
+<h4>الحرف البديل .</h4>
+
+<p>
+يطابق أي حرف واحد باستثناء فواصل الأسطر.
+</p>
+
+<code>
+const regex = /a./;
+</code>
+
+<h4>\d</h4>
+
+<p>
+يطابق أي رقم من 0 إلى 9.
+</p>
+
+<code>
+const regex = /\d/;
+</code>
+
+<h4>\w</h4>
+
+<p>
+يطابق الأحرف الإنجليزية والأرقام والشرطة السفلية.
+</p>
+
+<code>
+const regex = /\w/;
+</code>
+
+<h4>\s</h4>
+
+<p>
+يطابق المسافات البيضاء والأسطر الجديدة وعلامات التبويب.
+</p>
+
+<code>
+const regex = /\s/;
+</code>
+
+<h4>نفي فئات الأحرف</h4>
+
+<p>
+يمكن استخدام الحرف الكبير لنفي فئة الأحرف.
+</p>
+
+<code>
+const regex = /\D/;
+</code>
+
+<p>
+يطابق أي حرف ليس رقمًا.
+</p>
+
+<h4>فئات الأحرف المخصصة</h4>
+
+<code>
+const regex = /[abcdf]/;
+</code>
+
+<p>
+يطابق أي حرف موجود داخل الأقواس.
+</p>
+
+<h3>تأكيدات النظر للأمام والخلف</h3>
+
+<h4>Positive Lookahead</h4>
+
+<p>
+يطابق النمط إذا كان متبوعًا بنمط آخر.
+</p>
+
+<code>
+const regex = /free(?=code)/i;
+</code>
+
+<h4>Negative Lookahead</h4>
+
+<p>
+يتحقق من أن النمط التالي غير موجود.
+</p>
+
+<code>
+const regex = /free(?!code)/i;
+</code>
+
+<h4>Positive Lookbehind</h4>
+
+<p>
+يطابق النمط إذا كان مسبوقًا بنمط محدد.
+</p>
+
+<code>
+const regex = /(?<=free)code/i;
+</code>
+
+<h4>Negative Lookbehind</h4>
+
+<p>
+يتحقق من عدم وجود نمط معين قبل النص.
+</p>
+
+<code>
+const regex = /(?<!free)code/i;
+</code>
+
+<h3>Quantifiers</h3>
+
+<p>
+تستخدم لتحديد عدد مرات تكرار النمط.
+</p>
+
+<h4>*</h4>
+
+<p>
+يطابق صفر أو أكثر من التكرارات.
+</p>
+
+<code>
+const regex = /ab*/;
+</code>
+
+<h4>+</h4>
+
+<p>
+يطابق مرة واحدة أو أكثر.
+</p>
+
+<code>
+const regex = /ab+/;
+</code>
+
+<h4>?</h4>
+
+<p>
+يطابق صفر أو مرة واحدة.
+</p>
+
+<code>
+const regex = /ab?/;
+</code>
+
+<h4>{n}</h4>
+
+<p>
+يطابق عددًا محددًا من التكرارات.
+</p>
+
+<code>
+const regex = /^\d{4}$/;
+</code>
+
+<h4>{n,}</h4>
+
+<p>
+يطابق n أو أكثر.
+</p>
+
+<code>
+const regex = /\d{3,}/;
+</code>
+
+<h4>{n,m}</h4>
+
+<p>
+يطابق من n إلى m تكرارات.
+</p>
+
+<code>
+const regex = /\d{2,5}/;
+</code>
+
+<h3>Capture Groups</h3>
+
+<p>
+تستخدم لالتقاط أجزاء من النص المطابق لإعادة استخدامها.
+</p>
+
+<code>
+const regex = /free(code)camp/i;
+</code>
+
+<h3>Backreferences</h3>
+
+<p>
+تسمح بإعادة استخدام النص الذي تم التقاطه سابقًا.
+</p>
+
+<code>
+const regex = /free(co+de)camp/i;
+
+console.log(
+"freecoooooooodecamp"
+.replace(
+regex,
+"paid$1world"
+)
+);
+</code>
+
+</section>
+
+<section class="main-section" id="form-validation">
+
+<header>التحقق من صحة النماذج (Form Validation)</header>
+
+<p>
+توفر JavaScript و HTML أدوات مدمجة للتحقق من صحة البيانات المدخلة قبل إرسال النماذج.
+</p>
+
+<h3>Constraint Validation API</h3>
+
+<p>
+توفر بعض عناصر HTML مثل input و textarea واجهة للتحقق من صحة البيانات بناءً على القيود المحددة في العنصر.
+</p>
+
+<code>
+&lt;input
+type="email"
+required
+pattern=".+\.com$"
+/&gt;
+</code>
+
+<h3>الطريقة checkValidity()</h3>
+
+<p>
+تتحقق مما إذا كانت قيمة العنصر تحقق جميع شروط التحقق أم لا.
+</p>
+
+<code>
+&lt;form&gt;
+  &lt;label&gt;
+    Email:
+    &lt;input
+      id="email"
+      type="email"
+      required
+      pattern=".+\.com$"
+      placeholder="example@site.com"
+    /&gt;
+  &lt;/label&gt;
+&lt;/form&gt;
+</code>
+
+<code>
+const input =
+document.getElementById("email");
+
+input.addEventListener(
+"input",
+(e) =&gt; {
+
+  if (!e.target.checkValidity()) {
+
+    e.target.setCustomValidity(
+      "You must use a .com email."
+    );
+
+  } else {
+
+    e.target.setCustomValidity("");
+
+  }
+
+});
+</code>
+
+<h3>الطريقة reportValidity()</h3>
+
+<p>
+تجبر المتصفح على عرض رسالة الخطأ الخاصة بالتحقق من صحة البيانات.
+</p>
+
+<code>
+&lt;form&gt;
+  &lt;label&gt;
+    Email:
+    &lt;input
+      id="email2"
+      type="email"
+      required
+      pattern=".+\.com$"
+      placeholder="example@site.com"
+    /&gt;
+  &lt;/label&gt;
+&lt;/form&gt;
+</code>
+
+<code>
+const input =
+document.getElementById("email2");
+
+input.addEventListener(
+"input",
+(e) =&gt; {
+
+  if (!e.target.checkValidity()) {
+
+    e.target.reportValidity();
+
+  }
+
+});
+</code>
+
+<h3>الخاصية validity</h3>
+
+<p>
+تستخدم للحصول على حالة التحقق الحالية لعنصر النموذج.
+</p>
+
+<code>
+&lt;input
+id="age"
+type="number"
+min="18"
+placeholder="Enter age (18+)"
+/&gt;
+</code>
+
+<code>
+const input =
+document.getElementById("age");
+
+input.addEventListener(
+"input",
+(e) =&gt; {
+
+  console.log(
+    e.target.validity
+  );
+
+});
+</code>
+
+<h3>الخاصية patternMismatch</h3>
+
+<p>
+تكون قيمتها true إذا كانت البيانات لا تطابق النمط المحدد باستخدام pattern.
+</p>
+
+<code>
+if (input.validity.patternMismatch) {
+
+  console.log(
+    "Pattern does not match"
+  );
+
+}
+</code>
+
+<h3>الطريقة preventDefault()</h3>
+
+<p>
+تستخدم لمنع السلوك الافتراضي للحدث.
+</p>
+
+<p>
+على سبيل المثال منع إرسال النموذج عند الضغط على زر الإرسال.
+</p>
+
+<code>
+&lt;form id="form"&gt;
+  &lt;input
+    type="text"
+    placeholder="Try to submit"
+  /&gt;
+
+  &lt;button type="submit"&gt;
+    Submit
+  &lt;/button&gt;
+&lt;/form&gt;
+
+&lt;p id="status"&gt;&lt;/p&gt;
+</code>
+
+<code>
+const form =
+document.getElementById("form");
+
+const status =
+document.getElementById("status");
+
+form.addEventListener(
+"submit",
+(event) =&gt; {
+
+  event.preventDefault();
+
+  status.textContent =
+  "Form submission prevented.";
+
+});
+</code>
+
+</section>
+
+<section class="main-section" id="forms-date-media">
+
+<header>تقديم النماذج والتواريخ والوسائط</header>
+
+<h3>تقديم النماذج</h3>
+
+<p>
+التعريف : توجد ثلاث طرق لإرسال النموذج. الأولى هي عندما ينقر المستخدم على زر في النموذج مُعيّن له type السمة submit. الثانية هي عندما يضغط المستخدم على Enter مفتاح الإدخال في أي input حقل قابل للتعديل في النموذج. الثالثة هي من خلال استدعاء جافا سكريبت لأساليب requestSubmit() أو submit() الخاصة بالعنصر form.
+</p>
+
+<h3>الخاصية action</h3>
+
+<p>
+يجب أن تحتوي الخاصية action إما على عنوان URL أو مسار نسبي للنطاق الحالي. تحدد هذه القيمة وجهة إرسال البيانات من النموذج.
+</p>
+
+<code>
+&lt;form action="https://freecodecamp.org"&gt;
+  &lt;input
+    type="number"
+    id="input"
+    placeholder="Enter a number"
+    name="number"
+  /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+
+<h3>الخاصية method</h3>
+
+<p>
+تقبل هذه الخاصية HTTP طريقة قياسية مثل GET أو POST.
+</p>
+
+<code>
+&lt;form action="/data" method="POST"&gt;
+  &lt;input
+    type="number"
+    id="input"
+    placeholder="Enter a number"
+    name="number"
+  /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+
+<h3>السمة enctype</h3>
+
+<p>
+تحدد نوع التشفير المستخدم للبيانات المرسلة من النموذج.
+</p>
+
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>text/plain</li>
+<li>multipart/form-data</li>
+</ul>
+
+<h3>الكائن Date()</h3>
+
+<p>
+يستخدم لإنشاء ومعالجة وتنسيق التواريخ والأوقات في JavaScript.
+</p>
+
+<code>
+const now = new Date();
+console.log(now);
+</code>
+
+<h3>الطريقة Date.now()</h3>
+
+<p>
+تعيد عدد المللي ثواني منذ 1 يناير 1970 UTC.
+</p>
+
+<h3>الطريقة getDate()</h3>
+
+<code>
+const now = new Date("2014-10-15");
+const date = now.getDate();
+
+console.log(date); // 15
+</code>
+
+<h3>الطريقة getMonth()</h3>
+
+<code>
+const now = new Date("2014-03-15");
+const month = now.getMonth();
+
+console.log(month); // 2
+</code>
+
+<h3>الطريقة getFullYear()</h3>
+
+<code>
+const now = new Date("2014-10-15");
+const year = now.getFullYear();
+
+console.log(year); // 2014
+</code>
+
+<h3>تنسيق التواريخ</h3>
+
+<h4>toISOString()</h4>
+
+<code>
+const date = new Date("2014-10-15");
+
+console.log(
+  date.toISOString()
+);
+// 2014-10-15T00:00:00.000Z
+</code>
+
+<h4>toLocaleDateString()</h4>
+
+<code>
+const date = new Date("2014-10-15");
+
+console.log(
+  date.toLocaleDateString("en-US")
+);
+</code>
+
+<code>
+const date = new Date("2014-10-15");
+
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(
+  date.toLocaleDateString(
+    "en-GB",
+    options
+  )
+);
+</code>
+
+<h3>Audio Constructor</h3>
+
+<p>
+تُستخدم الدالة البانية Audio لإنشاء عنصر صوتي يمكن تشغيله أو إضافته إلى DOM.
+</p>
+
+<h3>الطريقة play()</h3>
+
+<code>
+&lt;audio id="audio" controls&gt;
+  &lt;source
+    src="https://www.w3schools.com/html/horse.mp3"
+    type="audio/mpeg"
+  &gt;
+&lt;/audio&gt;
+
+&lt;button id="playBtn"&gt;
+Play Audio
+&lt;/button&gt;
+</code>
+
+<code>
+const audio =
+document.getElementById("audio");
+
+const playBtn =
+document.getElementById("playBtn");
+
+playBtn.addEventListener(
+"click",
+() =&gt; {
+  audio.play();
+});
+</code>
+
+<h3>الطريقة pause()</h3>
+
+<code>
+&lt;audio id="myAudio" controls&gt;
+  &lt;source
+    src="https://www.w3schools.com/html/horse.mp3"
+    type="audio/mpeg"
+  &gt;
+&lt;/audio&gt;
+
+&lt;button id="pauseBtn"&gt;
+Pause Audio
+&lt;/button&gt;
+</code>
+
+<code>
+const audio =
+document.getElementById("myAudio");
+
+const pauseBtn =
+document.getElementById("pauseBtn");
+
+pauseBtn.addEventListener(
+"click",
+() =&gt; {
+  audio.pause();
+});
+</code>
+
+</section>
+
+<h3>addTextTrack()</h3>
+
+<p>
+تتيح لك هذه الطريقة تحديد مسار نصي لربطه بعنصر الوسائط، وهي مفيدة بشكل خاص لإضافة الترجمات (Captions) إلى الفيديو.
+</p>
+
+<h3>fastSeek()</h3>
+
+<p>
+تتيح لك هذه الطريقة نقل موضع التشغيل إلى وقت محدد داخل ملف الوسائط.
+</p>
+
+<h3>تنسيقات الصوت والفيديو</h3>
+
+<h4>نوع MIME</h4>
+
+<p>
+نوع MIME هو طريقة قياسية لتحديد نوع الملف برمجيًا. يساعد المتصفح على معرفة كيفية التعامل مع الملف.
+</p>
+
+<h4>العنصر source</h4>
+
+<p>
+يُستخدم لتحديد مصدر الملف ونوعه. يمكن إضافة أكثر من عنصر source ليختار المتصفح أفضل تنسيق مدعوم.
+</p>
+
+<code>
+&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  &lt;source src="sound.ogg" type="audio/ogg"&gt;
+&lt;/audio&gt;
+</code>
+
+<h4>MP3</h4>
+
+<p>
+تنسيق صوتي مضغوط لتخزين الموسيقى والصوت. نوع MIME الخاص به هو:
+</p>
+
+<code>
+audio/mpeg
+</code>
+
+<h4>MP4</h4>
+
+<p>
+تنسيق يستخدم لتخزين الفيديو والصوت معًا داخل ملف واحد.
+</p>
+
+<code>
+video/mp4
+</code>
+
+<code>
+audio/mp4
+</code>
+
+<h3>برامج الترميز (Codecs)</h3>
+
+<p>
+برنامج الترميز Codec هو خوارزمية تستخدم لضغط وفك ضغط ملفات الصوت والفيديو.
+</p>
+
+<code>
+video/mp4; codecs="avc1.42E01E, mp4a.40.2"
+</code>
+
+<h3>واجهة HTMLMediaElement API</h3>
+
+<p>
+واجهة توفر خصائص وطرق للتحكم بعناصر الصوت والفيديو مثل:
+</p>
+
+<ul>
+<li>play()</li>
+<li>pause()</li>
+<li>fastSeek()</li>
+<li>currentTime</li>
+<li>volume</li>
+</ul>
+
+<h3>واجهة MediaStream API</h3>
+
+<p>
+تُستخدم للوصول إلى الكاميرا والميكروفون الخاص بالمستخدم.
+</p>
+
+<code>
+window.navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: true
+});
+</code>
+
+<h3>واجهة Screen Capture API</h3>
+
+<p>
+تُستخدم لتسجيل أو مشاركة شاشة المستخدم.
+</p>
+
+<code>
+navigator.mediaDevices.getDisplayMedia();
+</code>
+
+<h3>واجهة MediaRecorder API</h3>
+
+<p>
+تُستخدم لتسجيل الصوت أو الفيديو الناتج من MediaStream.
+</p>
+
+<h3>واجهة Media Source Extensions API</h3>
+
+<p>
+تسمح بتمرير بث الوسائط مباشرة إلى عنصر الفيديو باستخدام الخاصية srcObject.
+</p>
+
+<h3>واجهة Web Audio API</h3>
+
+<p>
+واجهة متقدمة للتعامل مع الأصوات وإنشاء المؤثرات الصوتية والتحكم بها.
+</p>
+
+<code>
+const audioContext =
+new AudioContext();
+</code>
+
+<h3>AudioBuffer</h3>
+
+<p>
+كائن يستخدم لتخزين البيانات الصوتية الخام داخل Web Audio API.
+</p>
+
+<h3>AudioContext</h3>
+
+<p>
+النقطة الأساسية لإنشاء وإدارة جميع العمليات الصوتية داخل Web Audio API.
+</p>
+
+<h3>مجموعات Set في JavaScript</h3>
+
+<p>
+Set هي بنية بيانات مدمجة تُستخدم لتخزين القيم الفريدة فقط، بحيث لا يمكن تكرار نفس القيمة أكثر من مرة.
+</p>
+
+<code>
+const set = new Set([1, 2, 3, 4, 5]);
+
+console.log(set);
+// Set {1, 2, 3, 4, 5}
+</code>
+
+<p>
+يمكن التعامل مع المجموعات باستخدام الطرق التالية:
+</p>
+
+<ul>
+<li>add() : إضافة عنصر جديد.</li>
+<li>delete() : حذف عنصر.</li>
+<li>has() : التحقق من وجود عنصر.</li>
+<li>clear() : حذف جميع العناصر.</li>
+</ul>
+
+<h3>WeakSet في JavaScript</h3>
+
+<p>
+WeakSet هي مجموعة خاصة تسمح بتخزين الكائنات فقط مع مراجع ضعيفة.
+</p>
+
+<h3>الفرق بين Set و WeakSet</h3>
+
+<ul>
+<li>Set تدعم جميع أنواع البيانات.</li>
+<li>WeakSet تدعم الكائنات فقط.</li>
+<li>WeakSet تسمح بجمع القمامة تلقائيًا للكائنات غير المستخدمة.</li>
+</ul>
+
+<h3>Map في JavaScript</h3>
+
+<p>
+Map عبارة عن مجموعة من أزواج المفتاح والقيمة وتشبه الكائنات، لكنها تسمح باستخدام أي نوع من البيانات كمفتاح.
+</p>
+
+<code>
+const map = new Map([
+  ['flower', 'rose'],
+  ['fruit', 'apple'],
+  ['vegetable', 'carrot']
+]);
+
+console.log(map);
+</code>
+
+<p>
+أهم الطرق:
+</p>
+
+<ul>
+<li>set()</li>
+<li>get()</li>
+<li>delete()</li>
+<li>has()</li>
+<li>clear()</li>
+</ul>
+
+<h3>WeakMap في JavaScript</h3>
+
+<p>
+WeakMap تشبه Map ولكن المفاتيح يجب أن تكون كائنات فقط ويتم الاحتفاظ بها كمراجع ضعيفة.
+</p>
+
+<h3>الفرق بين Map و WeakMap</h3>
+
+<ul>
+<li>Map تسمح بأي نوع مفتاح.</li>
+<li>WeakMap تسمح بالكائنات فقط كمفاتيح.</li>
+<li>WeakMap تساعد في إدارة الذاكرة بشكل أفضل.</li>
+</ul>
+
+<h3>التخزين الدائم</h3>
+
+<p>
+التخزين الدائم يعني حفظ البيانات بحيث تبقى متاحة حتى بعد إعادة تشغيل المتصفح أو الجهاز.
+</p>
+
+<h3>CRUD Operations</h3>
+
+<ul>
+<li>Create : إنشاء بيانات جديدة.</li>
+<li>Read : قراءة البيانات.</li>
+<li>Update : تحديث البيانات.</li>
+<li>Delete : حذف البيانات.</li>
+</ul>
+
+<h3>طرق HTTP</h3>
+
+<p>
+HTTP هو بروتوكول نقل البيانات على الإنترنت.
+</p>
+
+<ul>
+<li>GET : جلب البيانات.</li>
+<li>POST : إنشاء بيانات جديدة.</li>
+<li>PUT : استبدال مورد بالكامل.</li>
+<li>PATCH : تعديل جزء من المورد.</li>
+<li>DELETE : حذف مورد.</li>
+</ul>
+
+
+<h3>العمل مع ملفات تعريف الارتباط (Cookies)</h3>
+
+<p>
+ملفات تعريف الارتباط هي أجزاء صغيرة من البيانات يرسلها الخادم إلى متصفح المستخدم وتُخزن على جهازه للمساعدة في حفظ حالة التطبيق وتذكر معلومات المستخدم.
+</p>
+
+<h4>ملفات تعريف الارتباط للجلسة</h4>
+
+<p>
+تبقى هذه الملفات طوال جلسة المستخدم فقط ويتم حذفها عند إغلاق المتصفح أو علامة التبويب.
+</p>
+
+<h4>ملفات تعريف الارتباط الآمنة</h4>
+
+<p>
+يتم إرسالها فقط عبر HTTPS لحماية البيانات أثناء النقل.
+</p>
+
+<h4>ملفات تعريف الارتباط HttpOnly</h4>
+
+<p>
+لا يمكن الوصول إليها أو تعديلها بواسطة JavaScript مما يوفر حماية إضافية ضد هجمات XSS.
+</p>
+
+<h4>رأس Set-Cookie</h4>
+
+<p>
+يمكن للخادم إرسال رأس Set-Cookie لحفظ ملف تعريف ارتباط داخل المتصفح.
+</p>
+
+<code>
+document.cookie =
+"organization=freeCodeCamp;
+expires=Fri, 31 Dec 2021 23:59:59 GMT;
+path=/";
+</code>
+
+<h4>حذف Cookie</h4>
+
+<code>
+document.cookie =
+"username=;
+expires=Thu, 01 Jan 1970 00:00:00 GMT;
+path=/";
+</code>
+
+<h3>واجهة Cache API</h3>
+
+<p>
+تُستخدم لتخزين طلبات واستجابات الشبكة لتحسين الأداء ودعم العمل بدون اتصال.
+</p>
+
+<p>
+تُعد جزءًا أساسيًا من تطبيقات الويب التقدمية (PWA).
+</p>
+
+<h4>التخزين المؤقت</h4>
+
+<p>
+يتم حفظ أزواج الطلبات والاستجابات لإعادة استخدامها لاحقًا دون الحاجة إلى طلب جديد من الخادم.
+</p>
+
+<h4>التحكم في ذاكرة التخزين المؤقت</h4>
+
+<p>
+يمكن تحديد مدة الاحتفاظ بالبيانات المخزنة مؤقتًا وكيفية إعادة التحقق منها.
+</p>
+
+<h4>دعم وضع عدم الاتصال</h4>
+
+<p>
+يمكن للتطبيق عرض البيانات المخزنة محليًا حتى في حالة انقطاع الإنترنت.
+</p>
+
+<h3>الأنماط السلبية والتخزين من جانب العميل</h3>
+
+<h4>التتبع المفرط</h4>
+
+<p>
+يشير إلى جمع وتخزين كميات كبيرة من بيانات المستخدم دون مبرر أو موافقة واضحة.
+</p>
+
+<h4>بصمة المتصفح</h4>
+
+<p>
+طريقة لتتبع المستخدم اعتمادًا على خصائص جهازه ومتصفحه بدلًا من ملفات تعريف الارتباط.
+</p>
+
+
+
+<h3>IndexedDB</h3>
+
+<p>
+قاعدة بيانات مدمجة داخل المتصفح تُستخدم لتخزين البيانات المنظمة واسترجاعها بكفاءة.
+</p>
+
+<h3>Service Workers</h3>
+
+<p>
+برنامج يعمل في الخلفية بشكل منفصل عن صفحة الويب.
+</p>
+
+<ul>
+<li>اعتراض طلبات الشبكة.</li>
+<li>التعامل مع Cache API.</li>
+<li>دعم العمل دون اتصال.</li>
+<li>أساس تطبيقات PWA.</li>
+</ul>
+
+<h3>أساسيات التعامل مع Classes</h3>
+
+<p>
+تُستخدم الفئات (Classes) لإنشاء مخططات للكائنات وتغليف البيانات والسلوكيات.
+</p>
+
+<code>
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  bark() {
+    console.log(
+      `${this.name} says woof!`
+    );
+  }
+}
+
+const dog = new Dog("Gino");
+
+console.log(dog.name);
+</code>
+
+<h3>constructor</h3>
+
+<p>
+دالة خاصة يتم استدعاؤها تلقائيًا عند إنشاء كائن جديد من الفئة.
+</p>
+
+<h3>this Keyword</h3>
+
+<p>
+تشير إلى الكائن الحالي الذي تم إنشاؤه من الفئة.
+</p>
+
+<h3>Methods</h3>
+
+<p>
+الدوال الموجودة داخل الفئة والتي تحدد سلوك الكائن.
+</p>
+
+<code>
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  bark() {
+    console.log(
+      `${this.name} says woof!`
+    );
+  }
+}
+</code>
+
+<h3>إنشاء كائن جديد من Class</h3>
+
+<code>
+const dog =
+new Dog("Gino");
+</code>
+
+<p>
+يمكنك بعد ذلك الوصول إلى الخصائص واستدعاء الدوال الخاصة بالكائن.
+</p>
+
+<code>
+console.log(dog.name);
+
+dog.bark();
+</code>
+
+</section>
+
+<h3>الوراثة (Inheritance)</h3>
+
+<p>
+في البرمجة، تسمح الوراثة بإنشاء فئات ترث الخصائص والأساليب من فئات أخرى مما يساعد على إعادة استخدام الكود وإنشاء علاقات هرمية بين الفئات.
+</p>
+
+<p>
+الفئة الأصلية (Parent Class) هي الفئة التي تحتوي على الخصائص والأساليب الأساسية.
+أما الفئة الفرعية (Child Class) فهي فئة ترث هذه الخصائص والأساليب ويمكنها إضافة خصائص وأساليب جديدة.
+</p>
+
+<p>
+في JavaScript نستخدم الكلمة المفتاحية extends لتطبيق الوراثة.
+</p>
+
+<code>
+class Vehicle {
+  constructor(brand, year) {
+    this.brand = brand;
+    this.year = year;
+  }
+}
+
+class Car extends Vehicle {
+  honk() {
+    console.log("Honk! Honk!");
+  }
+}
+
+const myCar =
+new Car(
+  "freeCodeCamp Motors",
+  2019
+);
+
+console.log(myCar.brand);
+console.log(myCar.year);
+
+myCar.honk();
+</code>
+
+<h3>الكلمة المفتاحية super</h3>
+
+<p>
+تُستخدم للوصول إلى منشئات وأساليب الفئة الأصلية.
+</p>
+
+<code>
+class Vehicle {
+  constructor(brand, year) {
+    this.brand = brand;
+    this.year = year;
+  }
+}
+
+class Car extends Vehicle {
+  constructor(
+    brand,
+    year,
+    numDoors
+  ) {
+    super(brand, year);
+
+    this.numDoors =
+    numDoors;
+  }
+}
+
+const myCar =
+new Car(
+  "freeCodeCamp Motors",
+  2019,
+  4
+);
+
+console.log(myCar.brand);
+console.log(myCar.year);
+console.log(myCar.numDoors);
+</code>
+
+<h3>الأساليب الثابتة Static Methods</h3>
+
+<p>
+هي أساليب مرتبطة بالفئة نفسها وليست بالكائنات التي يتم إنشاؤها منها.
+</p>
+
+<code>
+class Movie {
+  constructor(
+    title,
+    rating
+  ) {
+    this.title = title;
+    this.rating = rating;
+  }
+
+  static compareMovies(
+    movieA,
+    movieB
+  ) {
+    if (
+      movieA.rating >
+      movieB.rating
+    ) {
+      console.log(
+        `${movieA.title}
+        has a higher rating.`
+      );
+    } else if (
+      movieA.rating <
+      movieB.rating
+    ) {
+      console.log(
+        `${movieB.title}
+        has a higher rating.`
+      );
+    } else {
+      console.log(
+        "These movies have the same rating."
+      );
+    }
+  }
+}
+
+let movieA =
+new Movie(
+  "Movie A",
+  80
+);
+
+let movieB =
+new Movie(
+  "Movie B",
+  45
+);
+
+Movie.compareMovies(
+  movieA,
+  movieB
+);
+</code>
+
+<h3>Factory Method</h3>
+
+<p>
+يمكن استخدام الأساليب الثابتة لإنشاء كائنات بناءً على شروط أو إعدادات محددة.
+</p>
+
+<code>
+class Pizza {
+  constructor(
+    type,
+    price
+  ) {
+    this.type = type;
+    this.price = price;
+  }
+
+  static createMargherita() {
+    return new this(
+      "Margherita",
+      6.99
+    );
+  }
+}
+
+let myPizza =
+Pizza.createMargherita();
+
+console.log(myPizza);
+console.log(myPizza.type);
+</code>
+
+<h3>الخصائص الثابتة Static Properties</h3>
+
+<p>
+خصائص مرتبطة بالفئة نفسها ويتم مشاركتها بين جميع الكائنات.
+</p>
+
+<code>
+class Car {
+
+  static numberOfWheels = 4;
+
+  constructor(
+    make,
+    model
+  ) {
+    this.make = make;
+    this.model = model;
+  }
+
+  getCarInfo() {
+    return `
+      ${this.make}
+      ${this.model}
+    `;
+  }
+
+  static getNumberOfWheels() {
+    return Car.numberOfWheels;
+  }
+}
+
+console.log(
+  Car.numberOfWheels
+);
+</code>
+
+<h3>التكرار (Recursion)</h3>
+
+<p>
+التكرار هو مفهوم برمجي يسمح للدالة باستدعاء نفسها بشكل متكرر حتى الوصول إلى حالة التوقف (Base Case).
+</p>
+
+<p>
+يُستخدم التكرار لحل المشكلات التي يمكن تقسيمها إلى مشكلات أصغر من نفس النوع.
+</p>
+
+<code>
+function findFactorial(n) {
+
+  if (n === 0) {
+    return 1;
+  }
+
+  return n *
+  findFactorial(n - 1);
+}
+</code>
+
+<p>
+في المثال السابق تستدعي الدالة نفسها حتى تصل قيمة n إلى 0 ثم تبدأ النتائج بالرجوع من مكدس الاستدعاءات.
+</p>
+
+<h3>Call Stack</h3>
+
+<p>
+تُستخدم مكدسة الاستدعاءات (Call Stack) لتتبع استدعاءات الدوال أثناء تنفيذ التكرار.
+</p>
+
+<p>
+كل استدعاء جديد للدالة يتم إضافته إلى المكدس وعند الوصول إلى حالة التوقف تبدأ الإزالة من المكدس.
+</p>
+
+<h3>أهمية حالة التوقف</h3>
+
+<p>
+يجب دائمًا وجود Base Case لأن غيابها يؤدي إلى استدعاء لا نهائي واستهلاك كامل للذاكرة.
+</p>
+
+<h3>استخدامات Recursion</h3>
+
+<ul>
+<li>حساب المضروب Factorial.</li>
+<li>متتالية Fibonacci.</li>
+<li>اجتياز الأشجار Trees.</li>
+<li>اجتياز الرسوم البيانية Graphs.</li>
+<li>التعامل مع الكائنات المتداخلة.</li>
+<li>توليد التباديل والتوافيق.</li>
+</ul>
+
+<h3>الدوال النقية Pure Functions</h3>
+
+<p>
+الدالة النقية هي دالة تعيد دائمًا نفس النتيجة لنفس المدخلات ولا تُحدث أي آثار جانبية.
+</p>
+
+<p>
+تعتمد النتيجة فقط على المعاملات المرسلة إليها.
+</p>
+
+<code>
+function add(a, b) {
+  return a + b;
+}
+</code>
+
+<h3>الدوال غير النقية Impure Functions</h3>
+
+<p>
+هي الدوال التي تؤثر على حالة خارجية أو تعتمد عليها.
+</p>
+
+<code>
+let total = 0;
+
+function addToTotal(num) {
+  total += num;
+}
+</code>
+
+<h3>البرمجة الوظيفية Functional Programming</h3>
+
+<p>
+هي أسلوب برمجي يعتمد على استخدام الدوال لحل المشكلات مع التركيز على ما يجب فعله بدلاً من كيفية فعله.
+</p>
+
+<p>
+تشجع البرمجة الوظيفية على:
+</p>
+
+<ul>
+<li>استخدام الدوال النقية.</li>
+<li>تجنب الآثار الجانبية.</li>
+<li>استخدام الدوال عالية الرتبة.</li>
+<li>البيانات غير القابلة للتغيير.</li>
+</ul>
+
+<p>
+يساعد هذا الأسلوب في كتابة كود أوضح وأسهل في الصيانة.
+</p>
+
+<h3>Currying</h3>
+
+<p>
+الكاري هي تقنية لتحويل دالة تستقبل عدة معاملات إلى سلسلة من الدوال التي تستقبل معاملًا واحدًا في كل مرة.
+</p>
+
+<code>
+function average(a, b, c) {
+  return (
+    a + b + c
+  ) / 3;
+}
+
+console.log(
+  average(2, 3, 4)
+);
+</code>
+
+<code>
+function curriedAverage(a) {
+
+  return function(b) {
+
+    return function(c) {
+
+      return (
+        a + b + c
+      ) / 3;
+
+    };
+
+  };
+
+}
+
+console.log(
+  curriedAverage(2)(3)(4)
+);
+</code>
+
+<h3>Arrow Function Currying</h3>
+
+<code>
+const curriedAverage =
+a => b => c =>
+(a + b + c) / 3;
+</code>
+
+<p>
+تجعل Currying الكود أكثر مرونة وقابلية لإعادة الاستخدام ولكن الإفراط في استخدامها قد يجعل الكود أصعب في القراءة.
+</p>
+
+<h3>JavaScript غير المتزامنة (Asynchronous JavaScript)</h3>
+
+<p>
+يتم تنفيذ JavaScript المتزامنة بالتسلسل حيث تنتظر كل عملية انتهاء العملية السابقة قبل البدء في العملية التالية.
+</p>
+
+<p>
+أما JavaScript غير المتزامنة فتسمح بتنفيذ عمليات متعددة في الخلفية دون حظر الخيط الرئيسي (Main Thread).
+</p>
+
+<h3>الخيط (Thread)</h3>
+
+<p>
+الخيط هو سلسلة من التعليمات التي يمكن تنفيذها بشكل مستقل عن التدفق الرئيسي للبرنامج.
+</p>
+
+<h3>Callback Functions</h3>
+
+<p>
+دوال الاستدعاء هي دوال يتم تمريرها كوسائط إلى دوال أخرى ويتم تنفيذها بعد اكتمال عملية معينة أو عند حدوث حدث معين.
+</p>
+
+<h3>محرك JavaScript وبيئة التشغيل</h3>
+
+<p>
+محرك JavaScript هو البرنامج المسؤول عن تفسير وتنفيذ كود JavaScript.
+</p>
+
+<p>
+من أشهر المحركات:
+</p>
+
+<ul>
+<li>V8 (Google Chrome)</li>
+</ul>
+
+<p>
+أما بيئة التشغيل (Runtime Environment) فهي البيئة التي يتم فيها تنفيذ JavaScript مثل المتصفح أو Node.js.
+</p>
+
+<h3>Fetch API</h3>
+
+<p>
+تسمح Fetch API بإرسال واستقبال البيانات عبر الشبكة باستخدام الدالة fetch().
+</p>
+
+<p>
+يمكن استخدامها لجلب:
+</p>
+
+<ul>
+<li>JSON</li>
+<li>النصوص</li>
+<li>الصور</li>
+<li>الصوت</li>
+<li>أنواع أخرى من البيانات</li>
+</ul>
+
+<h3>GET Request</h3>
+
+<code>
+fetch(
+  'https://api.example.com/data'
+);
+</code>
+
+<code>
+fetch(
+  'https://api.example.com/data'
+)
+.then(response =>
+  response.json()
+)
+.then(data =>
+  console.log(data)
+);
+</code>
+
+<h3>POST Request</h3>
+
+<code>
+fetch(
+'https://api.example.com/users',
+{
+  method: 'POST',
+
+  headers: {
+    'Content-Type':
+    'application/json',
+  },
+
+  body: JSON.stringify({
+    name: 'John Doe',
+    email:
+    'john@example.com'
+  })
+}
+);
+</code>
+
+<h3>PUT Request</h3>
+
+<code>
+fetch(
+'https://api.example.com/users/45',
+{
+  method: 'PUT',
+
+  headers: {
+    'Content-Type':
+    'application/json',
+  },
+
+  body: JSON.stringify({
+    name: 'John Smith',
+    email:
+    'john@example.com'
+  })
+}
+);
+</code>
+
+<h3>DELETE Request</h3>
+
+<code>
+fetch(
+'https://api.example.com/users/45',
+{
+  method: 'DELETE'
+}
+);
+</code>
+
+<h3>Promises</h3>
+
+<p>
+الوعود (Promises) هي كائنات تمثل نجاح أو فشل عملية غير متزامنة في المستقبل.
+</p>
+
+<code>
+const promise =
+new Promise(
+(resolve, reject) => {
+
+  setTimeout(() => {
+
+    resolve(
+      'Data received successfully'
+    );
+
+  }, 2000);
+
+}
+);
+</code>
+
+<h3>then() و catch()</h3>
+
+<code>
+promise
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+</code>
+
+<h3>Promise Chaining</h3>
+
+<p>
+يمكن ربط عدة عمليات غير متزامنة باستخدام سلسلة من then().
+</p>
+
+<code>
+fetch(
+'https://api.example.com/data'
+)
+.then(response =>
+  response.json()
+)
+.then(data => {
+
+  console.log(data);
+
+  return fetch(
+    'https://api.example.com/other-data'
+  );
+
+})
+.then(response =>
+  response.json()
+)
+.then(otherData => {
+
+  console.log(otherData);
+
+})
+.catch(error => {
+
+  console.error(error);
+
+});
+</code>
+
+<h3>Async / Await</h3>
+
+<p>
+تجعل كتابة الكود غير المتزامن أسهل وأكثر وضوحًا.
+</p>
+
+<h4>async</h4>
+
+<p>
+تُستخدم لتعريف دالة غير متزامنة وتُرجع Promise.
+</p>
+
+<h4>await</h4>
+
+<p>
+تُستخدم داخل async لإيقاف التنفيذ مؤقتًا حتى يتم حل Promise.
+</p>
+
+<code>
+async function delayedGreeting(
+  name
+) {
+
+  console.log(
+    "A Messenger entered the chat..."
+  );
+
+  await new Promise(
+    resolve =>
+    setTimeout(
+      resolve,
+      2000
+    )
+  );
+
+  console.log(
+    `Hello, ${name}!`
+  );
+
+}
+
+delayedGreeting(
+  "Alice"
+);
+
+console.log(
+  "First Printed Message!"
+);
+</code>
+
+<h3>معالجة الأخطاء باستخدام try/catch</h3>
+
+<code>
+async function fetchData() {
+
+  try {
+
+    const response =
+    await fetch(
+      'https://api.example.com/data'
+    );
+
+    const data =
+    await response.json();
+
+    console.log(data);
+
+  } catch (error) {
+
+    console.error(error);
+
+  }
+
+}
+
+fetchData();
+</code>
+
+<h3>السمة async</h3>
+
+<p>
+تخبر المتصفح بتنزيل ملف JavaScript بشكل غير متزامن ثم تنفيذه فور اكتمال التنزيل.
+</p>
+
+<p>
+يُفضل استخدامها مع الملفات المستقلة التي لا تعتمد على ترتيب معين.
+</p>
+
+<h3>السمة defer</h3>
+
+<p>
+تقوم بتنزيل الملف بشكل غير متزامن ولكن تؤجل التنفيذ حتى يتم تحليل HTML بالكامل.
+</p>
+
+<p>
+تحافظ ملفات defer على ترتيب التنفيذ الموجود داخل الصفحة.
+</p>
+
+<p>
+إذا وُجدت async و defer معًا فإن async لها الأولوية.
+</p>
+
+<h3>Geolocation API</h3>
+
+<p>
+توفر طريقة للحصول على الموقع الجغرافي للمستخدم.
+</p>
+
+<code>
+navigator.geolocation
+.getCurrentPosition(
+
+(position) => {
+
+  console.log(
+    "Latitude: " +
+    position.coords.latitude
+  );
+
+  console.log(
+    "Longitude: " +
+    position.coords.longitude
+  );
+
+},
+
+(error) => {
+
+  console.log(
+    "Error: " +
+    error.message
+  );
+
+}
+
+);
+</code>
+
+<p>
+يجب احترام خصوصية المستخدم وعدم طلب الموقع إلا عند الحاجة الفعلية إليه.
+</p>
+
+</section>
+</main>
+<button id="back-to-top" class="back-to-top" aria-label="العودة إلى الأعلى">▲</button>
+
+<script src="script.js"></script>
+</body>
+</html>

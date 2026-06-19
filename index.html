@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تعلم البرمجة - دليل عربي شامل</title>
+<meta name="description" content="دليل تعليمي شامل للبرمجة بالعربية - JavaScript و HTML و CSS">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='60' fill='%2338bdf8'>💻</text></svg>">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', 'Almarai', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #38bdf8;
+    margin-bottom: 10px;
+    text-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: stretch;
+}
+
+.course-card {
+    background: rgba(30, 41, 59, 0.8);
+    border: 2px solid #334155;
+    border-radius: 15px;
+    padding: 24px 20px 28px 20px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.3s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+}
+
+.course-card:hover {
+    border-color: #38bdf8;
+    background: linear-gradient(180deg, rgba(30,41,59,1), rgba(15,23,42,0.95));
+    box-shadow: 0 10px 40px rgba(56,189,248,0.12);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.course-icon {
+    font-size: 56px;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.course-title {
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 12px;
+    word-break: keep-all;
+}
+
+.course-desc {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.topics {
+    text-align: right;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.topics span {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.course-btn {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.course-btn:hover {
+    background: #06b6d4;
+    transform: scale(1.05);
+}
+
+.course-btn:active {
+    transform: scale(0.95);
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #334155;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #06b6d4;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .courses {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .course-card {
+        padding: 30px 20px;
+    }
+    
+    .course-title {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <h1>🚀 تعلم البرمجة</h1>
+        <p class="subtitle">دليل عربي شامل لأساسيات وتقنيات البرمجة الحديثة</p>
+    </header>
+
+    <div class="courses">
+        <!-- JavaScript Course -->
+        <div class="course-card">
+            <div class="course-icon">JavaScript 📜</div>
+            <div class="course-title">JavaScript</div>
+            <p class="course-desc">
+                تعلم لغة البرمجة الأساسية للويب. من الأساسيات إلى المفاهيم المتقدمة.
+            </p>
+            <div class="topics">
+                <span>المتغيرات</span>
+                <span>الدوال</span>
+                <span>DOM</span>
+                <span>async/await</span>
+            </div>
+            <button class="course-btn" onclick="window.location.href='jspage.html'">
+                ابدأ الآن
+            </button>
+        </div>
+
+        <!-- HTML & CSS Course -->
+        <div class="course-card">
+            <div class="course-icon">HTML & CSS 🎨</div>
+            <div class="course-title">HTML و CSS</div>
+            <p class="course-desc">
+                تصميم صفحات ويب احترافية. تعلم الترميز والتنسيق من الصفر.
+            </p>
+            <div class="topics">
+                <span>الوسوم</span>
+                <span>Flexbox</span>
+                <span>Grid</span>
+                <span>Responsive</span>
+            </div>
+            <button class="course-btn" onclick="window.location.href='htmlcss.html'">
+                ابدأ الآن
+            </button>
+        </div>
+
+        <!-- React Course (activated) -->
+        <div class="course-card" style="position: relative;">
+            <div class="course-icon">React ⚛️</div>
+            <div class="course-title">React</div>
+            <p class="course-desc">
+                مكتبة JavaScript الحديثة لبناء واجهات المستخدم التفاعلية والديناميكية.
+            </p>
+            <div class="topics">
+                <span>Components</span>
+                <span>Hooks</span>
+                <span>State</span>
+                <span>Props</span>
+            </div>
+            <button class="course-btn" onclick="window.location.href='react.html'">
+                ابدأ الآن
+            </button>
+        </div>
+
+        <!-- Projects Course -->
+        <div class="course-card" style="position: relative;">
+            <div style="position: absolute; top: 10px; right: 10px; background: #f59e0b; color: white; padding: 5px 12px; border-radius: 18px; font-size: 12px; font-weight: 700;">مشاريع</div>
+            <div class="course-icon">🧩</div>
+            <div class="course-title">مشاريع تطبيقية</div>
+            <p class="course-desc">
+                مشاريع صغيرة عملية لتطبيق ما تعلمته: صفحات تفاعلية، واجهات، وأمثلة حية.
+            </p>
+            <div class="topics">
+                <span>صفحات تفاعلية</span>
+                <span>مشروعات صغيرة</span>
+                <span>عرض الأعمال</span>
+            </div>
+            <button class="course-btn" onclick="window.location.href='projects.html'">
+                استعرض المشاريع
+            </button>
+        </div>
+
+        <!-- Books & Summaries (coming soon) -->
+        <div class="course-card" style="position: relative;">
+            <div style="position: absolute; top: 10px; right: 10px; background: #ec4899; color: white; padding: 5px 12px; border-radius: 18px; font-size: 12px; font-weight: 700;">قريباً</div>
+            <div class="course-icon">📚</div>
+            <div class="course-title">كتب وملخصات</div>
+            <p class="course-desc">
+                مراجع وملخصات منتقاة قيد التحضير — ستكون متاحة قريباً بإذن الله.
+            </p>
+            <div class="topics">
+                <span>ملخصات</span>
+                <span>كتب مجانية</span>
+                <span>روابط مفيدة</span>
+            </div>
+            <button class="course-btn" onclick="window.location.href='books.html'">
+                عرض الكتب
+            </button>
+        </div>
+</div>
+
+</body>
+</html>
