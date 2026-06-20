@@ -1,41 +1,6808 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HTML & CSS — قريبا</title>
-<meta name="description" content="صفحة HTML & CSS - قريبا">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='60' fill='%2338bdf8'>&lt;/&gt;</text></svg>">
+<title>HTML & CSS </title>
+<meta name="description" content="صفحة HTML & CSS">
 <link rel="stylesheet" href="styles.css">
-<style>
-html,body{height:100%;}
-body{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#e5e7eb;font-family:'Cairo', 'Almarai', 'Segoe UI',sans-serif;margin:0}
-.container{max-width:900px;width:100%;padding:40px;box-sizing:border-box;text-align:center}
-.card{background:rgba(30,41,59,0.9);border:1px solid #334155;border-radius:16px;padding:60px 30px}
-.title{font-size:56px;color:#38bdf8;margin-bottom:10px}
-.badge{display:inline-block;background:#ec4899;color:white;padding:6px 16px;border-radius:20px;font-weight:700;margin-bottom:18px}
-.lead{color:#cbd5e1;font-size:18px;margin-bottom:24px}
-.note{color:#94a3b8;margin-bottom:18px}
-.btn{background:#38bdf8;color:#0f172a;border:none;padding:12px 28px;border-radius:24px;font-weight:700;cursor:pointer}
-.btn:focus{outline:2px solid #06b6d4}
-.footer-links a{color:#38bdf8;text-decoration:none;margin:0 10px}
-@media(max-width:600px){.title{font-size:40px;padding:0 10px}}
-</style>
 </head>
 <body>
-<div class="container">
-  <div class="card">
-    <div class="badge">قريبا</div>
-    <h1 class="title">HTML & CSS</h1>
-    <p class="lead">نحن نعمل على إعداد محتوى مرتب وسهل لتعليم HTML و CSS بالعربية.</p>
-    <p class="note">سأضيف الصفحات والدروس قريباً — يمكنك العودة إلى الدورات الحالية أو التحقق لاحقاً.</p>
-    <div style="margin-top:18px">
-      <button class="btn" onclick="window.location.href='index.html'">العودة للرئيسية</button>
+ <button id="menuBtn">☰</button>
+ <button id="homeBtn" title="العودة للرئيسية" onclick="window.location.href='index.html'">🏠</button>
+<nav id="navbar">
+
+<header>HTML & CSS Documentation</header>
+
+<a class="nav-link" href="#html-basics">
+أساسيات HTML
+</a>
+
+<a class="nav-link" href="#ids-classes">
+المعرفات والفئات
+</a>
+
+<a class="nav-link" href="#special-characters">
+الأحرف الخاصة والربط
+</a>
+
+<a class="nav-link" href="#html-template">
+قالب HTML الأساسي
+</a>
+
+<a class="nav-link" href="#seo-meta">
+SEO و Open Graph
+</a>
+
+<a class="nav-link" href="#media-elements">
+عناصر الوسائط
+</a>
+
+<a class="nav-link" href="#links-paths">
+الروابط والمسارات
+</a>
+
+<a class="nav-link" href="#semantic-html">
+HTML الدلالية
+</a>
+
+<a class="nav-link" href="#semantic-elements">
+العناصر الدلالية
+</a>
+
+<a class="nav-link" href="#html-forms">
+نماذج HTML
+</a>
+
+<a class="nav-link" href="#html-tables">
+جداول HTML
+</a>
+
+<a class="nav-link" href="#accessibility-intro">
+إمكانية الوصول HTML
+</a>
+
+<a class="nav-link" href="#css-basics">
+أساسيات CSS
+</a>
+
+<a class="nav-link" href="#css-types">
+المحددات والخصوصية
+</a>
+
+<a class="nav-link" href="#absolute-units">
+وحدات القياس
+</a>
+
+<a class="nav-link" href="#pseudo-classes">
+Pseudo Classes
+</a>
+
+<a class="nav-link" href="#pseudo-elements">
+Pseudo Elements
+</a>
+
+<a class="nav-link" href="#css-colors">
+نظرية الألوان
+</a>
+
+<a class="nav-link" href="#box-model">
+نموذج الصندوق
+</a>
+
+<a class="nav-link" href="#typography-introduction">
+فن الطباعة
+</a>
+
+<a class="nav-link" href="#font-family-property">
+font-family
+</a>
+
+<a class="nav-link" href="#web-safe-fonts">
+Web Safe Fonts
+</a>
+
+<a class="nav-link" href="#font-face-rule">
+@font-face
+</a>
+
+<a class="nav-link" href="#text-shadow">
+text-shadow
+</a>
+
+<a class="nav-link" href="#css-accessibility">
+CSS Accessibility
+</a>
+
+<a class="nav-link" href="#attribute-selectors">
+Attribute Selectors
+</a>
+
+<a class="nav-link" href="#floats">
+Float و Clear
+</a>
+
+<a class="nav-link" href="#css-positioning">
+Positioning
+</a>
+
+<a class="nav-link" href="#z-index-property">
+z-index
+</a>
+
+<a class="nav-link" href="#responsive-design">
+Responsive Design
+</a>
+
+<a class="nav-link" href="#media-queries">
+Media Queries
+</a>
+
+<a class="nav-link" href="#mobile-first">
+Mobile First
+</a>
+
+<a class="nav-link" href="#css-variables">
+CSS Variables
+</a>
+
+<a class="nav-link" href="#property-rule">
+@property
+</a>
+
+<a class="nav-link" href="#css-grid">
+CSS Grid
+</a>
+
+<a class="nav-link" href="#css-animations">
+CSS Animations
+</a>
+
+<a class="nav-link" href="#animation-accessibility">
+Animation Accessibility
+</a>
+
+</nav>
+<button id="back-to-top" class="back-to-top" aria-label="العودة إلى الأعلى">▲</button>
+<main id="main-doc">
+    <div id="search-bar">
+      <input type="search" id="searchInput" placeholder="ابحث في الشرح..." aria-label="بحث">
+      <div class="search-controls">
+        <span id="search-count" aria-live="polite">ادخل بحثًا للبدء</span>
+      </div>
     </div>
-    <div style="margin-top:22px;color:#64748b">
-      <a href="jspage.html">دورة JavaScript</a> · <a href="react.html" style="color:#38bdf8">React (قريبا)</a>
-    </div>
-  </div>
-</div>
+
+    
+<section class="main-section" id="html-basics">
+
+<header>أساسيات لغة HTML</header>
+
+<p>
+HTML أو HyperText Markup Language هي اللغة الأساسية المستخدمة لبناء صفحات الويب.
+تُستخدم لتحديد هيكل الصفحة والعناصر المختلفة التي تظهر للمستخدم داخل المتصفح.
+</p>
+
+<h3>دور لغة HTML</h3>
+
+<p>
+تُعد HTML أساس بنية الويب، حيث يتم من خلالها إنشاء العناصر المختلفة التي تتكون منها صفحة الويب مثل العناوين والفقرات والصور والروابط والنماذج.
+</p>
+
+<h3>عناصر HTML</h3>
+
+<p>
+تُستخدم عناصر HTML لتمثيل المحتوى داخل الصفحة.
+تتكون أغلب العناصر من وسم فتح ووسم إغلاق يحتويان على المحتوى بينهما.
+</p>
+
+<code>
+&lt;h1&gt;عنوان رئيسي&lt;/h1&gt;
+
+&lt;p&gt;هذه فقرة نصية&lt;/p&gt;
+</code>
+
+<h3>بنية مستند HTML</h3>
+
+<p>
+يتكون مستند HTML عادةً من قسمين رئيسيين:
+قسم head الذي يحتوي على البيانات الوصفية والروابط الخاصة بالملفات الخارجية،
+وقسم body الذي يحتوي على المحتوى الظاهر للمستخدم.
+</p>
+
+<code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    Content Here
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+
+<h3>العناصر الشائعة في HTML</h3>
+
+<p>
+هناك العديد من العناصر المستخدمة بشكل متكرر أثناء بناء صفحات الويب مثل:
+العناوين من h1 إلى h6،
+والفقرات p،
+وحاويات div.
+</p>
+
+<code>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+
+&lt;p&gt;Paragraph Text&lt;/p&gt;
+
+&lt;div&gt;Container&lt;/div&gt;
+</code>
+
+<h3>عنصر div</h3>
+
+<p>
+يُعتبر العنصر div من أكثر العناصر استخدامًا في HTML.
+لا يحمل أي معنى دلالي خاص، ولكنه يُستخدم كحاوية عامة لتنظيم وتجميع العناصر الأخرى داخل الصفحة.
+</p>
+
+<code>
+&lt;div&gt;
+  &lt;h2&gt;Section Title&lt;/h2&gt;
+  &lt;p&gt;Section Content&lt;/p&gt;
+&lt;/div&gt;
+</code>
+
+<h3>العناصر الفارغة</h3>
+
+<p>
+بعض عناصر HTML لا تحتوي على وسم إغلاق لأنها لا تحتوي على محتوى داخلي، وتُعرف بالعناصر الفارغة.
+</p>
+
+<code>
+&lt;img src="image.jpg" alt="Image"&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+</code>
+
+<h3>السمات Attributes</h3>
+
+<p>
+السمات هي معلومات إضافية تُضاف إلى عناصر HTML لتحديد سلوكها أو خصائصها.
+تُكتب السمات داخل وسم الفتح.
+</p>
+
+<code>
+&lt;a href="https://example.com"&gt;
+Visit Website
+&lt;/a&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="ids-classes">
+
+<header>المعرفات والفئات</header>
+
+<h3>المعرفات ID</h3>
+
+<p>
+المعرف أو ID هو قيمة فريدة تُستخدم لتمييز عنصر واحد فقط داخل الصفحة.
+لا يجب تكرار نفس المعرف لأكثر من عنصر.
+</p>
+
+<code>
+&lt;div id="header"&gt;
+  Header Content
+&lt;/div&gt;
+</code>
+
+<h3>الفئات Classes</h3>
+
+<p>
+تُستخدم الفئات لتجميع مجموعة من العناصر معًا بهدف تطبيق نفس التنسيق أو السلوك عليها.
+يمكن استخدام نفس الفئة مع أكثر من عنصر.
+</p>
+
+<code>
+&lt;p class="text"&gt;Paragraph One&lt;/p&gt;
+
+&lt;p class="text"&gt;Paragraph Two&lt;/p&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="special-characters">
+
+<header>الأحرف الخاصة والربط</header>
+
+<h3>كيانات HTML</h3>
+
+<p>
+تُستخدم كيانات HTML لعرض بعض الأحرف الخاصة التي لا يمكن كتابتها مباشرة داخل الصفحة.
+</p>
+
+<code>
+&amp;amp;  =&gt; &amp;
+
+&amp;lt;   =&gt; &lt;
+
+&amp;gt;   =&gt; &gt;
+</code>
+
+<h3>العنصر link</h3>
+
+<p>
+يُستخدم العنصر link لربط ملفات CSS الخارجية بصفحة HTML.
+</p>
+
+<code>
+&lt;link rel="stylesheet" href="style.css"&gt;
+</code>
+
+<h3>العنصر script</h3>
+
+<p>
+يُستخدم العنصر script لربط ملفات JavaScript الخارجية أو كتابة أكواد JavaScript داخل الصفحة.
+</p>
+
+<code>
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="html-template">
+
+<header>قالب HTML الأساسي</header>
+
+<p>
+يُعتبر قالب HTML الأساسي نقطة البداية لأي صفحة ويب.
+يحتوي على العناصر الرئيسية اللازمة لعمل الصفحة بشكل صحيح داخل المتصفح.
+</p>
+
+<h3>بنية قالب HTML</h3>
+
+<p>
+يتكون القالب الأساسي من تعريف نوع المستند DOCTYPE والعناصر html و head و body.
+يتم وضع البيانات الوصفية داخل head بينما يوضع المحتوى المرئي داخل body.
+</p>
+
+<code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  Content Here
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code>
+
+<h3>أهمية قالب HTML</h3>
+
+<p>
+يساعد هذا القالب المتصفح على فهم نوع المستند وطريقة عرضه بشكل صحيح.
+ويُعد نقطة البداية القياسية لإنشاء أي صفحة ويب حديثة.
+</p>
+
+</section>
+
+<section class="main-section" id="utf8">
+
+<header>ترميز الأحرف UTF-8</header>
+
+<p>
+يُستخدم ترميز UTF-8 لضمان عرض الأحرف والرموز المختلفة بشكل صحيح بغض النظر عن لغة المحتوى أو نظام التشغيل المستخدم.
+</p>
+
+<h3>إضافة ترميز UTF-8</h3>
+
+<p>
+يجب إضافة وسم meta الخاص بالترميز داخل عنصر head.
+</p>
+
+<code>
+&lt;meta charset="UTF-8"&gt;
+</code>
+
+<h3>أهمية UTF-8</h3>
+
+<p>
+يسمح بعرض النصوص العربية والإنجليزية واللغات الأخرى والرموز الخاصة بطريقة صحيحة داخل المتصفح.
+</p>
+
+</section>
+
+<section class="main-section" id="seo-meta">
+
+<header>تحسين محركات البحث والعلامات الوصفية</header>
+
+<h3>علامة Meta Description</h3>
+
+<p>
+تُستخدم العلامة الوصفية Description لتوفير وصف مختصر لمحتوى الصفحة.
+يظهر هذا الوصف غالبًا داخل نتائج البحث ويساعد في تحسين محركات البحث SEO.
+</p>
+
+<code>
+&lt;meta
+  name="description"
+  content="Learn HTML from beginner to advanced level."
+&gt;
+</code>
+
+<h3>أهمية Meta Description</h3>
+
+<p>
+تساعد محركات البحث والمستخدمين على فهم محتوى الصفحة قبل زيارتها.
+كما يمكن أن تؤثر على معدل النقر على نتائج البحث.
+</p>
+
+</section>
+
+<section class="main-section" id="open-graph">
+
+<header>علامات Open Graph</header>
+
+<p>
+تُستخدم علامات Open Graph لتحسين طريقة ظهور صفحات الويب عند مشاركتها على مواقع التواصل الاجتماعي مثل Facebook و LinkedIn.
+</p>
+
+<h3>إضافة بيانات Open Graph</h3>
+
+<code>
+&lt;meta property="og:title" content="Learn HTML"&gt;
+
+&lt;meta property="og:description"
+content="Complete HTML Tutorial"&gt;
+
+&lt;meta property="og:image"
+content="image.jpg"&gt;
+</code>
+
+<h3>فائدة Open Graph</h3>
+
+<p>
+تساعد في عرض عنوان ووصف وصورة مخصصة عند مشاركة الرابط على وسائل التواصل الاجتماعي.
+</p>
+
+</section>
+
+<section class="main-section" id="media-elements">
+
+<header>عناصر الوسائط وتحسينها</header>
+
+<h3>العناصر المستبدلة</h3>
+
+<p>
+العناصر المستبدلة هي عناصر يتم استبدال محتواها بمصدر خارجي مثل الصور ومقاطع الفيديو والإطارات المضمنة.
+</p>
+
+<code>
+&lt;img src="photo.jpg" alt="Photo"&gt;
+
+&lt;iframe src="page.html"&gt;&lt;/iframe&gt;
+</code>
+
+<h3>تحسين الوسائط</h3>
+
+<p>
+يُقصد بتحسين الوسائط تقليل حجم الصور والفيديوهات وتحسين أدائها لتسريع تحميل صفحات الويب.
+</p>
+
+<h3>تنسيقات الصور الشائعة</h3>
+
+<p>
+هناك عدة تنسيقات مستخدمة للصور ولكل منها استخدام مختلف.
+</p>
+
+<code>
+JPG  - للصور الفوتوغرافية
+
+PNG  - للصور ذات الخلفية الشفافة
+
+GIF  - للصور المتحركة
+
+WEBP - حجم أصغر وجودة أفضل
+</code>
+
+<h3>تراخيص الصور</h3>
+
+<p>
+يجب التأكد من حقوق استخدام الصور قبل إضافتها إلى موقع الويب.
+بعض الصور مجانية وبعضها يتطلب ترخيصًا أو إذنًا من صاحبها.
+</p>
+
+<h3>رسومات SVG</h3>
+
+<p>
+SVG هي رسومات متجهة قابلة للتوسيع يمكن تكبيرها أو تصغيرها دون فقدان الجودة.
+وتُستخدم بشكل واسع في الشعارات والأيقونات.
+</p>
+
+<code>
+&lt;svg width="100" height="100"&gt;
+  &lt;circle
+    cx="50"
+    cy="50"
+    r="40"
+  /&gt;
+&lt;/svg&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="multimedia">
+
+<header>تكامل الوسائط المتعددة</header>
+
+<h3>عنصر الصوت audio</h3>
+
+<p>
+يُستخدم العنصر audio لتضمين ملفات صوتية داخل صفحات الويب.
+</p>
+
+<code>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3"&gt;
+&lt;/audio&gt;
+</code>
+
+<h3>عنصر الفيديو video</h3>
+
+<p>
+يُستخدم العنصر video لتشغيل ملفات الفيديو مباشرة داخل صفحة الويب.
+</p>
+
+<code>
+&lt;video controls width="400"&gt;
+  &lt;source src="video.mp4"&gt;
+&lt;/video&gt;
+</code>
+
+<h3>التضمين باستخدام iframe</h3>
+
+<p>
+يُستخدم العنصر iframe لتضمين محتوى خارجي داخل الصفحة مثل مقاطع YouTube أو الخرائط أو صفحات ويب أخرى.
+</p>
+
+<code>
+&lt;iframe
+src="https://www.youtube.com/embed/video-id"&gt;
+&lt;/iframe&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="links-paths">
+
+<header>الروابط والمسارات</header>
+
+<p>
+تُستخدم الروابط في HTML للانتقال بين صفحات الويب أو أجزاء مختلفة من نفس الصفحة.
+ويتم إنشاؤها باستخدام العنصر a مع السمة href.
+</p>
+
+<h3>إنشاء رابط</h3>
+
+<p>
+يُستخدم العنصر a لإنشاء رابط قابل للنقر ينقل المستخدم إلى صفحة أو موقع آخر.
+</p>
+
+<code>
+&lt;a href="https://example.com"&gt;
+Visit Website
+&lt;/a&gt;
+</code>
+
+<h3>أنواع السمة target</h3>
+
+<p>
+تُستخدم السمة target للتحكم في مكان فتح الرابط عند النقر عليه.
+</p>
+
+<code>
+&lt;a href="https://example.com" target="_self"&gt;
+Open In Same Tab
+&lt;/a&gt;
+
+&lt;a href="https://example.com" target="_blank"&gt;
+Open In New Tab
+&lt;/a&gt;
+</code>
+
+<h3>المسارات المطلقة Absolute Paths</h3>
+
+<p>
+المسار المطلق هو المسار الكامل الذي يحتوي على عنوان الموقع بالكامل.
+يُستخدم عادةً للربط بمواقع أو ملفات موجودة خارج المشروع.
+</p>
+
+<code>
+&lt;img src="https://example.com/images/photo.jpg"&gt;
+</code>
+
+<h3>المسارات النسبية Relative Paths</h3>
+
+<p>
+المسار النسبي يعتمد على موقع الملف الحالي داخل المشروع.
+ويُستخدم للوصول إلى الملفات الموجودة داخل مجلدات المشروع.
+</p>
+
+<code>
+&lt;img src="images/photo.jpg"&gt;
+</code>
+
+<h3>بناء جملة المسارات</h3>
+
+<p>
+توجد عدة رموز تُستخدم للتنقل بين الملفات والمجلدات داخل المشروع.
+</p>
+
+<code>
+./      Current Directory
+
+../     Parent Directory
+
+folder/file.html
+</code>
+
+<h3>حالات الروابط</h3>
+
+<p>
+تمتلك الروابط حالات مختلفة أثناء تفاعل المستخدم معها مثل الحالة الافتراضية وحالة المرور بالمؤشر وحالة الضغط.
+</p>
+
+<code>
+a:link
+
+a:visited
+
+a:hover
+
+a:active
+</code>
+
+<h3>الروابط الداخلية</h3>
+
+<p>
+يمكن إنشاء روابط تنقل المستخدم إلى قسم معين داخل نفس الصفحة باستخدام المعرفات IDs.
+</p>
+
+<code>
+&lt;a href="#contact"&gt;
+Go To Contact Section
+&lt;/a&gt;
+
+&lt;section id="contact"&gt;
+Contact Information
+&lt;/section&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="semantic-html">
+
+<header>أهمية HTML الدلالية</header>
+
+<p>
+العناصر الدلالية أو Semantic Elements هي عناصر تضيف معنى واضحًا لمحتوى الصفحة.
+وهي تساعد المطورين ومحركات البحث والتقنيات المساعدة على فهم بنية الموقع بشكل أفضل.
+</p>
+
+<h3>التسلسل الهرمي للعناوين</h3>
+
+<p>
+يجب استخدام عناصر العناوين بالترتيب الصحيح للحفاظ على هيكل منطقي للمحتوى.
+العنصر h1 يمثل أعلى مستوى بينما h6 يمثل أدنى مستوى.
+</p>
+
+<code>
+&lt;h1&gt;Main Title&lt;/h1&gt;
+
+&lt;h2&gt;Section Title&lt;/h2&gt;
+
+&lt;h3&gt;Sub Section&lt;/h3&gt;
+</code>
+
+<h3>العناصر التقديمية القديمة</h3>
+
+<p>
+كانت بعض العناصر تُستخدم للتحكم في مظهر المحتوى فقط دون إضافة معنى دلالي.
+وقد أصبحت مهملة في HTML الحديثة.
+</p>
+
+<code>
+&lt;center&gt;Text&lt;/center&gt;
+
+&lt;font&gt;Text&lt;/font&gt;
+
+&lt;big&gt;Text&lt;/big&gt;
+</code>
+
+<h3>العناصر الدلالية الحديثة</h3>
+
+<p>
+توفر العناصر الدلالية معنى واضحًا لأجزاء الصفحة المختلفة وتساعد على تنظيم المحتوى بطريقة احترافية.
+</p>
+
+</section>
+
+<section class="main-section" id="semantic-elements">
+
+<header>العناصر الدلالية الأساسية</header>
+
+<h3>عنصر header</h3>
+
+<p>
+يمثل المحتوى التمهيدي للصفحة أو القسم مثل الشعار والعنوان الرئيسي.
+</p>
+
+<code>
+&lt;header&gt;
+  Website Header
+&lt;/header&gt;
+</code>
+
+<h3>عنصر nav</h3>
+
+<p>
+يحتوي على روابط التنقل الرئيسية داخل الموقع.
+</p>
+
+<code>
+&lt;nav&gt;
+  Navigation Links
+&lt;/nav&gt;
+</code>
+
+<h3>عنصر section</h3>
+
+<p>
+يُستخدم لتجميع مجموعة من المحتويات المرتبطة بموضوع واحد.
+</p>
+
+<code>
+&lt;section&gt;
+  Section Content
+&lt;/section&gt;
+</code>
+
+<h3>عنصر article</h3>
+
+<p>
+يمثل محتوى مستقلاً يمكن فهمه بمفرده مثل المقالات أو المنشورات.
+</p>
+
+<code>
+&lt;article&gt;
+  Blog Post
+&lt;/article&gt;
+</code>
+
+<h3>عنصر aside</h3>
+
+<p>
+يُستخدم للمحتوى الجانبي أو المعلومات المرتبطة بالمحتوى الرئيسي.
+</p>
+
+<code>
+&lt;aside&gt;
+  Sidebar Content
+&lt;/aside&gt;
+</code>
+
+<h3>عنصر footer</h3>
+
+<p>
+يمثل تذييل الصفحة أو القسم ويحتوي غالبًا على معلومات التواصل وحقوق النشر.
+</p>
+
+<code>
+&lt;footer&gt;
+  Copyright 2026
+&lt;/footer&gt;
+</code>
+
+<h3>مثال على استخدام العناصر الدلالية</h3>
+
+<code>
+&lt;header&gt;Header&lt;/header&gt;
+
+&lt;nav&gt;Navigation&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;
+      Article Content
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;aside&gt;
+    Sidebar
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  Footer
+&lt;/footer&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="text-semantic-elements">
+
+<header>العناصر الدلالية النصية</header>
+
+<p>
+توفر HTML مجموعة من العناصر الدلالية المستخدمة لإعطاء معنى إضافي للنصوص داخل الصفحة.
+تساعد هذه العناصر المتصفحات ومحركات البحث والتقنيات المساعدة على فهم المحتوى بشكل أفضل.
+</p>
+
+<h3>عنصر التأكيد em</h3>
+
+<p>
+يُستخدم العنصر em لتمثيل النص الذي يحتاج إلى تأكيد أو تشديد أثناء القراءة.
+عادةً ما يظهر النص بخط مائل.
+</p>
+
+<code>
+&lt;p&gt;
+I &lt;em&gt;really&lt;/em&gt; like HTML.
+&lt;/p&gt;
+</code>
+
+<h3>عنصر الأهمية القوية strong</h3>
+
+<p>
+يُستخدم العنصر strong للإشارة إلى أن النص يحمل أهمية كبيرة أو تحذيرًا أو معلومة مهمة.
+</p>
+
+<code>
+&lt;p&gt;
+&lt;strong&gt;Warning:&lt;/strong&gt;
+Save your work frequently.
+&lt;/p&gt;
+</code>
+
+<h3>عنصر لفت الانتباه b</h3>
+
+<p>
+يُستخدم العنصر b لجذب الانتباه إلى نص معين دون إعطائه أهمية دلالية خاصة.
+</p>
+
+<code>
+&lt;b&gt;New&lt;/b&gt;
+</code>
+
+<h3>عنصر النص الاصطلاحي i</h3>
+
+<p>
+يُستخدم العنصر i لعرض النصوص ذات المعنى المختلف مثل المصطلحات الأجنبية أو التقنية أو الأفكار.
+</p>
+
+<code>
+&lt;i&gt;Bonjour&lt;/i&gt;
+</code>
+
+<h3>عنصر الكود code</h3>
+
+<p>
+يُستخدم العنصر code لتمثيل جزء من كود برمجي داخل النص.
+</p>
+
+<code>
+&lt;code&gt;
+console.log("Hello");
+&lt;/code&gt;
+</code>
+
+<h3>عنصر الاقتباس المضمن q</h3>
+
+<p>
+يُستخدم العنصر q لعرض اقتباس قصير داخل النص.
+</p>
+
+<code>
+&lt;q&gt;
+Knowledge is power.
+&lt;/q&gt;
+</code>
+
+<h3>عنصر الاقتباس الكتلي blockquote</h3>
+
+<p>
+يُستخدم العنصر blockquote لعرض اقتباسات طويلة مأخوذة من مصدر آخر.
+</p>
+
+<code>
+&lt;blockquote&gt;
+The future belongs to those who learn more skills.
+&lt;/blockquote&gt;
+</code>
+
+<h3>عنصر الاختصار abbr</h3>
+
+<p>
+يُستخدم العنصر abbr لتمثيل الاختصارات مع توضيح معناها الكامل.
+</p>
+
+<code>
+&lt;abbr title="HyperText Markup Language"&gt;
+HTML
+&lt;/abbr&gt;
+</code>
+
+<h3>عنصر معلومات التواصل address</h3>
+
+<p>
+يُستخدم العنصر address لعرض معلومات التواصل الخاصة بشخص أو مؤسسة.
+</p>
+
+<code>
+&lt;address&gt;
+contact@example.com
+&lt;/address&gt;
+</code>
+
+<h3>عنصر الوقت time</h3>
+
+<p>
+يُستخدم العنصر time لتمثيل تاريخ أو وقت محدد بطريقة يمكن للمتصفحات فهمها.
+</p>
+
+<code>
+&lt;time datetime="2026-06-20"&gt;
+June 20, 2026
+&lt;/time&gt;
+</code>
+
+<h3>عنصر الأس sup</h3>
+
+<p>
+يُستخدم العنصر sup لعرض النصوص المرتفعة مثل الأسس الرياضية.
+</p>
+
+<code>
+x&lt;sup&gt;2&lt;/sup&gt;
+</code>
+
+<h3>عنصر النص السفلي sub</h3>
+
+<p>
+يُستخدم العنصر sub لعرض النصوص المنخفضة مثل الصيغ الكيميائية.
+</p>
+
+<code>
+H&lt;sub&gt;2&lt;/sub&gt;O
+</code>
+
+<h3>عنصر التعليق غير المفصل u</h3>
+
+<p>
+يُستخدم العنصر u لتمييز جزء من النص يحتاج إلى ملاحظة أو تعليق.
+</p>
+
+<code>
+&lt;u&gt;
+Important Note
+&lt;/u&gt;
+</code>
+
+<h3>عنصر الشطب s</h3>
+
+<p>
+يُستخدم العنصر s لتمثيل المحتوى الذي لم يعد صحيحًا أو صالحًا.
+</p>
+
+<code>
+&lt;s&gt;$100&lt;/s&gt;
+$75
+</code>
+
+<h3>قائمة الوصف dl</h3>
+
+<p>
+تُستخدم قائمة الوصف لعرض المصطلحات وتعريفاتها بطريقة منظمة.
+</p>
+
+<code>
+&lt;dl&gt;
+
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;
+    Markup Language
+  &lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;
+    Styling Language
+  &lt;/dd&gt;
+
+&lt;/dl&gt;
+</code>
+
+<h3>عنصر Ruby Annotation</h3>
+
+<p>
+يُستخدم العنصر ruby لإضافة شروحات أو نطق إضافي لبعض الأحرف خاصة في اللغات الآسيوية.
+</p>
+
+<code>
+&lt;ruby&gt;
+漢
+&lt;rt&gt;Kan&lt;/rt&gt;
+&lt;/ruby&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="html-forms">
+
+<header>عناصر وخصائص نماذج HTML</header>
+
+<p>
+تُستخدم النماذج Forms لجمع البيانات من المستخدمين وإرسالها إلى الخادم لمعالجتها.
+وتُعد من أهم العناصر المستخدمة في مواقع التسجيل وتسجيل الدخول والتواصل والاستبيانات.
+</p>
+
+<h3>العنصر form</h3>
+
+<p>
+يُستخدم العنصر form لإنشاء نموذج يحتوي على حقول الإدخال المختلفة التي يتفاعل معها المستخدم.
+</p>
+
+<code>
+&lt;form action="submit.php" method="POST"&gt;
+
+&lt;/form&gt;
+</code>
+
+<h3>السمة action</h3>
+
+<p>
+تُستخدم السمة action لتحديد عنوان الصفحة أو الخادم الذي سيتم إرسال بيانات النموذج إليه بعد الضغط على زر الإرسال.
+</p>
+
+<code>
+&lt;form action="register.php"&gt;
+
+&lt;/form&gt;
+</code>
+
+<h3>السمة method</h3>
+
+<p>
+تُستخدم السمة method لتحديد طريقة إرسال البيانات.
+أشهر الطرق المستخدمة هي GET و POST.
+</p>
+
+<code>
+&lt;form method="POST"&gt;
+
+&lt;/form&gt;
+</code>
+
+<h3>مثال على نموذج كامل</h3>
+
+<code>
+&lt;form method="POST"
+action="register.php"&gt;
+
+  &lt;input type="text"&gt;
+
+  &lt;input type="submit"&gt;
+
+&lt;/form&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="input-element">
+
+<header>العنصر input</header>
+
+<p>
+يُستخدم العنصر input لإنشاء حقول الإدخال المختلفة التي تسمح للمستخدم بإدخال البيانات أو اختيار الخيارات.
+</p>
+
+<h3>النوع text</h3>
+
+<p>
+يُستخدم لإنشاء حقل نصي عادي.
+</p>
+
+<code>
+&lt;input type="text"&gt;
+</code>
+
+<h3>النوع email</h3>
+
+<p>
+يُستخدم لإدخال البريد الإلكتروني مع التحقق من صحة التنسيق.
+</p>
+
+<code>
+&lt;input type="email"&gt;
+</code>
+
+<h3>النوع password</h3>
+
+<p>
+يُستخدم لإدخال كلمات المرور مع إخفاء الأحرف أثناء الكتابة.
+</p>
+
+<code>
+&lt;input type="password"&gt;
+</code>
+
+<h3>النوع number</h3>
+
+<p>
+يُستخدم لإدخال القيم الرقمية فقط.
+</p>
+
+<code>
+&lt;input type="number"&gt;
+</code>
+
+<h3>النوع radio</h3>
+
+<p>
+يُستخدم لاختيار خيار واحد فقط من مجموعة خيارات.
+</p>
+
+<code>
+&lt;input type="radio"&gt;
+</code>
+
+<h3>النوع checkbox</h3>
+
+<p>
+يُستخدم لاختيار أكثر من خيار من مجموعة خيارات.
+</p>
+
+<code>
+&lt;input type="checkbox"&gt;
+</code>
+
+<h3>النوع date</h3>
+
+<p>
+يُستخدم لاختيار تاريخ من تقويم مدمج في المتصفح.
+</p>
+
+<code>
+&lt;input type="date"&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="input-attributes">
+
+<header>خصائص حقول الإدخال</header>
+
+<h3>السمة placeholder</h3>
+
+<p>
+تُستخدم لعرض نص إرشادي داخل حقل الإدخال لمساعدة المستخدم.
+</p>
+
+<code>
+&lt;input
+type="text"
+placeholder="Enter Your Name"&gt;
+</code>
+
+<h3>السمة value</h3>
+
+<p>
+تُستخدم لتحديد قيمة افتراضية لحقل الإدخال أو لتحديد النص الظاهر داخل الأزرار.
+</p>
+
+<code>
+&lt;input
+type="text"
+value="Osama"&gt;
+</code>
+
+<h3>السمة name</h3>
+
+<p>
+تُستخدم لتحديد اسم الحقل الذي سيتم إرساله مع البيانات.
+وتُعتبر المفتاح الذي يميز قيمة الحقل عند الإرسال.
+</p>
+
+<code>
+&lt;input
+type="text"
+name="username"&gt;
+</code>
+
+<h3>السمة size</h3>
+
+<p>
+تُستخدم لتحديد عدد الأحرف الظاهرة داخل حقل الإدخال.
+</p>
+
+<code>
+&lt;input
+type="text"
+size="20"&gt;
+</code>
+
+<h3>السمة min</h3>
+
+<p>
+تُستخدم لتحديد أقل قيمة مسموح بها في الحقول الرقمية.
+</p>
+
+<code>
+&lt;input
+type="number"
+min="1"&gt;
+</code>
+
+<h3>السمة max</h3>
+
+<p>
+تُستخدم لتحديد أكبر قيمة مسموح بها.
+</p>
+
+<code>
+&lt;input
+type="number"
+max="100"&gt;
+</code>
+
+<h3>السمة minlength</h3>
+
+<p>
+تُستخدم لتحديد أقل عدد من الأحرف المطلوبة.
+</p>
+
+<code>
+&lt;input
+type="text"
+minlength="5"&gt;
+</code>
+
+<h3>السمة maxlength</h3>
+
+<p>
+تُستخدم لتحديد أكبر عدد من الأحرف المسموح بها.
+</p>
+
+<code>
+&lt;input
+type="text"
+maxlength="20"&gt;
+</code>
+
+<h3>السمة required</h3>
+
+<p>
+تُستخدم لجعل الحقل إلزاميًا قبل إرسال النموذج.
+</p>
+
+<code>
+&lt;input
+type="text"
+required&gt;
+</code>
+
+<h3>السمة disabled</h3>
+
+<p>
+تُستخدم لتعطيل حقل الإدخال ومنع المستخدم من التفاعل معه.
+</p>
+
+<code>
+&lt;input
+type="text"
+disabled&gt;
+</code>
+
+<h3>السمة readonly</h3>
+
+<p>
+تسمح بعرض البيانات داخل الحقل دون السماح بتعديلها.
+</p>
+
+<code>
+&lt;input
+type="text"
+readonly&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="labels">
+
+<header>العنصر label</header>
+
+<p>
+يُستخدم العنصر label لإنشاء تسمية توضيحية لحقل الإدخال.
+ويساعد المستخدم على معرفة الغرض من الحقل.
+</p>
+
+<h3>الربط الضمني</h3>
+
+<p>
+يتم ربط التسمية بالحقل عن طريق وضع حقل الإدخال داخل العنصر label.
+</p>
+
+<code>
+&lt;label&gt;
+
+  Full Name
+
+  &lt;input type="text"&gt;
+
+&lt;/label&gt;
+</code>
+
+<h3>الربط الصريح</h3>
+
+<p>
+يتم الربط باستخدام السمة for في العنصر label وربطها بمعرف الحقل id.
+</p>
+
+<code>
+&lt;label for="email"&gt;
+Email
+&lt;/label&gt;
+
+&lt;input
+type="email"
+id="email"&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="buttons">
+
+<header>العنصر button</header>
+
+<p>
+يُستخدم العنصر button لإنشاء أزرار قابلة للنقر داخل الصفحة.
+</p>
+
+<h3>زر عادي</h3>
+
+<code>
+&lt;button type="button"&gt;
+Show Alert
+&lt;/button&gt;
+</code>
+
+<h3>زر إرسال النموذج</h3>
+
+<code>
+&lt;button type="submit"&gt;
+Submit Form
+&lt;/button&gt;
+</code>
+
+<h3>زر إعادة التعيين</h3>
+
+<code>
+&lt;button type="reset"&gt;
+Reset Form
+&lt;/button&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="fieldset-legend">
+
+<header>تجميع عناصر النموذج</header>
+
+<h3>العنصر fieldset</h3>
+
+<p>
+يُستخدم لتجميع الحقول المرتبطة ببعضها داخل إطار واحد.
+</p>
+
+<h3>العنصر legend</h3>
+
+<p>
+يُستخدم لإضافة عنوان أو وصف لمجموعة الحقول الموجودة داخل fieldset.
+</p>
+
+<code>
+&lt;fieldset&gt;
+
+  &lt;legend&gt;
+    Personal Information
+  &lt;/legend&gt;
+
+  &lt;input type="text"&gt;
+
+&lt;/fieldset&gt;
+</code>
+
+<h3>مثال على مجموعة Radio</h3>
+
+<code>
+&lt;fieldset&gt;
+
+  &lt;legend&gt;
+    Gender
+  &lt;/legend&gt;
+
+  &lt;input
+  type="radio"
+  name="gender"&gt;
+
+  Male
+
+  &lt;input
+  type="radio"
+  name="gender"&gt;
+
+  Female
+
+&lt;/fieldset&gt;
+</code>
+
+<h3>مثال على مجموعة Checkbox</h3>
+
+<code>
+&lt;fieldset&gt;
+
+  &lt;legend&gt;
+    Skills
+  &lt;/legend&gt;
+
+  &lt;input
+  type="checkbox"&gt;
+
+  HTML
+
+  &lt;input
+  type="checkbox"&gt;
+
+  CSS
+
+  &lt;input
+  type="checkbox"&gt;
+
+  JavaScript
+
+&lt;/fieldset&gt;
+</code>
+
+<h3>حالة التركيز Focus State</h3>
+
+<p>
+تُعرف حالة التركيز بأنها الحالة التي يكون فيها حقل الإدخال نشطًا ومحددًا بواسطة المستخدم.
+وتُستخدم كثيرًا في CSS لتغيير مظهر الحقل أثناء الكتابة.
+</p>
+
+<code>
+input:focus{
+  border-color: blue;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="html-tables">
+
+<header>العمل مع عناصر وخصائص جداول HTML</header>
+
+<p>
+تُستخدم الجداول في HTML لعرض البيانات المنظمة في صفوف وأعمدة.
+وتُعد مناسبة لعرض النتائج والإحصائيات وقوائم البيانات المختلفة.
+</p>
+
+<h3>العنصر table</h3>
+
+<p>
+يُستخدم العنصر table لإنشاء جدول HTML يحتوي على الصفوف والأعمدة.
+</p>
+
+<code>
+&lt;table&gt;
+
+&lt;/table&gt;
+</code>
+
+<h3>العنصر caption</h3>
+
+<p>
+يُستخدم العنصر caption لإضافة عنوان وصفي للجدول.
+يساعد المستخدمين والتقنيات المساعدة على فهم الغرض من الجدول.
+</p>
+
+<code>
+&lt;table&gt;
+
+  &lt;caption&gt;
+    Exam Grades
+  &lt;/caption&gt;
+
+&lt;/table&gt;
+</code>
+
+<h3>العنصر thead</h3>
+
+<p>
+يُستخدم العنصر thead لتجميع رؤوس الأعمدة داخل الجدول.
+</p>
+
+<code>
+&lt;thead&gt;
+
+&lt;/thead&gt;
+</code>
+
+<h3>العنصر tr</h3>
+
+<p>
+يُستخدم العنصر tr لإنشاء صف جديد داخل الجدول.
+</p>
+
+<code>
+&lt;tr&gt;
+
+&lt;/tr&gt;
+</code>
+
+<h3>العنصر th</h3>
+
+<p>
+يُستخدم العنصر th لإنشاء خلية عنوان داخل الجدول.
+ويكون النص داخلها غالبًا عريضًا بشكل افتراضي.
+</p>
+
+<code>
+&lt;th&gt;Name&lt;/th&gt;
+</code>
+
+<h3>العنصر tbody</h3>
+
+<p>
+يُستخدم العنصر tbody لتجميع البيانات الرئيسية للجدول.
+</p>
+
+<code>
+&lt;tbody&gt;
+
+&lt;/tbody&gt;
+</code>
+
+<h3>العنصر td</h3>
+
+<p>
+يُستخدم العنصر td لإنشاء خلية بيانات عادية داخل الجدول.
+</p>
+
+<code>
+&lt;td&gt;Osama&lt;/td&gt;
+</code>
+
+<h3>العنصر tfoot</h3>
+
+<p>
+يُستخدم العنصر tfoot لتجميع بيانات التذييل مثل المتوسطات أو الإجماليات.
+</p>
+
+<code>
+&lt;tfoot&gt;
+
+&lt;/tfoot&gt;
+</code>
+
+<h3>السمة colspan</h3>
+
+<p>
+تُستخدم السمة colspan لجعل الخلية تمتد عبر عدة أعمدة.
+</p>
+
+<code>
+&lt;td colspan="2"&gt;
+Average Grade
+&lt;/td&gt;
+</code>
+
+<h3>مثال كامل على جدول</h3>
+
+<code>
+&lt;table&gt;
+
+  &lt;caption&gt;
+    Exam Grades
+  &lt;/caption&gt;
+
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Grade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Davis&lt;/td&gt;
+      &lt;td&gt;Alex&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Doe&lt;/td&gt;
+      &lt;td&gt;Samantha&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;
+        Average Grade
+      &lt;/td&gt;
+
+      &lt;td&gt;78&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+
+&lt;/table&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="html-tools">
+
+<header>أدوات HTML</header>
+
+<h3>مدقق HTML</h3>
+
+<p>
+يُستخدم مدقق HTML للتحقق من صحة بنية الكود واكتشاف الأخطاء والمشكلات الموجودة داخل الصفحة.
+</p>
+
+<h3>مدقق DOM</h3>
+
+<p>
+يساعد مدقق DOM على فحص العناصر الموجودة داخل الصفحة ومعرفة العلاقات بينها أثناء تشغيل الموقع.
+</p>
+
+<h3>أدوات المطورين</h3>
+
+<p>
+توفر المتصفحات الحديثة أدوات مطورين قوية تساعد في فحص العناصر وتصحيح الأخطاء وتحليل أداء الموقع.
+</p>
+
+</section>
+
+<section class="main-section" id="accessibility-intro">
+
+<header>مقدمة في إمكانية الوصول Accessibility</header>
+
+<p>
+إمكانية الوصول هي مجموعة من الممارسات التي تهدف إلى جعل المواقع والتطبيقات قابلة للاستخدام من قبل جميع الأشخاص بما في ذلك ذوو الإعاقات المختلفة.
+</p>
+
+<h3>إرشادات WCAG</h3>
+
+<p>
+تُعد إرشادات WCAG من أشهر المعايير المستخدمة لتحسين إمكانية الوصول.
+وترتكز على أربعة مبادئ رئيسية تعرف باسم POUR.
+</p>
+
+<code>
+P = Perceivable
+
+O = Operable
+
+U = Understandable
+
+R = Robust
+</code>
+
+<h3>قابلية الإدراك Perceivable</h3>
+
+<p>
+يجب أن يكون المحتوى قابلاً للإدراك من قبل المستخدمين سواء من خلال الرؤية أو السمع أو وسائل مساعدة أخرى.
+</p>
+
+<h3>قابلية التشغيل Operable</h3>
+
+<p>
+يجب أن تكون جميع عناصر الموقع قابلة للاستخدام بواسطة لوحة المفاتيح أو وسائل الإدخال الأخرى.
+</p>
+
+<h3>قابلية الفهم Understandable</h3>
+
+<p>
+يجب أن يكون المحتوى وسلوك الموقع واضحين وسهلين للفهم.
+</p>
+
+<h3>المتانة Robust</h3>
+
+<p>
+يجب أن يعمل الموقع بشكل جيد مع المتصفحات والتقنيات المساعدة المختلفة.
+</p>
+
+</section>
+
+<section class="main-section" id="assistive-technologies">
+
+<header>التقنيات المساعدة</header>
+
+<h3>قارئات الشاشة</h3>
+
+<p>
+هي برامج تقوم بقراءة محتوى الشاشة صوتيًا لمساعدة المكفوفين وضعاف البصر على استخدام الإنترنت.
+</p>
+
+<h3>لوحات مفاتيح برايل</h3>
+
+<p>
+تساعد المستخدمين ذوي الإعاقات البصرية على التفاعل مع المحتوى باستخدام نظام برايل.
+</p>
+
+<h3>مكبرات الشاشة</h3>
+
+<p>
+تُستخدم لتكبير أجزاء الشاشة لتسهيل قراءة المحتوى.
+</p>
+
+<h3>أجهزة التأشير البديلة</h3>
+
+<p>
+تشمل عصي التحكم ولوحات اللمس وكرات التتبع لمساعدة الأشخاص ذوي الإعاقات الحركية.
+</p>
+
+<h3>التعرف على الصوت</h3>
+
+<p>
+يسمح للمستخدمين بالتحكم في الحاسوب باستخدام الأوامر الصوتية.
+</p>
+
+</section>
+
+<section class="main-section" id="accessibility-tools">
+
+<header>أدوات تدقيق إمكانية الوصول</header>
+
+<p>
+هناك العديد من الأدوات المستخدمة لاكتشاف مشاكل إمكانية الوصول داخل المواقع الإلكترونية.
+</p>
+
+<h3>أدوات شائعة</h3>
+
+<code>
+Google Lighthouse
+
+Wave
+
+IBM Equal Accessibility Checker
+
+axe DevTools
+</code>
+
+</section>
+
+<section class="main-section" id="accessibility-best-practices">
+
+<header>أفضل الممارسات في إمكانية الوصول</header>
+
+<p>
+تساعد أفضل ممارسات إمكانية الوصول على جعل مواقع الويب قابلة للاستخدام من قبل جميع الأشخاص، بما في ذلك المستخدمون الذين يعتمدون على التقنيات المساعدة مثل قارئات الشاشة ولوحات المفاتيح.
+</p>
+
+<h3>استخدام بنية عناوين صحيحة</h3>
+
+<p>
+يجب استخدام عناصر العناوين بالترتيب الصحيح من h1 إلى h6 لإنشاء هيكل منطقي للمحتوى.
+يساعد ذلك التقنيات المساعدة ومحركات البحث على فهم الصفحة بشكل أفضل.
+</p>
+
+<code>
+&lt;h1&gt;Main Title&lt;/h1&gt;
+
+&lt;h2&gt;Section Title&lt;/h2&gt;
+
+&lt;h3&gt;Subsection Title&lt;/h3&gt;
+</code>
+
+<h3>إمكانية الوصول والجداول</h3>
+
+<p>
+عند إنشاء الجداول يجب استخدام العنصر th لخلايا العناوين والعنصر td لخلايا البيانات.
+يساعد ذلك قارئات الشاشة على تفسير بنية الجدول بشكل صحيح.
+</p>
+
+<code>
+&lt;tr&gt;
+  &lt;th&gt;Name&lt;/th&gt;
+  &lt;th&gt;Grade&lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  &lt;td&gt;Osama&lt;/td&gt;
+  &lt;td&gt;95&lt;/td&gt;
+&lt;/tr&gt;
+</code>
+
+<h3>أهمية ربط label مع input</h3>
+
+<p>
+يجب ربط عناصر label مع حقول الإدخال input حتى تتمكن التقنيات المساعدة من معرفة الغرض من كل حقل.
+</p>
+
+<code>
+&lt;label for="email"&gt;
+Email Address
+&lt;/label&gt;
+
+&lt;input
+type="email"
+id="email"&gt;
+</code>
+
+<h3>أهمية النص البديل alt</h3>
+
+<p>
+تُستخدم السمة alt لتوفير وصف نصي للصور.
+ويُعد ذلك ضروريًا للمستخدمين الذين يعتمدون على قارئات الشاشة أو في حالة فشل تحميل الصورة.
+</p>
+
+<code>
+&lt;img
+src="logo.png"
+alt="Company Logo"&gt;
+</code>
+
+<h3>أهمية نص الرابط الوصفي</h3>
+
+<p>
+يجب أن يوضح نص الرابط الغرض منه بشكل مباشر بدلًا من استخدام عبارات عامة مثل Click Here.
+</p>
+
+<code>
+&lt;a href="courses.html"&gt;
+Browse Programming Courses
+&lt;/a&gt;
+</code>
+
+<h3>إمكانية الوصول للمحتوى الصوتي والمرئي</h3>
+
+<p>
+يجب توفير ترجمات نصية للمحتوى الصوتي والفيديوهات لمساعدة الأشخاص ذوي الإعاقات السمعية.
+كما يُفضل إضافة أوصاف صوتية للمحتوى المرئي لمساعدة ذوي الإعاقات البصرية.
+</p>
+
+</section>
+
+<section class="main-section" id="tabindex-accesskey">
+
+<header>خصائص التنقل باستخدام لوحة المفاتيح</header>
+
+<h3>السمة tabindex</h3>
+
+<p>
+تُستخدم السمة tabindex لجعل العناصر قابلة للتركيز باستخدام لوحة المفاتيح وتحديد ترتيب التنقل بينها.
+</p>
+
+<p>
+يُفضل استخدام القيمة 0 أو -1 وعدم استخدام قيم أكبر من 0 إلا في حالات خاصة.
+</p>
+
+<code>
+&lt;button tabindex="0"&gt;
+Submit
+&lt;/button&gt;
+</code>
+
+<h3>السمة accesskey</h3>
+
+<p>
+تُستخدم السمة accesskey لتحديد اختصار لوحة مفاتيح يسمح بالوصول السريع إلى عنصر معين.
+</p>
+
+<code>
+&lt;button accesskey="s"&gt;
+Save
+&lt;/button&gt;
+</code>
+
+</section>
+
+<section class="main-section" id="wai-aria">
+
+<header>WAI-ARIA والأدوار والخصائص</header>
+
+<p>
+WAI-ARIA اختصار لـ Web Accessibility Initiative - Accessible Rich Internet Applications.
+وهي مجموعة من السمات التي تُضاف إلى عناصر HTML لتحسين إمكانية الوصول وتوفير معلومات إضافية للتقنيات المساعدة.
+</p>
+
+<h3>أدوار ARIA</h3>
+
+<p>
+تُستخدم الأدوار Roles لتوضيح وظيفة العنصر داخل الصفحة عندما لا يكون معناها واضحًا من HTML وحدها.
+</p>
+
+<code>
+&lt;div role="alert"&gt;
+Error Message
+&lt;/div&gt;
+
+&lt;div role="tab"&gt;
+Profile
+&lt;/div&gt;
+
+&lt;div role="menu"&gt;
+Navigation Menu
+&lt;/div&gt;
+</code>
+
+<h3>السمة aria-label</h3>
+
+<p>
+تُستخدم لإعطاء العنصر اسمًا يمكن للتقنيات المساعدة قراءته حتى إذا لم يكن هناك نص مرئي داخل العنصر.
+</p>
+
+<code>
+&lt;button aria-label="Close Menu"&gt;
+✖
+&lt;/button&gt;
+</code>
+
+<h3>السمة aria-labelledby</h3>
+
+<p>
+تُستخدم لربط العنصر بنص موجود بالفعل داخل الصفحة ليصبح هذا النص هو الاسم الذي تقرأه التقنيات المساعدة.
+</p>
+
+<code>
+&lt;h2 id="form-title"&gt;
+Contact Form
+&lt;/h2&gt;
+
+&lt;form
+aria-labelledby="form-title"&gt;
+&lt;/form&gt;
+</code>
+
+<h3>السمة aria-hidden</h3>
+
+<p>
+تُستخدم لإخفاء العناصر من قارئات الشاشة عندما لا تحتوي على معلومات مفيدة للمستخدم.
+</p>
+
+<code>
+&lt;span aria-hidden="true"&gt;
+★
+&lt;/span&gt;
+</code>
+
+<h3>السمة aria-describedby</h3>
+
+<p>
+تُستخدم لربط عنصر ما بوصف إضافي يساعد المستخدم على فهم الغرض منه أو طريقة استخدامه.
+</p>
+
+<code>
+&lt;p id="password-help"&gt;
+Password must be at least 8 characters.
+&lt;/p&gt;
+
+&lt;input
+type="password"
+aria-describedby="password-help"&gt;
+</code>
+
+<h3>متى نستخدم ARIA؟</h3>
+
+<p>
+يجب الاعتماد أولًا على عناصر HTML الدلالية مثل header و nav و section و article.
+ويتم استخدام ARIA فقط عندما لا توفر عناصر HTML المعلومات الكافية للتقنيات المساعدة.
+</p>
+
+<code>
+Use Semantic HTML First
+
+Use ARIA Only When Needed
+</code>
+
+</section>
+
+<section class="main-section" id="html-summary">
+
+<header>ملخص HTML</header>
+
+<p>
+HTML هي لغة بناء صفحات الويب والمسؤولة عن إنشاء هيكل الموقع وتنظيم محتواه.
+</p>
+
+<p>
+تشمل HTML العديد من المفاهيم المهمة مثل العناصر الأساسية، النماذج، الجداول، الوسائط المتعددة، الروابط، العناصر الدلالية، وإمكانية الوصول.
+</p>
+
+<p>
+كلما تم استخدام عناصر HTML الصحيحة بطريقة منظمة، أصبح الموقع أكثر احترافية وأسهل في الصيانة والتطوير وتحسين محركات البحث.
+</p>
+
+</section>
+
+<section class="main-section" id="css-basics">
+
+<header>أساسيات CSS</header>
+
+<p>
+CSS أو Cascading Style Sheets هي اللغة المسؤولة عن تنسيق صفحات الويب وإضافة الألوان والخلفيات والتخطيطات والتأثيرات البصرية لعناصر HTML.
+</p>
+
+<p>
+تعمل CSS جنبًا إلى جنب مع HTML حيث تتولى HTML إنشاء هيكل الصفحة بينما تتولى CSS تحسين مظهرها وتصميمها.
+</p>
+
+<h3>ما هي CSS؟</h3>
+
+<p>
+تُستخدم CSS للتحكم في مظهر العناصر داخل صفحة الويب مثل الألوان والخطوط والمسافات والأحجام والتخطيطات.
+</p>
+
+<code>
+p {
+  color: blue;
+}
+</code>
+
+<h3>البنية الأساسية لقاعدة CSS</h3>
+
+<p>
+تتكون قاعدة CSS من محدد Selector وكتلة تعريف Declaration Block تحتوي على الخصائص والقيم.
+</p>
+
+<code>
+p {
+  color: red;
+  font-size: 18px;
+}
+</code>
+
+<p>
+في المثال السابق:
+</p>
+
+<code>
+p        => Selector
+
+color    => Property
+
+red      => Value
+</code>
+
+</section>
+
+<section class="main-section" id="viewport">
+
+<header>عنصر Viewport</header>
+
+<p>
+يُستخدم العنصر meta viewport للتحكم في كيفية عرض الصفحة على الأجهزة المختلفة مثل الهواتف والأجهزة اللوحية.
+</p>
+
+<h3>إضافة Viewport</h3>
+
+<code>
+&lt;meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"&gt;
+</code>
+
+<p>
+بدون هذا العنصر قد لا تظهر الصفحة بشكل متجاوب على الشاشات الصغيرة.
+</p>
+
+</section>
+
+<section class="main-section" id="browser-default-styles">
+
+<header>أنماط المتصفح الافتراضية</header>
+
+<p>
+تقوم المتصفحات بإضافة أنماط افتراضية لبعض العناصر مثل الهوامش والحشوات والعناوين.
+</p>
+
+<p>
+لذلك يستخدم المطورون غالبًا Reset CSS أو Normalization للحصول على نقطة بداية موحدة.
+</p>
+
+<code>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-types">
+
+<header>أنواع CSS</header>
+
+<h3>CSS المضمنة Inline CSS</h3>
+
+<p>
+تُكتب داخل العنصر مباشرة باستخدام السمة style.
+</p>
+
+<code>
+&lt;p style="color:red;"&gt;
+Hello
+&lt;/p&gt;
+</code>
+
+<p>
+لا يُنصح باستخدامها كثيرًا لأنها تخالف مبدأ فصل المحتوى عن التصميم.
+</p>
+
+<h3>CSS الداخلية Internal CSS</h3>
+
+<p>
+تُكتب داخل عنصر style في قسم head.
+</p>
+
+<code>
+&lt;style&gt;
+p {
+  color: blue;
+}
+&lt;/style&gt;
+</code>
+
+<h3>CSS الخارجية External CSS</h3>
+
+<p>
+تُكتب داخل ملف منفصل بامتداد css ويتم ربطه بملف HTML.
+</p>
+
+<code>
+&lt;link
+rel="stylesheet"
+href="style.css"&gt;
+</code>
+
+<p>
+تُعتبر الطريقة الأفضل والأكثر استخدامًا في المشاريع الحقيقية.
+</p>
+
+</section>
+
+<section class="main-section" id="width-height">
+
+<header>خصائص العرض والارتفاع</header>
+
+<h3>الخاصية width</h3>
+
+<p>
+تُستخدم لتحديد عرض العنصر.
+</p>
+
+<code>
+div {
+  width: 300px;
+}
+</code>
+
+<h3>الخاصية min-width</h3>
+
+<p>
+تُحدد أقل عرض يمكن أن يصل إليه العنصر.
+</p>
+
+<code>
+div {
+  min-width: 200px;
+}
+</code>
+
+<h3>الخاصية max-width</h3>
+
+<p>
+تُحدد أكبر عرض يمكن أن يصل إليه العنصر.
+</p>
+
+<code>
+div {
+  max-width: 800px;
+}
+</code>
+
+<h3>الخاصية height</h3>
+
+<p>
+تُستخدم لتحديد ارتفاع العنصر.
+</p>
+
+<code>
+div {
+  height: 300px;
+}
+</code>
+
+<h3>الخاصية min-height</h3>
+
+<p>
+تُحدد أقل ارتفاع مسموح به للعنصر.
+</p>
+
+<code>
+div {
+  min-height: 150px;
+}
+</code>
+
+<h3>الخاصية max-height</h3>
+
+<p>
+تُحدد أكبر ارتفاع يمكن أن يصل إليه العنصر.
+</p>
+
+<code>
+div {
+  max-height: 600px;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-combinators">
+
+<header>مركبات CSS</header>
+
+<p>
+تُستخدم المركبات Combinators لتحديد العلاقة بين العناصر داخل الصفحة.
+</p>
+
+<h3>مركب العناصر التابعة Descendant</h3>
+
+<p>
+يستهدف جميع العناصر الموجودة داخل عنصر أب معين.
+</p>
+
+<code>
+div p {
+  color: red;
+}
+</code>
+
+<h3>مركب الأبناء Child</h3>
+
+<p>
+يستهدف الأبناء المباشرين فقط.
+</p>
+
+<code>
+div > p {
+  color: blue;
+}
+</code>
+
+<h3>مركب الأخ المجاور Adjacent Sibling</h3>
+
+<p>
+يستهدف العنصر الذي يأتي مباشرة بعد عنصر آخر.
+</p>
+
+<code>
+h1 + p {
+  color: green;
+}
+</code>
+
+<h3>مركب الأشقاء اللاحقين General Sibling</h3>
+
+<p>
+يستهدف جميع الأشقاء الذين يأتون بعد العنصر المحدد.
+</p>
+
+<code>
+h1 ~ p {
+  color: purple;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="display-types">
+
+<header>أنواع عناصر العرض</header>
+
+<p>
+تتعامل CSS مع العناصر بطرق مختلفة حسب نوع العرض الخاص بها.
+وتنقسم العناصر غالبًا إلى عناصر مضمنة Inline وعناصر كتلية Block وعناصر Inline-Block.
+</p>
+
+<h3>العناصر المضمنة Inline Elements</h3>
+
+<p>
+العناصر المضمنة تشغل مساحة مساوية لحجم محتواها فقط ولا تبدأ في سطر جديد.
+يمكن أن تظهر بجانب عناصر أخرى في نفس السطر.
+</p>
+
+<code>
+&lt;span&gt;Text&lt;/span&gt;
+
+&lt;a href="#"&gt;Link&lt;/a&gt;
+
+&lt;img src="image.jpg"&gt;
+</code>
+
+<h3>العناصر الكتلية Block Elements</h3>
+
+<p>
+تشغل العناصر الكتلية العرض الكامل المتاح لها بشكل افتراضي وتبدأ دائمًا في سطر جديد.
+</p>
+
+<code>
+&lt;div&gt;Content&lt;/div&gt;
+
+&lt;p&gt;Paragraph&lt;/p&gt;
+
+&lt;section&gt;Section&lt;/section&gt;
+</code>
+
+<h3>العناصر Inline-Block</h3>
+
+<p>
+تجمع بين خصائص العناصر المضمنة والكتلية.
+يمكن أن تظهر بجانب العناصر الأخرى مع إمكانية تحديد العرض والارتفاع لها.
+</p>
+
+<code>
+.box {
+  display: inline-block;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="margin-padding">
+
+<header>الهوامش والحشوات</header>
+
+<h3>الخاصية margin</h3>
+
+<p>
+تُستخدم الخاصية margin لإنشاء مساحة خارجية بين العنصر والعناصر المحيطة به.
+</p>
+
+<code>
+div {
+  margin: 20px;
+}
+</code>
+
+<h3>اختصار margin</h3>
+
+<p>
+يمكن استخدام قيمة واحدة أو أكثر للتحكم في جميع الجوانب.
+</p>
+
+<code>
+margin: 20px;
+
+margin: 10px 20px;
+
+margin: 10px 20px 30px;
+
+margin: 10px 20px 30px 40px;
+</code>
+
+<p>
+ترتيب القيم يكون:
+Top → Right → Bottom → Left
+</p>
+
+<h3>الخاصية padding</h3>
+
+<p>
+تُستخدم الخاصية padding لإنشاء مساحة داخلية بين المحتوى وحدود العنصر.
+</p>
+
+<code>
+div {
+  padding: 20px;
+}
+</code>
+
+<h3>اختصار padding</h3>
+
+<code>
+padding: 20px;
+
+padding: 10px 20px;
+
+padding: 10px 20px 30px;
+
+padding: 10px 20px 30px 40px;
+</code>
+
+</section>
+
+<section class="main-section" id="css-specificity">
+
+<header>خصوصية CSS</header>
+
+<p>
+عندما تتعارض أكثر من قاعدة CSS على نفس العنصر، يستخدم المتصفح مفهوم Specificity لتحديد القاعدة التي سيتم تطبيقها.
+</p>
+
+<h3>خصوصية الأنماط المضمنة</h3>
+
+<p>
+تتمتع الأنماط المضمنة بأعلى أولوية تقريبًا لأنها تُكتب مباشرة داخل العنصر.
+</p>
+
+<code>
+&lt;p style="color:red;"&gt;
+Hello
+&lt;/p&gt;
+</code>
+
+<p>
+قيمة الخصوصية:
+</p>
+
+<code>
+(1,0,0,0)
+</code>
+
+<h3>خصوصية المحدد العام *</h3>
+
+<p>
+المحدد العام يطابق جميع العناصر ويملك أقل قيمة خصوصية.
+</p>
+
+<code>
+* {
+  margin: 0;
+}
+</code>
+
+<code>
+(0,0,0,0)
+</code>
+
+<h3>محددات النوع Type Selectors</h3>
+
+<p>
+تستهدف العناصر حسب اسم الوسم.
+</p>
+
+<code>
+p {
+  color: blue;
+}
+</code>
+
+<code>
+(0,0,0,1)
+</code>
+
+<h3>محددات الفئات Class Selectors</h3>
+
+<p>
+تستهدف العناصر حسب اسم الفئة.
+</p>
+
+<code>
+.card {
+  color: red;
+}
+</code>
+
+<code>
+(0,0,1,0)
+</code>
+
+<h3>محددات المعرفات ID Selectors</h3>
+
+<p>
+تتمتع بقوة أعلى من محددات الفئات والأنواع.
+</p>
+
+<code>
+#hero {
+  color: green;
+}
+</code>
+
+<code>
+(0,1,0,0)
+</code>
+
+<h3>ترتيب الأولوية</h3>
+
+<code>
+Inline Style
+
+ID Selector
+
+Class Selector
+
+Type Selector
+
+Universal Selector
+</code>
+
+</section>
+
+<section class="main-section" id="important-keyword">
+
+<header>الكلمة المفتاحية !important</header>
+
+<p>
+تُستخدم !important لإجبار المتصفح على تطبيق قاعدة معينة حتى لو كانت هناك قواعد أخرى ذات خصوصية أعلى.
+</p>
+
+<code>
+p {
+  color: red !important;
+}
+</code>
+
+<p>
+يجب استخدام هذه الكلمة بحذر لأنها قد تجعل ملفات CSS أكثر صعوبة في الصيانة والتطوير.
+</p>
+
+</section>
+
+<section class="main-section" id="cascade-algorithm">
+
+<header>خوارزمية التتالي</header>
+
+<p>
+تُستخدم خوارزمية التتالي Cascade لتحديد أي قاعدة CSS سيتم تطبيقها عندما توجد عدة قواعد تستهدف نفس العنصر.
+</p>
+
+<p>
+تعتمد الخوارزمية على:
+</p>
+
+<code>
+1. Origin
+
+2. Importance
+
+3. Specificity
+
+4. Source Order
+</code>
+
+<p>
+إذا تساوت الخصوصية بين قاعدتين، يتم تطبيق القاعدة التي تظهر لاحقًا داخل الملف.
+</p>
+
+</section>
+
+<section class="main-section" id="css-inheritance">
+
+<header>التوريث في CSS</header>
+
+<p>
+التوريث هو انتقال بعض الخصائص من العنصر الأب إلى العناصر الأبناء تلقائيًا.
+</p>
+
+<p>
+بعض الخصائص مثل اللون والخطوط يتم توريثها افتراضيًا.
+بينما خصائص أخرى مثل العرض والهوامش لا يتم توريثها.
+</p>
+
+<code>
+body {
+  color: blue;
+}
+</code>
+
+<p>
+في المثال السابق سترث العناصر الموجودة داخل body اللون الأزرق ما لم يتم تغييره.
+</p>
+
+</section>
+
+<section class="main-section" id="design-terminology">
+
+<header>مصطلحات التصميم</header>
+
+<p>
+يحتاج مطورو الويب ومصممو واجهات المستخدم إلى فهم مجموعة من المصطلحات الأساسية المستخدمة في عالم التصميم من أجل إنشاء واجهات منظمة وسهلة الاستخدام.
+</p>
+
+<h3>التصميم Layout</h3>
+
+<p>
+التصميم هو الطريقة التي يتم بها ترتيب العناصر المرئية داخل الصفحة أو الشاشة بهدف إيصال المعلومات بشكل واضح ومنظم.
+</p>
+
+<h3>المحاذاة Alignment</h3>
+
+<p>
+تشير المحاذاة إلى كيفية تموضع العناصر بالنسبة لبعضها البعض داخل التصميم.
+تساعد المحاذاة الجيدة على جعل التصميم أكثر احترافية وتنظيمًا.
+</p>
+
+<h3>التكوين Composition</h3>
+
+<p>
+التكوين هو عملية ترتيب النصوص والصور والأشكال والعناصر المختلفة بطريقة تحقق الانسجام البصري داخل التصميم.
+</p>
+
+<h3>التوازن Balance</h3>
+
+<p>
+التوازن هو توزيع الوزن البصري للعناصر داخل الصفحة.
+يمكن تحقيقه بشكل متماثل أو غير متماثل حسب طبيعة التصميم.
+</p>
+
+<h3>المقياس Scale</h3>
+
+<p>
+يشير المقياس إلى مقارنة أحجام العناصر ببعضها البعض.
+يُستخدم لإبراز العناصر المهمة أو إنشاء تسلسل بصري واضح.
+</p>
+
+<h3>التسلسل الهرمي Hierarchy</h3>
+
+<p>
+يحدد التسلسل الهرمي ترتيب أهمية العناصر داخل التصميم بحيث يتم توجيه انتباه المستخدم إلى المعلومات الأهم أولًا.
+</p>
+
+<h3>التباين Contrast</h3>
+
+<p>
+يُستخدم التباين لإظهار الاختلاف بين العناصر من خلال اللون أو الحجم أو الشكل أو السمك.
+يساعد التباين الجيد على تحسين وضوح المحتوى وسهولة قراءته.
+</p>
+
+<h3>المساحة البيضاء White Space</h3>
+
+<p>
+هي المساحات الفارغة الموجودة بين العناصر.
+تساعد هذه المساحات على تقليل الازدحام البصري وتحسين تجربة المستخدم.
+</p>
+
+</section>
+
+<section class="main-section" id="ui-ux">
+
+<header>واجهة المستخدم وتجربة المستخدم</header>
+
+<h3>واجهة المستخدم UI</h3>
+
+<p>
+واجهة المستخدم هي جميع العناصر المرئية والتفاعلية التي يراها المستخدم ويتعامل معها داخل الموقع أو التطبيق.
+</p>
+
+<code>
+Buttons
+
+Forms
+
+Menus
+
+Icons
+
+Cards
+</code>
+
+<h3>تجربة المستخدم UX</h3>
+
+<p>
+تركز تجربة المستخدم على شعور المستخدم أثناء استخدام المنتج ومدى سهولة وفعالية تنفيذ المهام المختلفة.
+</p>
+
+<p>
+التطبيق ذو تجربة المستخدم الجيدة يكون:
+</p>
+
+<code>
+Easy To Use
+
+Accessible
+
+Fast
+
+Efficient
+
+Enjoyable
+</code>
+
+</section>
+
+<section class="main-section" id="design-brief">
+
+<header>موجز التصميم</header>
+
+<p>
+موجز التصميم Design Brief هو مستند يحدد أهداف المشروع ومتطلباته والجمهور المستهدف والنتائج المتوقعة.
+</p>
+
+<p>
+يُستخدم كمصدر مرجعي للمصممين والمطورين أثناء تنفيذ المشروع.
+</p>
+
+</section>
+
+<section class="main-section" id="vector-design">
+
+<header>التصميم القائم على المتجهات</header>
+
+<p>
+يعتمد التصميم القائم على المتجهات على المعادلات الرياضية لإنشاء الأشكال والخطوط.
+</p>
+
+<p>
+يمكن تكبير الرسومات المتجهة أو تصغيرها دون فقدان الجودة، لذلك تُستخدم بكثرة في الشعارات والأيقونات.
+</p>
+
+</section>
+
+<section class="main-section" id="prototyping">
+
+<header>النمذجة الأولية</header>
+
+<p>
+النمذجة الأولية Prototyping هي عملية إنشاء نموذج أولي للتطبيق أو الموقع قبل بدء التطوير الفعلي.
+</p>
+
+<p>
+تساعد النماذج الأولية على اختبار الأفكار واكتشاف المشكلات وتحسين تجربة المستخدم قبل كتابة الكود.
+</p>
+
+</section>
+
+<section class="main-section" id="ui-design-basics">
+
+<header>أساسيات تصميم واجهة المستخدم</header>
+
+<h3>التباين الجيد بين الخلفية والمقدمة</h3>
+
+<p>
+يجب أن يكون هناك تباين كافٍ بين لون النص والخلفية لضمان سهولة القراءة.
+</p>
+
+<p>
+توصي معايير WCAG بنسبة تباين لا تقل عن:
+</p>
+
+<code>
+4.5:1 للنصوص العادية
+
+3:1 للنصوص الكبيرة
+</code>
+
+<h3>التسلسل الهرمي البصري</h3>
+
+<p>
+يساعد التسلسل الهرمي البصري المستخدم على معرفة المعلومات الأهم أولًا من خلال اختلاف الأحجام والألوان والمسافات.
+</p>
+
+<h3>الصور المتجاوبة Responsive Images</h3>
+
+<p>
+يجب أن تتغير أبعاد الصور تلقائيًا لتناسب أحجام الشاشات المختلفة.
+</p>
+
+<code>
+img {
+  max-width: 100%;
+}
+</code>
+
+<h3>التحسين التدريجي Progressive Enhancement</h3>
+
+<p>
+هو أسلوب تصميم يضمن عمل المحتوى الأساسي للجميع أولًا ثم إضافة الميزات المتقدمة للأجهزة والمتصفحات الحديثة.
+</p>
+
+</section>
+
+<section class="main-section" id="user-centered-design">
+
+<header>التصميم المتمحور حول المستخدم</header>
+
+<p>
+يركز هذا الأسلوب على احتياجات المستخدمين وسلوكياتهم ومشكلاتهم قبل اتخاذ القرارات التصميمية.
+</p>
+
+<p>
+الهدف هو إنشاء منتجات سهلة الاستخدام وفعالة ومريحة للمستخدم النهائي.
+</p>
+
+</section>
+
+<section class="main-section" id="user-research">
+
+<header>أبحاث المستخدمين</header>
+
+<p>
+أبحاث المستخدمين هي عملية دراسة المستخدمين لفهم احتياجاتهم وسلوكياتهم والتحديات التي يواجهونها.
+</p>
+
+<p>
+تساعد نتائج الأبحاث في اتخاذ قرارات تصميمية أكثر دقة.
+</p>
+
+</section>
+
+<section class="main-section" id="user-testing">
+
+<header>اختبار المستخدم</header>
+
+<p>
+يتضمن اختبار المستخدم مراقبة المستخدمين أثناء استخدام التطبيق أو الموقع بهدف اكتشاف المشكلات وتحسين التجربة.
+</p>
+
+</section>
+
+<section class="main-section" id="ab-testing">
+
+<header>اختبار A/B</header>
+
+<p>
+يُستخدم اختبار A/B لمقارنة نسختين مختلفتين من عنصر أو ميزة معينة لمعرفة أيهما يحقق نتائج أفضل.
+</p>
+
+<p>
+يتم الاعتماد على البيانات والتحليلات لاتخاذ القرار النهائي.
+</p>
+
+</section>
+
+<section class="main-section" id="user-requirements">
+
+<header>متطلبات المستخدم</header>
+
+<p>
+تمثل متطلبات المستخدم الخصائص والوظائف التي يجب أن يوفرها التطبيق لتلبية احتياجات المستخدمين وأصحاب المصلحة.
+</p>
+
+</section>
+
+<section class="main-section" id="progressive-disclosure">
+
+<header>الكشف التدريجي</header>
+
+<p>
+هو نمط تصميم يهدف إلى عرض المعلومات المهمة فقط في البداية ثم إظهار التفاصيل الإضافية عند الحاجة.
+</p>
+
+<p>
+يساعد هذا الأسلوب على تقليل التعقيد وتحسين تجربة المستخدم.
+</p>
+
+</section>
+
+<section class="main-section" id="lazy-registration">
+
+<header>التسجيل المؤجل</header>
+
+<p>
+التسجيل المؤجل أو Lazy Registration هو أسلوب يسمح للمستخدمين باستخدام جزء من التطبيق قبل مطالبتهم بإنشاء حساب.
+</p>
+
+<p>
+يساعد هذا الأسلوب على تقليل معدل مغادرة المستخدمين وزيادة فرص التسجيل لاحقًا.
+</p>
+
+</section>
+
+<section class="main-section" id="design-best-practices">
+
+<header>أفضل ممارسات التصميم</header>
+
+<h3>الوضع الداكن Dark Mode</h3>
+
+<p>
+الوضع الداكن هو نظام ألوان يستخدم خلفيات داكنة مع نصوص وعناصر فاتحة.
+يساعد على تقليل إجهاد العين خاصة في البيئات منخفضة الإضاءة.
+</p>
+
+<p>
+يُفضل استخدام ألوان غير مشبعة وتجنب التباين الحاد جدًا للحصول على تجربة مريحة للمستخدم.
+</p>
+
+<h3>مسارات التنقل Breadcrumbs</h3>
+
+<p>
+مسارات التنقل هي عنصر يساعد المستخدم على معرفة موقعه الحالي داخل الموقع.
+</p>
+
+<code>
+Home > Courses > CSS > Flexbox
+</code>
+
+<p>
+يُفضل وضعها أعلى الصفحة لتسهيل التنقل بين الأقسام المختلفة.
+</p>
+
+<h3>عنصر البطاقة Card Component</h3>
+
+<p>
+البطاقات هي حاويات تُستخدم لعرض المحتوى بشكل منظم مثل المنتجات أو المقالات أو المستخدمين.
+</p>
+
+<p>
+يجب أن يكون تصميم البطاقة بسيطًا وغير مزدحم مع استخدام صور عالية الجودة ونصوص واضحة.
+</p>
+
+<h3>التمرير اللانهائي Infinite Scroll</h3>
+
+<p>
+يقوم هذا النمط بتحميل المزيد من المحتوى أثناء تمرير المستخدم إلى أسفل الصفحة.
+</p>
+
+<p>
+في كثير من الحالات يُفضل استخدام زر "تحميل المزيد" لأنه يمنح المستخدم تحكمًا أكبر.
+</p>
+
+<h3>نافذة الحوار Dialog</h3>
+
+<p>
+هي نافذة منبثقة تظهر فوق المحتوى الحالي لجذب انتباه المستخدم إلى مهمة معينة.
+</p>
+
+<p>
+يُنصح بالسماح للمستخدم بإغلاق النافذة بسهولة سواء بزر إغلاق أو بالنقر خارجها.
+</p>
+
+<code>
+&lt;dialog&gt;
+  Dialog Content
+&lt;/dialog&gt;
+</code>
+
+<h3>مؤشر التقدم Progress Indicator</h3>
+
+<p>
+يُستخدم لإظهار مدى تقدم المستخدم في عملية معينة مثل التسجيل أو إكمال نموذج متعدد الخطوات.
+</p>
+
+<code>
+Step 2 of 5
+</code>
+
+<h3>سلة التسوق Shopping Cart</h3>
+
+<p>
+تُستخدم لعرض المنتجات التي اختارها المستخدم قبل إتمام عملية الشراء.
+</p>
+
+<p>
+يجب أن تكون مرئية دائمًا وتحتوي على زر واضح لإكمال عملية الدفع.
+</p>
+
+</section>
+
+<section class="main-section" id="design-tools">
+
+<header>أدوات التصميم الشائعة</header>
+
+<h3>Figma</h3>
+
+<p>
+Figma هي أداة تصميم سحابية تُستخدم لإنشاء واجهات المستخدم والنماذج الأولية والتعاون بين فرق العمل.
+</p>
+
+<h3>Sketch</h3>
+
+<p>
+Sketch هي أداة تصميم مشهورة تُستخدم لإنشاء واجهات المستخدم والأيقونات والتصميمات الرقمية.
+</p>
+
+<h3>Adobe XD</h3>
+
+<p>
+Adobe XD هي أداة تصميم ونمذجة أولية تدعم إنشاء واجهات المستخدم وتجربة المستخدم.
+</p>
+
+<h3>Canva</h3>
+
+<p>
+Canva منصة سهلة الاستخدام لإنشاء التصاميم والعروض التقديمية والملصقات والمحتوى المرئي.
+</p>
+
+</section>
+
+<section class="main-section" id="absolute-units">
+
+<header>الوحدات المطلقة</header>
+
+<p>
+الوحدات المطلقة هي وحدات ثابتة لا تعتمد على حجم الشاشة أو العنصر الأب.
+</p>
+
+<h3>وحدة px</h3>
+
+<p>
+تُعد أكثر الوحدات استخدامًا في CSS وتمثل البكسل.
+</p>
+
+<code>
+div {
+  width: 300px;
+}
+</code>
+
+<h3>وحدة in</h3>
+
+<p>
+تمثل البوصة الواحدة وتساوي 96 بكسل.
+</p>
+
+<code>
+width: 2in;
+</code>
+
+<h3>وحدة cm</h3>
+
+<p>
+تمثل السنتيمتر وتُستخدم غالبًا في الطباعة.
+</p>
+
+<code>
+width: 10cm;
+</code>
+
+<h3>وحدة mm</h3>
+
+<p>
+تمثل الملليمتر.
+</p>
+
+<code>
+width: 20mm;
+</code>
+
+<h3>وحدة q</h3>
+
+<p>
+تمثل ربع الملليمتر.
+</p>
+
+<code>
+width: 40q;
+</code>
+
+<h3>وحدة pc</h3>
+
+<p>
+تمثل البيكا وتساوي سدس البوصة.
+</p>
+
+<code>
+width: 4pc;
+</code>
+
+<h3>وحدة pt</h3>
+
+<p>
+تمثل النقطة وتساوي 1/72 من البوصة.
+</p>
+
+<code>
+font-size: 12pt;
+</code>
+
+</section>
+
+<section class="main-section" id="relative-units">
+
+<header>الوحدات النسبية</header>
+
+<p>
+الوحدات النسبية تعتمد على حجم عنصر آخر أو على أبعاد نافذة العرض.
+</p>
+
+<h3>النسبة المئوية %</h3>
+
+<p>
+تعتمد على أبعاد العنصر الأب.
+</p>
+
+<code>
+width: 50%;
+</code>
+
+<h3>وحدة em</h3>
+
+<p>
+تعتمد على حجم الخط الخاص بالعنصر الحالي أو العنصر الأب.
+</p>
+
+<code>
+font-size: 2em;
+</code>
+
+<h3>وحدة rem</h3>
+
+<p>
+تعتمد على حجم الخط الخاص بالعنصر الجذر html.
+</p>
+
+<code>
+font-size: 2rem;
+</code>
+
+<h3>وحدة vh</h3>
+
+<p>
+تمثل نسبة من ارتفاع نافذة العرض.
+كل 1vh يساوي 1% من ارتفاع الشاشة.
+</p>
+
+<code>
+height: 100vh;
+</code>
+
+<h3>وحدة vw</h3>
+
+<p>
+تمثل نسبة من عرض نافذة العرض.
+كل 1vw يساوي 1% من عرض الشاشة.
+</p>
+
+<code>
+width: 100vw;
+</code>
+
+</section>
+
+<section class="main-section" id="calc-function">
+
+<header>الدالة calc()</header>
+
+<p>
+تُستخدم الدالة calc() لإجراء عمليات حسابية مباشرة داخل CSS.
+</p>
+
+<p>
+تساعد على إنشاء تصميمات مرنة ومتجاوبة دون الحاجة إلى JavaScript.
+</p>
+
+<h3>الجمع</h3>
+
+<code>
+width: calc(100% - 50px);
+</code>
+
+<h3>الطرح</h3>
+
+<code>
+height: calc(100vh - 80px);
+</code>
+
+<h3>الضرب</h3>
+
+<code>
+width: calc(100px * 2);
+</code>
+
+<h3>القسمة</h3>
+
+<code>
+width: calc(200px / 2);
+</code>
+
+<h3>مثال عملي</h3>
+
+<code>
+.container {
+  width: calc(100% - 40px);
+  margin: 20px;
+}
+</code>
+
+<p>
+في المثال السابق سيتم حساب العرض تلقائيًا بناءً على عرض العنصر الأب مع خصم الهوامش المحددة.
+</p>
+
+</section>
+
+<section class="main-section" id="pseudo-classes">
+
+<header>الفئات الزائفة Pseudo Classes</header>
+
+<p>
+الفئات الزائفة هي كلمات مفتاحية خاصة في CSS تُستخدم لاستهداف العناصر بناءً على حالة معينة أو موقعها داخل الصفحة.
+</p>
+
+<h3>الفئة الزائفة :hover</h3>
+
+<p>
+تُستخدم لتطبيق أنماط عند مرور مؤشر الفأرة فوق العنصر.
+</p>
+
+<code>
+button:hover {
+  background-color: blue;
+}
+</code>
+
+<h3>الفئة الزائفة :active</h3>
+
+<p>
+تُستخدم أثناء الضغط على العنصر.
+</p>
+
+<code>
+button:active {
+  transform: scale(0.95);
+}
+</code>
+
+<h3>الفئة الزائفة :focus</h3>
+
+<p>
+تُطبق الأنماط عندما يحصل العنصر على التركيز.
+</p>
+
+<code>
+input:focus {
+  border-color: blue;
+}
+</code>
+
+<h3>الفئة الزائفة :focus-within</h3>
+
+<p>
+تُطبق الأنماط على العنصر الأب عندما يحصل أي عنصر داخله على التركيز.
+</p>
+
+<code>
+.form-group:focus-within {
+  background: #eee;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="input-pseudo-classes">
+
+<header>فئات الإدخال الزائفة</header>
+
+<h3>:enabled</h3>
+
+<p>
+تستهدف العناصر المفعلة التي يمكن للمستخدم التفاعل معها.
+</p>
+
+<code>
+input:enabled {
+  background: white;
+}
+</code>
+
+<h3>:disabled</h3>
+
+<p>
+تستهدف العناصر المعطلة.
+</p>
+
+<code>
+input:disabled {
+  opacity: 0.5;
+}
+</code>
+
+<h3>:checked</h3>
+
+<p>
+تستهدف عناصر الاختيار المحددة.
+</p>
+
+<code>
+input:checked {
+  accent-color: green;
+}
+</code>
+
+<h3>:valid</h3>
+
+<p>
+تستهدف الحقول التي تحتوي على بيانات صحيحة.
+</p>
+
+<code>
+input:valid {
+  border-color: green;
+}
+</code>
+
+<h3>:invalid</h3>
+
+<p>
+تستهدف الحقول التي تحتوي على بيانات غير صحيحة.
+</p>
+
+<code>
+input:invalid {
+  border-color: red;
+}
+</code>
+
+<h3>:in-range</h3>
+
+<p>
+تستهدف القيم الموجودة داخل النطاق المحدد.
+</p>
+
+<code>
+input:in-range {
+  background: lightgreen;
+}
+</code>
+
+<h3>:out-of-range</h3>
+
+<p>
+تستهدف القيم الموجودة خارج النطاق المحدد.
+</p>
+
+<code>
+input:out-of-range {
+  background: pink;
+}
+</code>
+
+<h3>:required</h3>
+
+<p>
+تستهدف الحقول المطلوبة.
+</p>
+
+<code>
+input:required {
+  border-left: 3px solid red;
+}
+</code>
+
+<h3>:optional</h3>
+
+<p>
+تستهدف الحقول غير المطلوبة.
+</p>
+
+<code>
+input:optional {
+  border-left: 3px solid gray;
+}
+</code>
+
+<h3>:autofill</h3>
+
+<p>
+تستهدف الحقول التي ملأها المتصفح تلقائيًا.
+</p>
+
+<code>
+input:autofill {
+  background: lightyellow;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="location-pseudo-classes">
+
+<header>فئات الموقع الزائفة</header>
+
+<h3>:any-link</h3>
+
+<p>
+تستهدف جميع الروابط سواء تمت زيارتها أم لا.
+</p>
+
+<code>
+:any-link {
+  color: blue;
+}
+</code>
+
+<h3>:link</h3>
+
+<p>
+تستهدف الروابط غير المزارة.
+</p>
+
+<code>
+a:link {
+  color: blue;
+}
+</code>
+
+<h3>:visited</h3>
+
+<p>
+تستهدف الروابط التي تمت زيارتها.
+</p>
+
+<code>
+a:visited {
+  color: purple;
+}
+</code>
+
+<h3>:local-link</h3>
+
+<p>
+تستهدف الروابط التي تشير إلى نفس المستند أو الموقع.
+</p>
+
+<h3>:target</h3>
+
+<p>
+تستهدف العنصر المشار إليه في عنوان URL.
+</p>
+
+<code>
+#about:target {
+  background: yellow;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="tree-structural-pseudo">
+
+<header>الفئات الزائفة ذات البنية الشجرية</header>
+
+<h3>:root</h3>
+
+<p>
+تمثل العنصر الجذر للمستند وغالبًا ما تكون html.
+</p>
+
+<code>
+:root {
+  --main-color: blue;
+}
+</code>
+
+<h3>:empty</h3>
+
+<p>
+تستهدف العناصر الفارغة التي لا تحتوي على محتوى.
+</p>
+
+<code>
+div:empty {
+  display: none;
+}
+</code>
+
+<h3>:first-child</h3>
+
+<p>
+تستهدف أول عنصر داخل العنصر الأب.
+</p>
+
+<code>
+li:first-child {
+  color: red;
+}
+</code>
+
+<h3>:last-child</h3>
+
+<p>
+تستهدف آخر عنصر داخل العنصر الأب.
+</p>
+
+<code>
+li:last-child {
+  color: blue;
+}
+</code>
+
+<h3>:only-child</h3>
+
+<p>
+تستهدف العنصر الوحيد داخل العنصر الأب.
+</p>
+
+<code>
+p:only-child {
+  font-weight: bold;
+}
+</code>
+
+<h3>:nth-child(n)</h3>
+
+<p>
+تستهدف عنصرًا حسب ترتيبه.
+</p>
+
+<code>
+li:nth-child(2) {
+  color: green;
+}
+</code>
+
+<h3>:nth-last-child(n)</h3>
+
+<p>
+تعمل مثل nth-child ولكن تبدأ العد من النهاية.
+</p>
+
+<code>
+li:nth-last-child(2) {
+  color: orange;
+}
+</code>
+
+<h3>:first-of-type</h3>
+
+<p>
+تستهدف أول عنصر من نوع معين.
+</p>
+
+<code>
+p:first-of-type {
+  color: red;
+}
+</code>
+
+<h3>:last-of-type</h3>
+
+<p>
+تستهدف آخر عنصر من نوع معين.
+</p>
+
+<code>
+p:last-of-type {
+  color: blue;
+}
+</code>
+
+<h3>:nth-of-type(n)</h3>
+
+<p>
+تستهدف عنصرًا من نفس النوع بناءً على ترتيبه.
+</p>
+
+<code>
+p:nth-of-type(3) {
+  color: green;
+}
+</code>
+
+<h3>:only-of-type</h3>
+
+<p>
+تستهدف العنصر إذا كان الوحيد من نوعه داخل الأب.
+</p>
+
+<code>
+p:only-of-type {
+  color: purple;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="functional-pseudo">
+
+<header>الفئات الزائفة الوظيفية</header>
+
+<h3>:is()</h3>
+
+<p>
+تسمح بتجميع عدة محددات داخل محدد واحد.
+</p>
+
+<code>
+:is(h1, h2, h3) {
+  color: blue;
+}
+</code>
+
+<h3>:where()</h3>
+
+<p>
+تشبه is لكنها تمتلك خصوصية صفرية.
+</p>
+
+<code>
+:where(h1, h2, h3) {
+  margin-bottom: 20px;
+}
+</code>
+
+<h3>:has()</h3>
+
+<p>
+تُستخدم لاستهداف عنصر يحتوي على عنصر آخر محدد.
+وتُعرف أحيانًا باسم Parent Selector.
+</p>
+
+<code>
+.card:has(img) {
+  border: 2px solid blue;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="pseudo-elements">
+
+<header>العناصر الزائفة Pseudo Elements</header>
+
+<h3>::before</h3>
+
+<p>
+يُستخدم لإضافة محتوى قبل العنصر.
+</p>
+
+<code>
+h2::before {
+  content: "★ ";
+}
+</code>
+
+<h3>::after</h3>
+
+<p>
+يُستخدم لإضافة محتوى بعد العنصر.
+</p>
+
+<code>
+h2::after {
+  content: " ✔";
+}
+</code>
+
+<h3>::first-letter</h3>
+
+<p>
+يستهدف أول حرف داخل العنصر.
+</p>
+
+<code>
+p::first-letter {
+  font-size: 2rem;
+}
+</code>
+
+<h3>::marker</h3>
+
+<p>
+يُستخدم لتنسيق علامات عناصر القوائم.
+</p>
+
+<code>
+li::marker {
+  color: red;
+}
+</code>
+
+</section>
+<section class="main-section" id="css-colors">
+
+<header>طرق التعامل مع الألوان في CSS</header>
+
+<p>
+توفر CSS عدة طرق مختلفة لتمثيل الألوان وتطبيقها على العناصر.
+يمكن للمطور اختيار الطريقة المناسبة حسب احتياجات المشروع وسهولة القراءة والصيانة.
+</p>
+
+<h3>الألوان المسماة</h3>
+
+<p>
+الألوان المسماة هي أسماء ألوان معرفة مسبقًا وتدعمها جميع المتصفحات الحديثة.
+</p>
+
+<code>
+color: blue;
+
+color: darkred;
+
+color: lightgreen;
+</code>
+
+<h3>الدالة rgb()</h3>
+
+<p>
+تعتمد هذه الدالة على نموذج RGB الذي يتكون من الألوان الأساسية للضوء:
+الأحمر والأخضر والأزرق.
+</p>
+
+<code>
+color: rgb(255, 0, 0);
+
+color: rgb(0, 255, 0);
+
+color: rgb(0, 0, 255);
+</code>
+
+<h3>الدالة rgba()</h3>
+
+<p>
+تشبه rgb() ولكنها تضيف قيمة Alpha للتحكم في مستوى الشفافية.
+</p>
+
+<code>
+color: rgba(255, 0, 0, 0.5);
+</code>
+
+<h3>الدالة hsl()</h3>
+
+<p>
+تعتمد على ثلاثة مكونات:
+Hue و Saturation و Lightness.
+</p>
+
+<code>
+color: hsl(240, 100%, 50%);
+</code>
+
+<h3>الدالة hsla()</h3>
+
+<p>
+تشبه hsl() ولكنها تسمح بإضافة قيمة Alpha للتحكم في الشفافية.
+</p>
+
+<code>
+color: hsla(240, 100%, 50%, 0.5);
+</code>
+
+<h3>الألوان السداسية Hexadecimal</h3>
+
+<p>
+تُستخدم القيم السداسية لتمثيل الألوان باستخدام ستة رموز تتكون من الأرقام والحروف.
+</p>
+
+<code>
+color: #ff0000;
+
+color: #00ff00;
+
+color: #0000ff;
+</code>
+
+</section>
+
+<section class="main-section" id="box-shadow">
+
+<header>خاصية box-shadow</header>
+
+<p>
+تُستخدم خاصية box-shadow لإضافة ظل حول العناصر مما يساعد على إبرازها وإضافة عمق للتصميم.
+</p>
+
+<h3>بنية الخاصية</h3>
+
+<code>
+box-shadow:
+offset-x
+offset-y
+blur-radius
+spread-radius
+color;
+</code>
+
+<h3>الإزاحة الأفقية والرأسية</h3>
+
+<p>
+تحدد قيم offset-x و offset-y اتجاه ومكان ظهور الظل.
+</p>
+
+<code>
+box-shadow: 10px 10px;
+</code>
+
+<h3>نصف قطر التمويه</h3>
+
+<p>
+كلما زادت قيمة التمويه أصبح الظل أكثر نعومة.
+</p>
+
+<code>
+box-shadow: 10px 10px 20px;
+</code>
+
+<h3>نصف قطر الانتشار</h3>
+
+<p>
+يتحكم في حجم الظل واتساعه.
+</p>
+
+<code>
+box-shadow: 10px 10px 20px 5px;
+</code>
+
+<h3>تحديد لون الظل</h3>
+
+<code>
+box-shadow:
+10px 10px 20px
+rgba(0, 0, 0, 0.4);
+</code>
+
+<h3>الكلمة المفتاحية inset</h3>
+
+<p>
+تجعل الظل يظهر داخل العنصر بدلاً من خارجه.
+</p>
+
+<code>
+box-shadow:
+inset 5px 5px 10px gray;
+</code>
+
+<h3>تطبيق عدة ظلال</h3>
+
+<code>
+box-shadow:
+2px 2px 5px gray,
+5px 5px 10px black;
+</code>
+
+<h3>مثال عملي</h3>
+
+<code>
+.shadow-box {
+  width: 200px;
+  padding: 20px;
+  background: lightblue;
+
+  box-shadow:
+  10px 10px 20px
+  rgba(0,0,0,0.4);
+}
+</code>
+
+</section>
+
+<section class="main-section" id="gradients">
+
+<header>التدرجات اللونية</header>
+
+<h3>التدرجات الخطية</h3>
+
+<p>
+تُستخدم لإنشاء انتقال تدريجي بين لونين أو أكثر على طول خط مستقيم.
+</p>
+
+<code>
+background:
+linear-gradient(
+to right,
+blue,
+purple
+);
+</code>
+
+<h3>التدرجات الشعاعية</h3>
+
+<p>
+تُنشئ تدرجًا يبدأ من نقطة مركزية وينتشر للخارج بشكل دائري أو بيضاوي.
+</p>
+
+<code>
+background:
+radial-gradient(
+circle,
+yellow,
+orange,
+red
+);
+</code>
+
+</section>
+
+<section class="main-section" id="input-styling">
+
+<header>أفضل الممارسات لتنسيق المدخلات</header>
+
+<p>
+يجب أن تكون حقول الإدخال سهلة القراءة والاستخدام لجميع المستخدمين.
+</p>
+
+<h3>سهولة القراءة</h3>
+
+<p>
+ينبغي استخدام حجم خط مناسب وتباين جيد بين النص والخلفية.
+</p>
+
+<h3>مؤشر التركيز</h3>
+
+<p>
+يجب المحافظة على مؤشر واضح عند التركيز على الحقول.
+</p>
+
+<code>
+input:focus {
+  border: 2px solid blue;
+}
+</code>
+
+<h3>استخدام appearance: none</h3>
+
+<p>
+تسمح هذه الخاصية بإزالة التنسيقات الافتراضية للمتصفح وتطبيق تصميم مخصص.
+</p>
+
+<code>
+input {
+  appearance: none;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-colors">
+
+<header>طرق التعامل مع الألوان في CSS</header>
+
+<p>
+توفر CSS عدة طرق مختلفة لتمثيل الألوان وتطبيقها على العناصر.
+يمكن للمطور اختيار الطريقة المناسبة حسب احتياجات المشروع وسهولة القراءة والصيانة.
+</p>
+
+<h3>الألوان المسماة</h3>
+
+<p>
+الألوان المسماة هي أسماء ألوان معرفة مسبقًا وتدعمها جميع المتصفحات الحديثة.
+</p>
+
+<code>
+color: blue;
+
+color: darkred;
+
+color: lightgreen;
+</code>
+
+<h3>الدالة rgb()</h3>
+
+<p>
+تعتمد هذه الدالة على نموذج RGB الذي يتكون من الألوان الأساسية للضوء:
+الأحمر والأخضر والأزرق.
+</p>
+
+<code>
+color: rgb(255, 0, 0);
+
+color: rgb(0, 255, 0);
+
+color: rgb(0, 0, 255);
+</code>
+
+<h3>الدالة rgba()</h3>
+
+<p>
+تشبه rgb() ولكنها تضيف قيمة Alpha للتحكم في مستوى الشفافية.
+</p>
+
+<code>
+color: rgba(255, 0, 0, 0.5);
+</code>
+
+<h3>الدالة hsl()</h3>
+
+<p>
+تعتمد على ثلاثة مكونات:
+Hue و Saturation و Lightness.
+</p>
+
+<code>
+color: hsl(240, 100%, 50%);
+</code>
+
+<h3>الدالة hsla()</h3>
+
+<p>
+تشبه hsl() ولكنها تسمح بإضافة قيمة Alpha للتحكم في الشفافية.
+</p>
+
+<code>
+color: hsla(240, 100%, 50%, 0.5);
+</code>
+
+<h3>الألوان السداسية Hexadecimal</h3>
+
+<p>
+تُستخدم القيم السداسية لتمثيل الألوان باستخدام ستة رموز تتكون من الأرقام والحروف.
+</p>
+
+<code>
+color: #ff0000;
+
+color: #00ff00;
+
+color: #0000ff;
+</code>
+
+</section>
+
+<section class="main-section" id="box-shadow">
+
+<header>خاصية box-shadow</header>
+
+<p>
+تُستخدم خاصية box-shadow لإضافة ظل حول العناصر مما يساعد على إبرازها وإضافة عمق للتصميم.
+</p>
+
+<h3>بنية الخاصية</h3>
+
+<code>
+box-shadow:
+offset-x
+offset-y
+blur-radius
+spread-radius
+color;
+</code>
+
+<h3>الإزاحة الأفقية والرأسية</h3>
+
+<p>
+تحدد قيم offset-x و offset-y اتجاه ومكان ظهور الظل.
+</p>
+
+<code>
+box-shadow: 10px 10px;
+</code>
+
+<h3>نصف قطر التمويه</h3>
+
+<p>
+كلما زادت قيمة التمويه أصبح الظل أكثر نعومة.
+</p>
+
+<code>
+box-shadow: 10px 10px 20px;
+</code>
+
+<h3>نصف قطر الانتشار</h3>
+
+<p>
+يتحكم في حجم الظل واتساعه.
+</p>
+
+<code>
+box-shadow: 10px 10px 20px 5px;
+</code>
+
+<h3>تحديد لون الظل</h3>
+
+<code>
+box-shadow:
+10px 10px 20px
+rgba(0, 0, 0, 0.4);
+</code>
+
+<h3>الكلمة المفتاحية inset</h3>
+
+<p>
+تجعل الظل يظهر داخل العنصر بدلاً من خارجه.
+</p>
+
+<code>
+box-shadow:
+inset 5px 5px 10px gray;
+</code>
+
+<h3>تطبيق عدة ظلال</h3>
+
+<code>
+box-shadow:
+2px 2px 5px gray,
+5px 5px 10px black;
+</code>
+
+<h3>مثال عملي</h3>
+
+<code>
+.shadow-box {
+  width: 200px;
+  padding: 20px;
+  background: lightblue;
+
+  box-shadow:
+  10px 10px 20px
+  rgba(0,0,0,0.4);
+}
+</code>
+
+</section>
+
+<section class="main-section" id="gradients">
+
+<header>التدرجات اللونية</header>
+
+<h3>التدرجات الخطية</h3>
+
+<p>
+تُستخدم لإنشاء انتقال تدريجي بين لونين أو أكثر على طول خط مستقيم.
+</p>
+
+<code>
+background:
+linear-gradient(
+to right,
+blue,
+purple
+);
+</code>
+
+<h3>التدرجات الشعاعية</h3>
+
+<p>
+تُنشئ تدرجًا يبدأ من نقطة مركزية وينتشر للخارج بشكل دائري أو بيضاوي.
+</p>
+
+<code>
+background:
+radial-gradient(
+circle,
+yellow,
+orange,
+red
+);
+</code>
+
+</section>
+
+<section class="main-section" id="input-styling">
+
+<header>أفضل الممارسات لتنسيق المدخلات</header>
+
+<p>
+يجب أن تكون حقول الإدخال سهلة القراءة والاستخدام لجميع المستخدمين.
+</p>
+
+<h3>سهولة القراءة</h3>
+
+<p>
+ينبغي استخدام حجم خط مناسب وتباين جيد بين النص والخلفية.
+</p>
+
+<h3>مؤشر التركيز</h3>
+
+<p>
+يجب المحافظة على مؤشر واضح عند التركيز على الحقول.
+</p>
+
+<code>
+input:focus {
+  border: 2px solid blue;
+}
+</code>
+
+<h3>استخدام appearance: none</h3>
+
+<p>
+تسمح هذه الخاصية بإزالة التنسيقات الافتراضية للمتصفح وتطبيق تصميم مخصص.
+</p>
+
+<code>
+input {
+  appearance: none;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="overflow-property">
+
+<header>خاصية Overflow في CSS</header>
+
+<p>
+تشير خاصية Overflow إلى كيفية تعامل العنصر مع المحتوى الذي يتجاوز أبعاده المحددة.
+عندما يكون المحتوى أكبر من مساحة العنصر فإنه يُعتبر محتوى فائضًا.
+</p>
+
+<h3>الخاصية overflow-x</h3>
+
+<p>
+تتحكم هذه الخاصية في كيفية التعامل مع الفائض الأفقي للمحتوى.
+</p>
+
+<code>
+.container {
+  overflow-x: auto;
+}
+</code>
+
+<h3>الخاصية overflow-y</h3>
+
+<p>
+تتحكم هذه الخاصية في كيفية التعامل مع الفائض الرأسي للمحتوى.
+</p>
+
+<code>
+.container {
+  overflow-y: scroll;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-transform">
+
+<header>خاصية Transform</header>
+
+<p>
+تُستخدم خاصية Transform لتطبيق التحويلات المختلفة على العناصر مثل النقل والتكبير والتدوير والتحريف.
+</p>
+
+<h3>الدالة translate()</h3>
+
+<p>
+تُستخدم لنقل العنصر من موضعه الأصلي إلى موضع جديد.
+</p>
+
+<code>
+.box {
+  transform: translate(50px, 20px);
+}
+</code>
+
+<h3>الدالة scale()</h3>
+
+<p>
+تُستخدم لتكبير أو تصغير حجم العنصر.
+</p>
+
+<code>
+.box {
+  transform: scale(1.5);
+}
+</code>
+
+<h3>التحويلات وإمكانية الوصول</h3>
+
+<p>
+إذا تم استخدام التحويلات لإخفاء المحتوى أو إظهاره فيجب التأكد من أن المحتوى ما زال متاحًا للتقنيات المساعدة ولوحة المفاتيح.
+</p>
+
+<code>
+display: none;
+
+visibility: hidden;
+</code>
+
+</section>
+
+<section class="main-section" id="box-model">
+
+<header>نموذج الصندوق Box Model</header>
+
+<p>
+كل عنصر في CSS يُعتبر صندوقًا يتكون من عدة أجزاء مترابطة.
+يساعد فهم نموذج الصندوق على التحكم الدقيق في أبعاد العناصر والمسافات بينها.
+</p>
+
+<h3>منطقة المحتوى Content Area</h3>
+
+<p>
+هي المنطقة التي تحتوي على المحتوى الفعلي للعنصر مثل النصوص والصور.
+</p>
+
+<h3>الحشو Padding</h3>
+
+<p>
+هو المسافة بين المحتوى وحدود العنصر.
+</p>
+
+<code>
+padding: 20px;
+</code>
+
+<h3>الحدود Border</h3>
+
+<p>
+تمثل الإطار المحيط بالعنصر.
+</p>
+
+<code>
+border: 2px solid black;
+</code>
+
+<h3>الهامش Margin</h3>
+
+<p>
+هو المسافة الخارجية بين العنصر والعناصر المحيطة به.
+</p>
+
+<code>
+margin: 20px;
+</code>
+
+<h3>مكونات Box Model</h3>
+
+<code>
+Content
+
+Padding
+
+Border
+
+Margin
+</code>
+
+</section>
+
+<section class="main-section" id="margin-collapse">
+
+<header>انهيار الهوامش Margin Collapse</header>
+
+<p>
+يحدث انهيار الهوامش عندما تتداخل الهوامش الرأسية لعناصر متجاورة.
+في هذه الحالة يتم استخدام أكبر قيمة هامش بدلًا من جمع القيمتين.
+</p>
+
+<code>
+div {
+  margin-bottom: 30px;
+}
+
+section {
+  margin-top: 20px;
+}
+</code>
+
+<p>
+في المثال السابق ستكون المسافة النهائية 30px وليس 50px.
+</p>
+
+</section>
+
+<section class="main-section" id="box-sizing">
+
+<header>خاصية Box Sizing</header>
+
+<p>
+تُستخدم خاصية box-sizing لتحديد طريقة حساب العرض والارتفاع النهائي للعنصر.
+</p>
+
+<h3>القيمة content-box</h3>
+
+<p>
+وهي القيمة الافتراضية.
+يتم حساب العرض والارتفاع للمحتوى فقط دون الحشو والحدود.
+</p>
+
+<code>
+box-sizing: content-box;
+</code>
+
+<h3>القيمة border-box</h3>
+
+<p>
+تشمل العرض والارتفاع المحتوى والحشو والحدود.
+وهي الأكثر استخدامًا في المشاريع الحديثة.
+</p>
+
+<code>
+box-sizing: border-box;
+</code>
+
+<h3>إعادة ضبط شائعة</h3>
+
+<code>
+* {
+  box-sizing: border-box;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-reset">
+
+<header>إعادة ضبط CSS</header>
+
+<p>
+تُستخدم إعادة الضبط لإزالة التنسيقات الافتراضية التي تطبقها المتصفحات على العناصر.
+</p>
+
+<h3>أهمية CSS Reset</h3>
+
+<p>
+تساعد على توحيد مظهر الموقع عبر مختلف المتصفحات.
+</p>
+
+<h3>أشهر الأدوات</h3>
+
+<code>
+normalize.css
+
+sanitize.css
+</code>
+
+<h3>مثال بسيط</h3>
+
+<code>
+* {
+  margin: 0;
+  padding: 0;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-filters">
+
+<header>خاصية Filter</header>
+
+<p>
+تُستخدم خاصية Filter لتطبيق تأثيرات بصرية مختلفة على الصور والعناصر.
+</p>
+
+<h3>الدالة blur()</h3>
+
+<p>
+تُضيف تأثير التمويه على العنصر.
+</p>
+
+<code>
+img {
+  filter: blur(5px);
+}
+</code>
+
+<h3>الدالة brightness()</h3>
+
+<p>
+تتحكم في مستوى سطوع العنصر.
+</p>
+
+<code>
+img {
+  filter: brightness(150%);
+}
+</code>
+
+<h3>الدالة grayscale()</h3>
+
+<p>
+تحول الصورة إلى تدرج رمادي.
+</p>
+
+<code>
+img {
+  filter: grayscale(100%);
+}
+</code>
+
+<h3>الدالة sepia()</h3>
+
+<p>
+تضيف تأثيرًا بنيًا قديمًا للصورة.
+</p>
+
+<code>
+img {
+  filter: sepia(100%);
+}
+</code>
+
+<h3>الدالة hue-rotate()</h3>
+
+<p>
+تُستخدم لتدوير ألوان العنصر حول عجلة الألوان.
+</p>
+
+<code>
+img {
+  filter: hue-rotate(90deg);
+}
+</code>
+
+</section>
+
+<section class="main-section" id="flexbox-introduction">
+
+<header>مقدمة إلى CSS Flexbox</header>
+
+<p>
+يُعتبر Flexbox أحد أهم أنظمة التخطيط في CSS.
+يُستخدم لتنظيم العناصر داخل الحاويات بطريقة مرنة وسهلة سواء أفقيًا أو رأسيًا.
+</p>
+
+<p>
+يُعد Flexbox نموذج تخطيط أحادي البعد لأنه يتعامل مع محور واحد في كل مرة.
+</p>
+
+<h3>تفعيل Flexbox</h3>
+
+<p>
+لتحويل عنصر إلى حاوية مرنة يجب استخدام الخاصية display بالقيمة flex.
+</p>
+
+<code>
+.container {
+  display: flex;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="flex-model">
+
+<header>نموذج Flex</header>
+
+<p>
+عند استخدام Flexbox يصبح لدينا محوران رئيسيان:
+المحور الرئيسي Main Axis والمحور العرضي Cross Axis.
+</p>
+
+<h3>المحور الرئيسي</h3>
+
+<p>
+هو المحور الذي يتم ترتيب العناصر عليه افتراضيًا.
+</p>
+
+<h3>المحور العرضي</h3>
+
+<p>
+هو المحور العمودي على المحور الرئيسي.
+</p>
+
+</section>
+
+<section class="main-section" id="flex-direction">
+
+<header>الخاصية flex-direction</header>
+
+<p>
+تُستخدم هذه الخاصية لتحديد اتجاه المحور الرئيسي وطريقة ترتيب العناصر داخله.
+</p>
+
+<h3>القيمة row</h3>
+
+<p>
+وهي القيمة الافتراضية، حيث يتم ترتيب العناصر أفقيًا.
+</p>
+
+<code>
+.container {
+  flex-direction: row;
+}
+</code>
+
+<h3>القيمة row-reverse</h3>
+
+<p>
+تعكس ترتيب العناصر أفقيًا.
+</p>
+
+<code>
+.container {
+  flex-direction: row-reverse;
+}
+</code>
+
+<h3>القيمة column</h3>
+
+<p>
+ترتب العناصر رأسيًا من الأعلى إلى الأسفل.
+</p>
+
+<code>
+.container {
+  flex-direction: column;
+}
+</code>
+
+<h3>القيمة column-reverse</h3>
+
+<p>
+تعكس ترتيب العناصر رأسيًا.
+</p>
+
+<code>
+.container {
+  flex-direction: column-reverse;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="flex-wrap">
+
+<header>الخاصية flex-wrap</header>
+
+<p>
+تتحكم هذه الخاصية في إمكانية انتقال العناصر إلى سطر جديد عندما لا تتسع المساحة المتاحة.
+</p>
+
+<h3>القيمة nowrap</h3>
+
+<p>
+وهي القيمة الافتراضية.
+لن تنتقل العناصر إلى سطر جديد حتى لو تجاوزت مساحة الحاوية.
+</p>
+
+<code>
+.container {
+  flex-wrap: nowrap;
+}
+</code>
+
+<h3>القيمة wrap</h3>
+
+<p>
+تسمح للعناصر بالانتقال إلى سطر جديد عند الحاجة.
+</p>
+
+<code>
+.container {
+  flex-wrap: wrap;
+}
+</code>
+
+<h3>القيمة wrap-reverse</h3>
+
+<p>
+تشبه wrap ولكن بترتيب معكوس.
+</p>
+
+<code>
+.container {
+  flex-wrap: wrap-reverse;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="flex-flow">
+
+<header>الخاصية flex-flow</header>
+
+<p>
+تُعتبر اختصارًا للخاصيتين flex-direction و flex-wrap.
+</p>
+
+<code>
+.container {
+  flex-flow: row wrap;
+}
+</code>
+
+<p>
+يعادل المثال السابق:
+</p>
+
+<code>
+.container {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="justify-content">
+
+<header>الخاصية justify-content</header>
+
+<p>
+تُستخدم لمحاذاة العناصر على طول المحور الرئيسي.
+</p>
+
+<h3>القيمة flex-start</h3>
+
+<p>
+تُحاذي العناصر إلى بداية المحور الرئيسي.
+</p>
+
+<code>
+justify-content: flex-start;
+</code>
+
+<h3>القيمة flex-end</h3>
+
+<p>
+تُحاذي العناصر إلى نهاية المحور الرئيسي.
+</p>
+
+<code>
+justify-content: flex-end;
+</code>
+
+<h3>القيمة center</h3>
+
+<p>
+تُوسّط العناصر داخل الحاوية.
+</p>
+
+<code>
+justify-content: center;
+</code>
+
+<h3>القيمة space-between</h3>
+
+<p>
+توزع العناصر بالتساوي مع ترك مسافات بين العناصر فقط.
+</p>
+
+<code>
+justify-content: space-between;
+</code>
+
+<h3>القيمة space-around</h3>
+
+<p>
+تضيف مسافات حول جميع العناصر.
+</p>
+
+<code>
+justify-content: space-around;
+</code>
+
+<h3>القيمة space-evenly</h3>
+
+<p>
+توزع العناصر بحيث تكون جميع المسافات متساوية تمامًا.
+</p>
+
+<code>
+justify-content: space-evenly;
+</code>
+
+</section>
+
+<section class="main-section" id="align-items">
+
+<header>الخاصية align-items</header>
+
+<p>
+تُستخدم لمحاذاة العناصر على طول المحور العرضي.
+</p>
+
+<h3>القيمة flex-start</h3>
+
+<p>
+تُحاذي العناصر إلى بداية المحور العرضي.
+</p>
+
+<code>
+align-items: flex-start;
+</code>
+
+<h3>القيمة center</h3>
+
+<p>
+تُوسّط العناصر على المحور العرضي.
+</p>
+
+<code>
+align-items: center;
+</code>
+
+<h3>القيمة stretch</h3>
+
+<p>
+تُمدد العناصر لتملأ المساحة المتاحة على المحور العرضي.
+</p>
+
+<code>
+align-items: stretch;
+</code>
+
+<h3>مثال كامل</h3>
+
+<code>
+.container {
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+}
+</code>
+
+<p>
+في المثال السابق سيتم ترتيب العناصر داخل الحاوية باستخدام Flexbox مع توسيطها أفقيًا ورأسيًا.
+</p>
+
+</section>
+
+<section class="main-section" id="typography-introduction">
+
+<header>مقدمة في فن الطباعة</header>
+
+<p>
+الطباعة هي فن اختيار الخطوط والتنسيق المناسبين لجعل النص جذابًا بصريًا وسهل القراءة.
+يشير مصطلح الخط إلى كيفية تصميم الأحرف الفردية وترتيبها.
+</p>
+
+<h3>تعريف Typeface</h3>
+
+<p>
+الـ Typeface هو التصميم العام وأسلوب مجموعة من الأحرف والأرقام والرموز.
+يمكن اعتباره المخطط الأساسي الذي تُبنى عليه الخطوط المختلفة.
+</p>
+
+<h3>تعريف Font</h3>
+
+<p>
+الـ Font هو شكل محدد من أشكال Typeface وله خصائص معينة مثل الحجم والوزن والعرض والنمط.
+</p>
+
+</section>
+
+<section class="main-section" id="font-types">
+
+<header>أنواع الخطوط</header>
+
+<h3>الخطوط ذات الزوائد Serif</h3>
+
+<p>
+تتميز بوجود خطوط صغيرة أو زوائد في نهايات الأحرف.
+تُستخدم غالبًا في الكتب والمطبوعات التقليدية.
+</p>
+
+<h3>الخطوط غير المزخرفة Sans-Serif</h3>
+
+<p>
+لا تحتوي على الزوائد الموجودة في خطوط Serif.
+تمتاز بسهولة القراءة على الشاشات الحديثة.
+</p>
+
+<code>
+Helvetica
+
+Arial
+
+Roboto
+</code>
+
+</section>
+
+<section class="main-section" id="font-properties">
+
+<header>خصائص الخطوط</header>
+
+<h3>وزن الخط Font Weight</h3>
+
+<p>
+يشير إلى سمك الأحرف داخل الخط.
+</p>
+
+<code>
+Light
+
+Regular
+
+Bold
+
+Black
+</code>
+
+<h3>نمط الخط Font Style</h3>
+
+<p>
+يشير إلى شكل الخط مثل الخط العادي أو المائل.
+</p>
+
+<code>
+normal
+
+italic
+
+oblique
+</code>
+
+<h3>عرض الخط Font Width</h3>
+
+<p>
+يشير إلى المساحة الأفقية التي تشغلها الأحرف.
+قد تكون الأحرف مضغوطة أو موسعة.
+</p>
+
+</section>
+
+<section class="main-section" id="font-anatomy">
+
+<header>تشريح الخطوط</header>
+
+<h3>خط الأساس Baseline</h3>
+
+<p>
+هو الخط الوهمي الذي ترتكز عليه معظم الأحرف.
+</p>
+
+<h3>ارتفاع الأحرف الكبيرة Cap Height</h3>
+
+<p>
+هو ارتفاع الأحرف الكبيرة من خط الأساس إلى أعلى الحرف.
+</p>
+
+<h3>ارتفاع الحرف X</h3>
+
+<p>
+يمثل متوسط ارتفاع الأحرف الصغيرة باستثناء الأحرف الصاعدة والهابطة.
+</p>
+
+<h3>الأحرف الصاعدة Ascenders</h3>
+
+<p>
+هي أجزاء الأحرف التي تمتد فوق ارتفاع x.
+</p>
+
+<code>
+h
+
+b
+
+d
+
+f
+</code>
+
+<h3>الأحرف الهابطة Descenders</h3>
+
+<p>
+هي أجزاء الأحرف التي تمتد أسفل خط الأساس.
+</p>
+
+<code>
+y
+
+g
+
+p
+
+q
+</code>
+
+</section>
+
+<section class="main-section" id="spacing-concepts">
+
+<header>المسافات في الطباعة</header>
+
+<h3>Kerning</h3>
+
+<p>
+هو تعديل المسافة بين زوج محدد من الأحرف لتحسين المظهر البصري وسهولة القراءة.
+</p>
+
+<p>
+مثال شائع هو تقليل المسافة بين الحرفين A و V.
+</p>
+
+<h3>Tracking</h3>
+
+<p>
+هو التحكم في المسافة بين جميع الأحرف داخل كلمة أو فقرة كاملة.
+</p>
+
+<h3>Line Height</h3>
+
+<p>
+هو المسافة الرأسية بين الأسطر.
+ويتم قياسها من خط الأساس لسطر إلى خط الأساس للسطر التالي.
+</p>
+
+</section>
+
+<section class="main-section" id="typography-best-practices">
+
+<header>أفضل الممارسات في الطباعة</header>
+
+<p>
+يجب اختيار خطوط واضحة وسهلة القراءة خاصة للنصوص الأساسية داخل الموقع.
+</p>
+
+<p>
+كلما كان الخط أكثر وضوحًا زادت قابلية قراءة المحتوى وتحسنت تجربة المستخدم.
+</p>
+
+<p>
+يفضل استخدام خطين أو ثلاثة خطوط فقط داخل المشروع للحفاظ على التناسق البصري.
+</p>
+
+<p>
+الإفراط في استخدام الخطوط المختلفة قد يسبب تشتيتًا للمستخدم ويؤثر على هوية التصميم.
+</p>
+
+<p>
+يمكن استخدام أحجام الخطوط المختلفة لإنشاء تسلسل هرمي بصري واضح بين العناوين الرئيسية والعناوين الفرعية والفقرات.
+</p>
+
+</section>
+
+<section class="main-section" id="font-family-property">
+
+<header>الخاصية font-family</header>
+
+<p>
+تُستخدم الخاصية font-family لتحديد الخطوط المستخدمة داخل العنصر.
+</p>
+
+<p>
+يمكن تحديد أكثر من خط كخيارات احتياطية في حالة عدم توفر الخط الأساسي.
+</p>
+
+<code>
+body {
+  font-family:
+  Arial,
+  Helvetica,
+  sans-serif;
+}
+</code>
+
+<h3>عائلات الخطوط الشائعة</h3>
+
+<code>
+serif
+
+sans-serif
+
+monospace
+
+cursive
+
+fantasy
+</code>
+
+</section>
+
+<section class="main-section" id="web-safe-fonts">
+
+<header>الخطوط الآمنة للويب</header>
+
+<p>
+الخطوط الآمنة للويب هي خطوط يُحتمل أن تكون مثبتة مسبقًا على أجهزة المستخدمين.
+</p>
+
+<p>
+إذا لم يجد المتصفح الخط المطلوب فسيستخدم الخط الاحتياطي أو الخط الافتراضي للنظام.
+</p>
+
+<h3>خطوط Sans-Serif الشائعة</h3>
+
+<code>
+Arial
+
+Verdana
+
+Trebuchet MS
+</code>
+
+<h3>خطوط Serif الشائعة</h3>
+
+<code>
+Times New Roman
+
+Georgia
+</code>
+
+</section>
+
+<section class="main-section" id="at-rules">
+
+<header>قواعد At Rules</header>
+
+<p>
+قواعد At Rules هي تعليمات خاصة يتم تمريرها إلى المتصفح للتحكم في سلوك ورقة الأنماط.
+</p>
+
+<p>
+يمكن استخدامها للتعامل مع الخطوط المخصصة واستعلامات الوسائط والرسوم المتحركة والعديد من الميزات الأخرى.
+</p>
+
+<code>
+@media
+
+@font-face
+
+@keyframes
+</code>
+
+</section>
+
+<section class="main-section" id="font-face-rule">
+
+<header>القاعدة @font-face</header>
+
+<p>
+تُستخدم القاعدة @font-face لتعريف خطوط مخصصة داخل المشروع.
+</p>
+
+<p>
+تسمح هذه القاعدة باستخدام ملفات خطوط خارجية حتى لو لم تكن مثبتة على جهاز المستخدم.
+</p>
+
+<h3>الخاصية src</h3>
+
+<p>
+تُستخدم لتحديد مسار ملف الخط الذي سيتم تحميله.
+</p>
+
+<code>
+@font-face {
+
+  font-family: "MyFont";
+
+  src:
+  url("fonts/my-font.woff2")
+  format("woff2");
+
+}
+</code>
+
+<p>
+لكي تكون القاعدة @font-face صحيحة يجب توفير الخاصية src.
+</p>
+
+</section>
+
+<section class="main-section" id="font-formats">
+
+<header>تنسيقات الخطوط</header>
+
+<p>
+يمكن تحديد تنسيق ملف الخط كنوع من التلميح للمتصفح.
+</p>
+
+<p>
+إذا كان التنسيق غير مدعوم فلن يتم تحميل الملف.
+</p>
+
+<h3>التنسيقات الشائعة</h3>
+
+<code>
+collection
+
+embedded-opentype
+
+opentype
+
+svg
+
+truetype
+
+woff
+
+woff2
+</code>
+
+</section>
+
+<section class="main-section" id="woff-formats">
+
+<header>تنسيقات WOFF و WOFF2</header>
+
+<p>
+يرمز WOFF إلى Web Open Font Format.
+وهو أحد أكثر تنسيقات الخطوط استخدامًا على الويب.
+</p>
+
+<p>
+تم تطويره خصيصًا لتحسين أداء تحميل الخطوط داخل المتصفحات.
+</p>
+
+<h3>WOFF</h3>
+
+<p>
+تنسيق خطوط مضغوط مناسب للاستخدام على الويب.
+</p>
+
+<h3>WOFF2</h3>
+
+<p>
+إصدار أحدث يوفر ضغطًا أفضل وحجم ملفات أصغر.
+</p>
+
+<p>
+غالبًا ما يُفضل استخدام WOFF2 عندما يكون مدعومًا.
+</p>
+
+</section>
+
+<section class="main-section" id="opentype-fonts">
+
+<header>خطوط OpenType</header>
+
+<p>
+OpenType هو تنسيق خطوط تم تطويره بواسطة Microsoft و Adobe.
+</p>
+
+<p>
+يوفر ميزات متقدمة مثل الأشكال البديلة والرموز الإضافية والتحكم الأفضل في الطباعة.
+</p>
+
+<p>
+يُستخدم على نطاق واسع في أنظمة التشغيل الحديثة.
+</p>
+
+</section>
+
+<section class="main-section" id="tech-function">
+
+<header>الدالة tech()</header>
+
+<p>
+تُستخدم الدالة tech() لتحديد التقنية المستخدمة في مورد الخط.
+</p>
+
+<p>
+يُعتبر استخدامها اختياريًا في معظم الحالات.
+</p>
+
+</section>
+
+<section class="main-section" id="external-fonts">
+
+<header>العمل مع الخطوط الخارجية</header>
+
+<p>
+الخط الخارجي هو ملف خط يتم استضافته خارج ملفات المشروع أو على خادم منفصل.
+</p>
+
+<p>
+يمكن إضافة الخطوط الخارجية باستخدام عنصر link داخل HTML أو باستخدام @import داخل CSS.
+</p>
+
+<h3>استخدام عنصر Link</h3>
+
+<code>
+&lt;link
+rel="stylesheet"
+href="font.css"&gt;
+</code>
+
+<h3>استخدام @import</h3>
+
+<code>
+@import url("font.css");
+</code>
+
+</section>
+
+<section class="main-section" id="google-fonts">
+
+<header>Google Fonts</header>
+
+<p>
+Google Fonts هي خدمة مجانية توفر مجموعة كبيرة من الخطوط المخصصة للاستخدام على الويب.
+</p>
+
+<p>
+تم تصميم العديد من هذه الخطوط خصيصًا لتحسين القراءة والأداء في المتصفحات.
+</p>
+
+<h3>مثال</h3>
+
+<code>
+&lt;link
+href="https://fonts.googleapis.com/..."
+rel="stylesheet"&gt;
+</code>
+
+<code>
+body {
+  font-family: "Roboto",
+  sans-serif;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="font-squirrel">
+
+<header>Font Squirrel</header>
+
+<p>
+Font Squirrel هو موقع يوفر خطوطًا مجانية وموارد متعلقة بالخطوط للاستخدام داخل المشاريع.
+</p>
+
+<p>
+يُستخدم بشكل شائع للحصول على خطوط قابلة للاستخدام على الويب مع ملفات WOFF و WOFF2 جاهزة.
+</p>
+
+</section>
+
+<section class="main-section" id="text-shadow">
+
+<header>الخاصية text-shadow</header>
+
+<p>
+تُستخدم الخاصية text-shadow لإضافة ظلال إلى النصوص.
+</p>
+
+<h3>بنية الخاصية</h3>
+
+<code>
+text-shadow:
+offset-x
+offset-y
+blur-radius
+color;
+</code>
+
+<h3>الإزاحة الأفقية والرأسية</h3>
+
+<p>
+تحدد المسافة بين النص والظل.
+</p>
+
+<code>
+text-shadow:
+2px 2px;
+</code>
+
+<h3>لون الظل</h3>
+
+<p>
+يمكن تحديد لون الظل قبل أو بعد قيم الإزاحة.
+</p>
+
+<code>
+text-shadow:
+2px 2px red;
+</code>
+
+<h3>نصف قطر التمويه</h3>
+
+<p>
+كلما زادت قيمة التمويه أصبح الظل أكثر نعومة.
+</p>
+
+<code>
+text-shadow:
+2px 2px 8px black;
+</code>
+
+<h3>تطبيق عدة ظلال</h3>
+
+<p>
+يمكن تطبيق أكثر من ظل باستخدام الفواصل.
+</p>
+
+<code>
+text-shadow:
+
+1px 1px 2px black,
+
+3px 3px 6px gray;
+</code>
+
+</section>
+
+<section class="main-section" id="color-contrast-tools">
+
+<header>أدوات تباين الألوان</header>
+
+<h3>WebAIM Contrast Checker</h3>
+
+<p>
+تساعد هذه الأداة في التحقق من توافق ألوان النص والخلفية مع معايير WCAG الخاصة بإمكانية الوصول.
+</p>
+
+<h3>TPGi Color Contrast Analyzer</h3>
+
+<p>
+أداة مجانية لفحص تباين الألوان واكتشاف المشكلات المتعلقة بإمكانية الوصول.
+</p>
+
+<p>
+توفر أيضًا إمكانيات لمحاكاة بعض حالات عمى الألوان.
+</p>
+
+</section>
+
+<section class="main-section" id="accessibility-tree">
+
+<header>شجرة إمكانية الوصول</header>
+
+<p>
+شجرة إمكانية الوصول هي بنية تستخدمها التقنيات المساعدة مثل قارئات الشاشة لفهم محتوى الصفحة والتفاعل معه.
+</p>
+
+<p>
+تعتمد برامج قراءة الشاشة على هذه الشجرة بدلًا من الاعتماد على العرض المرئي للصفحة.
+</p>
+
+</section>
+
+<section class="main-section" id="max-function">
+
+<header>الدالة max()</header>
+
+<p>
+تُرجع الدالة max() أكبر قيمة من مجموعة من القيم المفصولة بفواصل.
+</p>
+
+<code>
+img {
+
+  width:
+  max(250px, 25vw);
+
+}
+</code>
+
+<p>
+إذا كانت القيمة الأولى أكبر فسيتم استخدامها، وإذا كانت القيمة الثانية أكبر فسيتم استخدامها بدلًا منها.
+</p>
+
+<p>
+تُستخدم هذه الدالة بشكل شائع في التصميمات المتجاوبة.
+</p>
+
+</section>
+
+<section class="main-section" id="css-accessibility">
+
+<header>أفضل الممارسات في استخدام CSS وإمكانية الوصول</header>
+
+<p>
+تُعد إمكانية الوصول Accessibility جزءًا مهمًا من تطوير الويب، حيث تساعد جميع المستخدمين بمن فيهم مستخدمو التقنيات المساعدة على الوصول إلى المحتوى والتفاعل معه بسهولة.
+</p>
+
+</section>
+
+<section class="main-section" id="display-none">
+
+<header>استخدام display: none</header>
+
+<p>
+عند استخدام الخاصية display بالقيمة none يتم إخفاء العنصر بالكامل من الصفحة.
+</p>
+
+<p>
+لن يظهر العنصر بصريًا كما أنه سيُزال من شجرة إمكانية الوصول.
+</p>
+
+<p>
+لن تتمكن قارئات الشاشة أو التقنيات المساعدة الأخرى من الوصول إلى هذا المحتوى.
+</p>
+
+<code>
+.hidden {
+  display: none;
+}
+</code>
+
+<p>
+يجب استخدام هذه الطريقة فقط عندما يكون الهدف هو إزالة المحتوى بالكامل من العرض وإمكانية الوصول.
+</p>
+
+</section>
+
+<section class="main-section" id="visibility-hidden">
+
+<header>استخدام visibility: hidden</header>
+
+<p>
+تُخفي هذه الخاصية العنصر بصريًا مع احتفاظه بمساحته داخل التخطيط.
+</p>
+
+<p>
+يظل العنصر موجودًا داخل المستند ولكنه لا يكون مرئيًا للمستخدم.
+</p>
+
+<p>
+كما يتم إزالته من شجرة إمكانية الوصول ولن تتمكن قارئات الشاشة من قراءته.
+</p>
+
+<code>
+.hidden {
+  visibility: hidden;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="sr-only">
+
+<header>الفئة .sr-only</header>
+
+<p>
+تُستخدم هذه التقنية لإخفاء المحتوى بصريًا مع إبقائه متاحًا لقارئات الشاشة.
+</p>
+
+<p>
+تُعتبر من أشهر تقنيات إمكانية الوصول المستخدمة في النماذج والأزرار والأيقونات.
+</p>
+
+<code>
+.sr-only {
+
+  position: absolute;
+
+  width: 1px;
+
+  height: 1px;
+
+  padding: 0;
+
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="smooth-scroll">
+
+<header>الخاصية scroll-behavior</header>
+
+<p>
+تُستخدم للتحكم في طريقة انتقال الصفحة أثناء التمرير.
+</p>
+
+<h3>القيمة smooth</h3>
+
+<p>
+تجعل عملية التمرير تتم بشكل سلس بدلاً من الانتقال المفاجئ.
+</p>
+
+<code>
+html {
+  scroll-behavior: smooth;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="reduced-motion">
+
+<header>الميزة prefers-reduced-motion</header>
+
+<p>
+تُستخدم هذه الميزة لاكتشاف ما إذا كان المستخدم يفضل تقليل الحركة والرسوم المتحركة على جهازه.
+</p>
+
+<p>
+يُعتبر استخدامها من أفضل ممارسات إمكانية الوصول.
+</p>
+
+<code>
+@media
+(prefers-reduced-motion:
+no-preference) {
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+}
+</code>
+
+<p>
+في المثال السابق يتم تفعيل التمرير السلس فقط إذا لم يكن المستخدم قد طلب تقليل الحركة.
+</p>
+
+</section>
+
+<section class="main-section" id="aria-hidden">
+
+<header>السمة aria-hidden</header>
+
+<p>
+تُستخدم لإخفاء عنصر من التقنيات المساعدة مثل قارئات الشاشة.
+</p>
+
+<p>
+يمكن استخدامها مع العناصر الزخرفية التي لا تحمل معنى أو معلومات مهمة للمستخدم.
+</p>
+
+<code>
+<p aria-hidden="true">
+  Decorative Text
+</p>
+</code>
+
+</section>
+
+<section class="main-section" id="hidden-attribute">
+
+<header>السمة hidden</header>
+
+<p>
+تُستخدم لإخفاء العنصر بصريًا وإزالته من شجرة إمكانية الوصول.
+</p>
+
+<p>
+تدعمها معظم المتصفحات الحديثة ويمكن التحكم بها بسهولة باستخدام JavaScript.
+</p>
+
+<code>
+<p hidden>
+  Hidden Content
+</p>
+</code>
+
+</section>
+
+<section class="main-section" id="hidden-vs-aria-hidden">
+
+<header>الفرق بين hidden و aria-hidden</header>
+
+<h3>aria-hidden</h3>
+
+<p>
+يُخفي العنصر عن التقنيات المساعدة فقط بينما قد يظل ظاهرًا بصريًا.
+</p>
+
+<h3>hidden</h3>
+
+<p>
+يُخفي العنصر بصريًا ويزيله أيضًا من شجرة إمكانية الوصول.
+</p>
+
+</section>
+
+<section class="main-section" id="placeholder-accessibility">
+
+<header>مشكلة إمكانية الوصول مع Placeholder</header>
+
+<p>
+لا يُنصح بالاعتماد على نص Placeholder كبديل لعنصر Label.
+</p>
+
+<p>
+قد يعتقد المستخدم أن هناك قيمة موجودة بالفعل داخل الحقل.
+</p>
+
+<p>
+كما أن بعض المستخدمين قد يواجهون صعوبة في قراءة النصوص الرمادية الخافتة داخل الحقول.
+</p>
+
+<p>
+يجب دائمًا استخدام عنصر Label واضح ومربوط بحقل الإدخال.
+</p>
+
+</section>
+
+<section class="main-section" id="attribute-selectors">
+
+<header>محددات السمات Attribute Selectors</header>
+
+<p>
+تسمح محددات السمات باستهداف العناصر بناءً على السمات الموجودة داخلها.
+</p>
+
+<h3>مثال عام</h3>
+
+<code>
+[href] {
+  color: blue;
+}
+</code>
+
+<p>
+في المثال السابق سيتم استهداف جميع العناصر التي تحتوي على السمة href.
+</p>
+
+</section>
+
+<section class="main-section" id="title-attribute">
+
+<header>السمة title</header>
+
+<p>
+توفر السمة title معلومات إضافية حول العنصر.
+</p>
+
+<p>
+غالبًا ما تظهر هذه المعلومات عند تمرير مؤشر الفأرة فوق العنصر.
+</p>
+
+<code>
+<a
+href="#"
+title="More Information">
+
+  Link
+
+</a>
+</code>
+
+</section>
+
+<section class="main-section" id="lang-attribute">
+
+<header>السمة lang</header>
+
+<p>
+تُستخدم لتحديد لغة المحتوى داخل عنصر HTML.
+</p>
+
+<p>
+تساعد المتصفحات والتقنيات المساعدة على فهم اللغة المستخدمة بشكل صحيح.
+</p>
+
+<code>
+<p lang="en">
+  Hello World
+</p>
+</code>
+
+<p>
+يمكن أيضًا استخدامها لتطبيق أنماط مختلفة حسب اللغة.
+</p>
+
+</section>
+
+<section class="main-section" id="data-lang-attribute">
+
+<header>السمة data-lang</header>
+
+<p>
+تُعد من سمات البيانات المخصصة Custom Data Attributes.
+</p>
+
+<p>
+تُستخدم لتخزين معلومات إضافية داخل العناصر.
+</p>
+
+<code>
+<p data-lang="english">
+  Hello World
+</p>
+</code>
+
+<p>
+يمكن الوصول إلى هذه البيانات باستخدام CSS أو JavaScript.
+</p>
+
+</section>
+
+<section class="main-section" id="ordered-list-type">
+
+<header>السمة type في القوائم المرتبة</header>
+
+<p>
+تسمح السمة type بتحديد شكل الترقيم المستخدم داخل القوائم المرتبة.
+</p>
+
+<code>
+<ol type="A">
+  <li>Item</li>
+</ol>
+</code>
+
+<h3>القيم الشائعة</h3>
+
+<code>
+1
+
+A
+
+a
+
+I
+
+i
+</code>
+
+</section>
+
+<section class="main-section" id="floats">
+
+<header>العمل مع العناصر العائمة Float</header>
+
+<p>
+تُستخدم خاصية float لإزالة العنصر من التدفق الطبيعي للصفحة ووضعه على الجانب الأيسر أو الأيمن من الحاوية.
+</p>
+
+<p>
+بعد تعويم العنصر، يلتف النص والمحتوى المحيط حوله.
+</p>
+
+<h3>القيمة left</h3>
+
+<p>
+تنقل العنصر إلى الجانب الأيسر من الحاوية.
+</p>
+
+<code>
+img {
+  float: left;
+}
+</code>
+
+<h3>القيمة right</h3>
+
+<p>
+تنقل العنصر إلى الجانب الأيمن من الحاوية.
+</p>
+
+<code>
+img {
+  float: right;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="clear-property">
+
+<header>الخاصية clear</header>
+
+<p>
+تُستخدم الخاصية clear لتحديد ما إذا كان العنصر يجب أن ينتقل أسفل العناصر العائمة الموجودة قبله.
+</p>
+
+<h3>القيمة left</h3>
+
+<p>
+تمنع وجود عناصر عائمة على الجانب الأيسر.
+</p>
+
+<code>
+clear: left;
+</code>
+
+<h3>القيمة right</h3>
+
+<p>
+تمنع وجود عناصر عائمة على الجانب الأيمن.
+</p>
+
+<code>
+clear: right;
+</code>
+
+<h3>القيمة both</h3>
+
+<p>
+تمنع وجود عناصر عائمة على الجانبين.
+</p>
+
+<code>
+clear: both;
+</code>
+
+</section>
+
+<section class="main-section" id="clearfix-technique">
+
+<header>تقنية Clearfix</header>
+
+<p>
+عند استخدام عدة عناصر عائمة قد تحدث مشكلات في التخطيط مثل انهيار ارتفاع الحاوية.
+</p>
+
+<p>
+تم تطوير تقنية Clearfix لمعالجة هذه المشكلة وإجبار الحاوية على احتواء العناصر العائمة بداخلها.
+</p>
+
+<code>
+.clearfix::after {
+
+  content: "";
+
+  display: block;
+
+  clear: both;
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="css-positioning">
+
+<header>أنظمة التموضع في CSS</header>
+
+<p>
+تحدد خاصية position الطريقة التي يتم بها وضع العنصر داخل الصفحة.
+</p>
+
+<p>
+توجد عدة أنواع من التموضع لكل منها استخدامات مختلفة.
+</p>
+
+</section>
+
+<section class="main-section" id="static-position">
+
+<header>التموضع الثابت Static</header>
+
+<p>
+يُعد التموضع الثابت القيمة الافتراضية لجميع العناصر.
+</p>
+
+<p>
+تظهر العناصر داخل التدفق الطبيعي للمستند من الأعلى إلى الأسفل ومن اليسار إلى اليمين.
+</p>
+
+<code>
+position: static;
+</code>
+
+<p>
+في هذا النوع لا تعمل الخصائص top و right و bottom و left.
+</p>
+
+</section>
+
+<section class="main-section" id="relative-position">
+
+<header>التموضع النسبي Relative</header>
+
+<p>
+يبقى العنصر داخل التدفق الطبيعي للمستند ولكن يمكن تحريكه بالنسبة إلى موقعه الأصلي.
+</p>
+
+<p>
+يتم استخدام الخصائص top و right و bottom و left لتحديد مقدار الإزاحة.
+</p>
+
+<code>
+.box {
+
+  position: relative;
+
+  top: 20px;
+
+  left: 30px;
+
+}
+</code>
+
+<p>
+يظل مكان العنصر الأصلي محفوظًا داخل التخطيط.
+</p>
+
+</section>
+
+<section class="main-section" id="absolute-position">
+
+<header>التموضع المطلق Absolute</header>
+
+<p>
+يقوم التموضع المطلق بإخراج العنصر من التدفق الطبيعي للمستند.
+</p>
+
+<p>
+يتم تحديد موقع العنصر بالنسبة لأقرب عنصر أب يمتلك position غير static.
+</p>
+
+<code>
+.box {
+
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+}
+</code>
+
+<p>
+إذا لم يوجد عنصر أب متموضع فسيتم التموضع بالنسبة إلى الصفحة نفسها.
+</p>
+
+</section>
+
+<section class="main-section" id="fixed-position">
+
+<header>التموضع الثابت Fixed</header>
+
+<p>
+عند استخدام position: fixed يتم إخراج العنصر من التدفق الطبيعي للمستند.
+</p>
+
+<p>
+يتم تموضع العنصر بالنسبة إلى نافذة العرض Viewport وليس بالنسبة للعناصر الأخرى.
+</p>
+
+<p>
+يبقى العنصر في نفس المكان حتى عند قيام المستخدم بالتمرير داخل الصفحة.
+</p>
+
+<code>
+header {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+
+}
+</code>
+
+<h3>الاستخدامات الشائعة</h3>
+
+<code>
+Sticky Headers
+
+Navigation Bars
+
+Floating Buttons
+</code>
+
+</section>
+
+<section class="main-section" id="sticky-position">
+
+<header>التموضع اللاصق Sticky</header>
+
+<p>
+يُعتبر التموضع اللاصق مزيجًا بين التموضع النسبي والتموضع الثابت.
+</p>
+
+<p>
+في البداية يتصرف العنصر كعنصر نسبي داخل الصفحة.
+</p>
+
+<p>
+وعندما يصل المستخدم إلى نقطة معينة أثناء التمرير يصبح العنصر مثبتًا داخل نافذة العرض.
+</p>
+
+<code>
+nav {
+
+  position: sticky;
+
+  top: 0;
+
+}
+</code>
+
+<h3>الاستخدامات الشائعة</h3>
+
+<p>
+يُستخدم لإنشاء أشرطة تنقل تبقى مرئية بعد الوصول إلى جزء معين من الصفحة.
+</p>
+
+</section>
+
+<section class="main-section" id="z-index-property">
+
+<header>الخاصية z-index</header>
+
+<p>
+تُستخدم الخاصية z-index للتحكم في ترتيب تراكب العناصر فوق بعضها البعض.
+</p>
+
+<p>
+كلما زادت قيمة z-index ظهر العنصر فوق العناصر ذات القيم الأقل.
+</p>
+
+<code>
+.box-one {
+
+  position: relative;
+
+  z-index: 10;
+
+}
+
+.box-two {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+</code>
+
+<p>
+في المثال السابق سيظهر العنصر الأول فوق العنصر الثاني.
+</p>
+
+<h3>ملاحظات مهمة</h3>
+
+<p>
+تعمل الخاصية z-index فقط على العناصر المتموضعة Positioned Elements.
+</p>
+
+<code>
+position:
+
+relative
+
+absolute
+
+fixed
+
+sticky
+</code>
+
+<p>
+لا يكون لها تأثير عادةً على العناصر ذات التموضع static.
+</p>
+
+</section>
+
+<section class="main-section" id="position-comparison">
+
+<header>مقارنة بين أنواع التموضع</header>
+
+<h3>Static</h3>
+
+<p>
+التموضع الافتراضي داخل التدفق الطبيعي للمستند.
+</p>
+
+<h3>Relative</h3>
+
+<p>
+يبقى داخل التدفق الطبيعي مع إمكانية تحريكه من موضعه الأصلي.
+</p>
+
+<h3>Absolute</h3>
+
+<p>
+يخرج من التدفق الطبيعي ويتم تموضعه بالنسبة لأقرب عنصر أب متموضع.
+</p>
+
+<h3>Fixed</h3>
+
+<p>
+يبقى ثابتًا بالنسبة لنافذة العرض حتى أثناء التمرير.
+</p>
+
+<h3>Sticky</h3>
+
+<p>
+يتحول من عنصر نسبي إلى عنصر ثابت عند الوصول إلى نقطة معينة أثناء التمرير.
+</p>
+
+</section>
+
+<section class="main-section" id="responsive-design">
+
+<header>تصميم مواقع الويب المتجاوبة</header>
+
+<p>
+التصميم المتجاوب Responsive Design هو أسلوب تطوير يهدف إلى جعل مواقع الويب قادرة على التكيف مع مختلف أحجام الشاشات والأجهزة.
+</p>
+
+<p>
+يعتمد هذا المفهوم على مبدأ التكيف بحيث يتغير التخطيط والمحتوى تلقائيًا وفقًا لحجم الشاشة وإمكانات الجهاز المستخدم.
+</p>
+
+</section>
+
+<section class="main-section" id="flexible-grids">
+
+<header>الشبكات المرنة</header>
+
+<p>
+تعتمد الشبكات المرنة على الوحدات النسبية مثل النسب المئوية بدلاً من الوحدات الثابتة مثل البكسل.
+</p>
+
+<p>
+يسمح ذلك بتغيير حجم العناصر وإعادة ترتيبها تلقائيًا عند اختلاف أبعاد الشاشة.
+</p>
+
+<code>
+.container {
+  width: 80%;
+}
+</code>
+
+</section>
+
+<section class="main-section" id="flexible-images">
+
+<header>الصور المرنة</header>
+
+<p>
+يجب أن تكون الصور قادرة على التكيف مع أحجام الشاشات المختلفة دون تجاوز حدود الحاوية.
+</p>
+
+<code>
+img {
+
+  max-width: 100%;
+
+  height: auto;
+
+}
+</code>
+
+<p>
+يساعد ذلك على منع الصور من الخروج خارج الحاوية في الشاشات الصغيرة.
+</p>
+
+</section>
+
+<section class="main-section" id="media-queries">
+
+<header>استعلامات الوسائط Media Queries</header>
+
+<p>
+تسمح Media Queries بتطبيق أنماط مختلفة اعتمادًا على خصائص الجهاز أو نافذة العرض.
+</p>
+
+<h3>مثال أساسي</h3>
+
+<code>
+@media (max-width: 768px) {
+
+  body {
+    background: lightgray;
+  }
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="media-types">
+
+<header>أنواع الوسائط</header>
+
+<h3>all</h3>
+
+<p>
+ينطبق على جميع أنواع الأجهزة.
+</p>
+
+<h3>screen</h3>
+
+<p>
+يُستخدم للشاشات مثل الهواتف والحواسيب والأجهزة اللوحية.
+</p>
+
+<h3>print</h3>
+
+<p>
+يُستخدم لتنسيق المحتوى المخصص للطباعة.
+</p>
+
+</section>
+
+<section class="main-section" id="media-features">
+
+<header>خصائص Media Queries</header>
+
+<h3>aspect-ratio</h3>
+
+<p>
+تصف النسبة بين عرض وارتفاع نافذة العرض.
+</p>
+
+<h3>orientation</h3>
+
+<p>
+تحدد ما إذا كان الجهاز في الوضع الأفقي أو الرأسي.
+</p>
+
+<h3>resolution</h3>
+
+<p>
+تحدد دقة الشاشة بالنقاط لكل بوصة.
+</p>
+
+<h3>hover</h3>
+
+<p>
+تتحقق مما إذا كان الجهاز يدعم التحويم بالفأرة.
+</p>
+
+<h3>prefers-color-scheme</h3>
+
+<p>
+تُستخدم لمعرفة ما إذا كان المستخدم يفضل الوضع الفاتح أو الداكن.
+</p>
+
+</section>
+
+<section class="main-section" id="logical-operators">
+
+<header>العوامل المنطقية في Media Queries</header>
+
+<h3>العامل and</h3>
+
+<p>
+يُستخدم لدمج أكثر من شرط.
+</p>
+
+<code>
+@media screen and
+(max-width: 768px)
+</code>
+
+<h3>العامل not</h3>
+
+<p>
+يُستخدم لعكس نتيجة الاستعلام.
+</p>
+
+<h3>العامل only</h3>
+
+<p>
+يُستخدم لتقييد تطبيق الاستعلام على أنواع وسائط معينة.
+</p>
+
+</section>
+
+<section class="main-section" id="breakpoints">
+
+<header>نقاط التوقف Breakpoints</header>
+
+<p>
+هي نقاط محددة يتم عندها تعديل التخطيط ليتناسب مع أحجام الشاشات المختلفة.
+</p>
+
+<h3>الأجهزة الصغيرة</h3>
+
+<code>
+حتى 640px
+</code>
+
+<h3>الأجهزة المتوسطة</h3>
+
+<code>
+641px - 1024px
+</code>
+
+<h3>الأجهزة الكبيرة</h3>
+
+<code>
+1025px فأكثر
+</code>
+
+</section>
+
+<section class="main-section" id="mobile-first">
+
+<header>نهج Mobile First</header>
+
+<p>
+يعتمد هذا النهج على تصميم الموقع للأجهزة المحمولة أولًا ثم إضافة التحسينات للأجهزة الأكبر حجمًا.
+</p>
+
+<p>
+يُعتبر من أكثر الأساليب شيوعًا في تطوير الويب الحديث.
+</p>
+
+</section>
+
+<section class="main-section" id="css-variables">
+
+<header>متغيرات CSS</header>
+
+<p>
+تُعرف أيضًا باسم CSS Custom Properties.
+</p>
+
+<p>
+تُستخدم لتخزين قيم قابلة لإعادة الاستخدام داخل المشروع.
+</p>
+
+<h3>تعريف متغير</h3>
+
+<code>
+:root {
+
+  --main-color:
+  #3498db;
+
+}
+</code>
+
+<h3>استخدام متغير</h3>
+
+<code>
+h1 {
+
+  color:
+  var(--main-color);
+
+}
+</code>
+
+<h3>القيم الاحتياطية</h3>
+
+<code>
+color:
+var(--main-color, blue);
+</code>
+
+</section>
+
+<section class="main-section" id="property-rule">
+
+<header>القاعدة @property</header>
+
+<p>
+تسمح القاعدة @property بإنشاء خصائص مخصصة مع تحكم أكبر في سلوكها.
+</p>
+
+<code>
+@property --main-color {
+
+  syntax: "<color>";
+
+  inherits: true;
+
+  initial-value: blue;
+
+}
+</code>
+
+<h3>syntax</h3>
+
+<p>
+تحدد نوع البيانات الخاصة بالمتغير.
+</p>
+
+<h3>inherits</h3>
+
+<p>
+تحدد ما إذا كانت القيمة ستنتقل إلى العناصر الأبناء.
+</p>
+
+<h3>initial-value</h3>
+
+<p>
+تحدد القيمة الافتراضية للمتغير.
+</p>
+
+</section>
+
+<section class="main-section" id="css-grid">
+
+<header>أساسيات CSS Grid</header>
+
+<p>
+CSS Grid هو نظام تخطيط ثنائي الأبعاد يسمح بالتحكم في الصفوف والأعمدة في الوقت نفسه.
+</p>
+
+<h3>تفعيل Grid</h3>
+
+<code>
+.container {
+
+  display: grid;
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="fr-unit">
+
+<header>الوحدة fr</header>
+
+<p>
+تمثل جزءًا من المساحة المتاحة داخل حاوية الشبكة.
+</p>
+
+<code>
+grid-template-columns:
+
+1fr 1fr 1fr;
+</code>
+
+</section>
+
+<section class="main-section" id="grid-gap">
+
+<header>الفجوات داخل الشبكة</header>
+
+<h3>column-gap</h3>
+
+<p>
+تُستخدم لإنشاء مسافات بين الأعمدة.
+</p>
+
+<h3>row-gap</h3>
+
+<p>
+تُستخدم لإنشاء مسافات بين الصفوف.
+</p>
+
+<h3>gap</h3>
+
+<p>
+اختصار يجمع بين row-gap و column-gap.
+</p>
+
+<code>
+gap: 20px;
+</code>
+
+</section>
+
+<section class="main-section" id="repeat-function">
+
+<header>الدالة repeat()</header>
+
+<p>
+تُستخدم لتكرار القيم داخل الشبكة.
+</p>
+
+<code>
+grid-template-columns:
+
+repeat(3, 1fr);
+</code>
+
+</section>
+
+<section class="main-section" id="explicit-grid">
+
+<header>الشبكة الصريحة Explicit Grid</header>
+
+<p>
+يتم إنشاؤها باستخدام الخصائص grid-template-columns و grid-template-rows.
+</p>
+
+</section>
+
+<section class="main-section" id="implicit-grid">
+
+<header>الشبكة الضمنية Implicit Grid</header>
+
+<p>
+يتم إنشاؤها تلقائيًا عندما يتم وضع عناصر خارج حدود الشبكة المحددة.
+</p>
+
+</section>
+
+<section class="main-section" id="minmax-function">
+
+<header>الدالة minmax()</header>
+
+<p>
+تُستخدم لتحديد الحد الأدنى والحد الأقصى لحجم المسار.
+</p>
+
+<code>
+grid-template-columns:
+
+repeat(3,
+minmax(150px, 1fr));
+</code>
+
+</section>
+
+<section class="main-section" id="grid-auto-flow">
+
+<header>الخاصية grid-auto-flow</header>
+
+<p>
+تتحكم في طريقة توزيع العناصر تلقائيًا داخل الشبكة.
+</p>
+
+<code>
+row
+
+column
+
+dense
+</code>
+
+</section>
+
+<section class="main-section" id="grid-placement">
+
+<header>تحديد مواقع عناصر Grid</header>
+
+<h3>grid-column-start</h3>
+
+<h3>grid-column-end</h3>
+
+<h3>grid-row-start</h3>
+
+<h3>grid-row-end</h3>
+
+<p>
+تُستخدم هذه الخصائص لتحديد بداية ونهاية العنصر داخل الشبكة.
+</p>
+
+<code>
+.item {
+
+  grid-column:
+  1 / 3;
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="grid-template-areas">
+
+<header>الخاصية grid-template-areas</header>
+
+<p>
+تُستخدم لتسمية مناطق الشبكة وتسهيل بناء التخطيطات المعقدة.
+</p>
+
+<code>
+grid-template-areas:
+
+"header header"
+
+"sidebar main"
+
+"footer footer";
+</code>
+
+</section>
+
+<section class="main-section" id="grid-alignment">
+
+<header>محاذاة عناصر Grid</header>
+
+<h3>justify-items</h3>
+
+<h3>align-items</h3>
+
+<p>
+تتحكمان في محاذاة جميع العناصر داخل الشبكة.
+</p>
+
+<h3>justify-self</h3>
+
+<h3>align-self</h3>
+
+<p>
+تتحكمان في محاذاة عنصر فردي داخل الشبكة.
+</p>
+
+</section>
+
+<section class="main-section" id="css-animations">
+
+<header>أساسيات CSS Animations</header>
+
+<p>
+تُستخدم الرسوم المتحركة في CSS لإنشاء تأثيرات بصرية ديناميكية دون الحاجة إلى JavaScript.
+</p>
+
+</section>
+
+<section class="main-section" id="keyframes-rule">
+
+<header>القاعدة @keyframes</header>
+
+<p>
+تُستخدم لتحديد مراحل الرسوم المتحركة المختلفة.
+</p>
+
+<code>
+@keyframes move {
+
+  from {
+
+    transform:
+    translateX(0);
+
+  }
+
+  to {
+
+    transform:
+    translateX(200px);
+
+  }
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="animation-property">
+
+<header>الخاصية animation</header>
+
+<p>
+تُعتبر اختصارًا لجميع خصائص الرسوم المتحركة.
+</p>
+
+<code>
+.box {
+
+  animation:
+
+  move
+
+  2s
+
+  ease-in-out
+
+  infinite;
+
+}
+</code>
+
+</section>
+
+<section class="main-section" id="animation-properties">
+
+<header>خصائص Animation</header>
+
+<code>
+animation-name
+
+animation-duration
+
+animation-timing-function
+
+animation-delay
+
+animation-iteration-count
+
+animation-direction
+
+animation-fill-mode
+
+animation-play-state
+</code>
+
+</section>
+
+<section class="main-section" id="animation-accessibility">
+
+<header>إمكانية الوصول والرسوم المتحركة</header>
+
+<p>
+قد تسبب بعض الرسوم المتحركة الإزعاج أو الدوار لبعض المستخدمين.
+</p>
+
+<p>
+لذلك يُفضل مراعاة إعدادات النظام الخاصة بتقليل الحركة.
+</p>
+
+<h3>prefers-reduced-motion</h3>
+
+<code>
+@media
+(prefers-reduced-motion:
+reduce) {
+
+  * {
+
+    animation: none;
+
+    transition: none;
+
+  }
+
+}
+</code>
+
+<p>
+يساعد ذلك على تحسين تجربة المستخدم للأشخاص الحساسين للحركة.
+</p>
+
+</section>
+
+</main>
+<script src="script.js"></script>
 </body>
 </html>
